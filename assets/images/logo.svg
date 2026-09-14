@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" fill="none">
+  <!-- Flat Design - Deep Forest Green & Warm Brass -->
+  <g transform="translate(4, 4)">
+    <!-- Hexagonal outer ring - Solid Deep Forest Green -->
+    <polygon points="28,4 50,16 50,40 28,52 6,40 6,16" stroke="#1E3A2F" stroke-width="3" fill="#EFECE1" />
+    
+    <!-- Precision Crosshair ticks -->
+    <line x1="28" y1="0" x2="28" y2="7" stroke="#2D5844" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="28" y1="49" x2="28" y2="56" stroke="#2D5844" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="28" x2="7" y2="28" stroke="#2D5844" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="49" y1="28" x2="56" y2="28" stroke="#2D5844" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Stylized "K" inside precision geometry - Solid Flat colors -->
+    <path d="M20,16 L20,40" stroke="#1E3A2F" stroke-width="4" stroke-linecap="round" />
+    <path d="M36,17 L22,28 L36,39" stroke="#C28B38" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Central micro-pivot -->
+    <circle cx="28" cy="28" r="2.5" fill="#2D5844"/>
+  </g>
+
+  <!-- Typography: Flat Solid Dark Pine -->
+  <text x="72" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" fill="#14231C">
+    K-PRECISION
+  </text>
+  <text x="73" y="49" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" letter-spacing="3.2" fill="#2D5844">
+    MANUFACTURING CONSUMABLES
+  </text>
+</svg>

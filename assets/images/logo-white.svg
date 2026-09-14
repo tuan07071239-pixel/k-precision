@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" fill="none">
+  <!-- Flat Design - Warm Beige & Brass on Dark Forest Green -->
+  <g transform="translate(4, 4)">
+    <polygon points="28,4 50,16 50,40 28,52 6,40 6,16" stroke="#D5CFBE" stroke-width="3" fill="#142921" />
+    <line x1="28" y1="0" x2="28" y2="7" stroke="#8EAC9D" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="28" y1="49" x2="28" y2="56" stroke="#8EAC9D" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="28" x2="7" y2="28" stroke="#8EAC9D" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="49" y1="28" x2="56" y2="28" stroke="#8EAC9D" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M20,16 L20,40" stroke="#F6F4ED" stroke-width="4" stroke-linecap="round" />
+    <path d="M36,17 L22,28 L36,39" stroke="#E2B167" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="28" cy="28" r="2.5" fill="#8EAC9D"/>
+  </g>
+
+  <text x="72" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" letter-spacing="1.5" fill="#F6F4ED">
+    K-PRECISION
+  </text>
+  <text x="73" y="49" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" letter-spacing="3.2" fill="#C5D6CC">
+    MANUFACTURING CONSUMABLES
+  </text>
+</svg>
