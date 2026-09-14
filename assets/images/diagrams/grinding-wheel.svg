@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" fill="none">
+  <!-- Flat Design Background: Warm Linen Beige -->
+  <rect width="400" height="300" rx="8" fill="#EFECE1" stroke="#D5CFBE" stroke-width="1"/>
+  
+  <!-- Technical Grid Lines -->
+  <path d="M40 0v300 M80 0v300 M120 0v300 M160 0v300 M200 0v300 M240 0v300 M280 0v300 M320 0v300 M360 0v300" stroke="#E2DEC7" stroke-width="1"/>
+  <path d="M0 30h400 M0 60h400 M0 90h400 M0 120h400 M0 150h400 M0 180h400 M0 210h400 M0 240h400 M0 270h400" stroke="#E2DEC7" stroke-width="1"/>
+
+  <!-- Solid Wheel Body - Flat Superabrasive Rim (Forest Green) -->
+  <circle cx="200" cy="140" r="95" fill="#1E3A2F" stroke="#142921" stroke-width="2"/>
+  
+  <!-- Diamond Abrasive Rim Layer Indicator -->
+  <circle cx="200" cy="140" r="82" fill="#2D5844" stroke="#1E3A2F" stroke-width="1.5"/>
+  <circle cx="200" cy="140" r="82" stroke="#8EAC9D" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- Steel/Aluminum Wheel Core (Warm Slate) -->
+  <circle cx="200" cy="140" r="66" fill="#F6F4ED" stroke="#B8AF9C" stroke-width="2"/>
+  
+  <!-- Recessed Mounting Hub -->
+  <circle cx="200" cy="140" r="44" fill="#E4DEC9" stroke="#B8AF9C" stroke-width="1.5"/>
+  
+  <!-- Center Arbor Hole -->
+  <circle cx="200" cy="140" r="22" fill="#1E3A2F" stroke="#142921" stroke-width="2"/>
+
+  <!-- Mounting Pinholes -->
+  <circle cx="200" cy="116" r="4.5" fill="#B8AF9C"/>
+  <circle cx="200" cy="164" r="4.5" fill="#B8AF9C"/>
+  <circle cx="176" cy="140" r="4.5" fill="#B8AF9C"/>
+  <circle cx="224" cy="140" r="4.5" fill="#B8AF9C"/>
+
+  <!-- Flat Technical Dimension Lines -->
+  <line x1="90" y1="140" x2="310" y2="140" stroke="#1E3A2F" stroke-width="1" stroke-dasharray="2 3"/>
+  <line x1="200" y1="35" x2="200" y2="245" stroke="#1E3A2F" stroke-width="1" stroke-dasharray="2 3"/>
+
+  <!-- Flat Spark / Chip Evacuation Indicators -->
+  <path d="M295 140 L345 125" stroke="#C28B38" stroke-width="2" stroke-linecap="round"/>
+  <path d="M293 148 L355 152" stroke="#C28B38" stroke-width="2" stroke-linecap="round"/>
+  <path d="M288 156 L340 180" stroke="#C28B38" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="348" cy="125" r="2.5" fill="#C28B38"/>
+  <circle cx="358" cy="152" r="2" fill="#E5A84B"/>
+
+  <!-- Flat Badges -->
+  <rect x="20" y="24" width="140" height="36" rx="4" fill="#1E3A2F"/>
+  <text x="30" y="42" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#F6F4ED">DIAMOND &amp; CBN</text>
+  <text x="30" y="53" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#C5D6CC">Vitrified &amp; Resinoid</text>
+
+  <rect x="240" y="238" width="140" height="36" rx="4" fill="#FFFFFF" stroke="#D5CFBE" stroke-width="1"/>
+  <text x="250" y="254" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="700" fill="#1E3A2F">RUNOUT &lt; 2µm</text>
+  <text x="250" y="266" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#58655E">TIR Sub-Micron Precision</text>
+</svg>

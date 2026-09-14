@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" fill="none">
+  <!-- Flat Design Background: Warm Linen Beige -->
+  <rect width="400" height="300" rx="8" fill="#EFECE1" stroke="#D5CFBE" stroke-width="1"/>
+  
+  <path d="M40 0v300 M80 0v300 M120 0v300 M160 0v300 M200 0v300 M240 0v300 M280 0v300 M320 0v300 M360 0v300" stroke="#E2DEC7" stroke-width="1"/>
+  <path d="M0 30h400 M0 60h400 M0 90h400 M0 120h400 M0 150h400 M0 180h400 M0 210h400 M0 240h400 M0 270h400" stroke="#E2DEC7" stroke-width="1"/>
+
+  <!-- Tool Holder Profile (Horizontal orientation) - Flat Solid Architecture -->
+  <!-- 1. Pull Stud (Left) -->
+  <path d="M35 142 L48 142 L52 145 L52 155 L48 158 L35 158 Z" fill="#B8AF9C" stroke="#8E8573" stroke-width="1.5"/>
+  <circle cx="43" cy="150" r="3" fill="#1E3A2F"/>
+
+  <!-- 2. BT40 / 7:24 Precision Taper (Flat Warm White) -->
+  <polygon points="52,126 140,105 140,195 52,174" fill="#FFFFFF" stroke="#B8AF9C" stroke-width="1.5"/>
+  <line x1="80" y1="119" x2="80" y2="181" stroke="#D5CFBE" stroke-width="1"/>
+  <line x1="110" y1="112" x2="110" y2="188" stroke="#D5CFBE" stroke-width="1"/>
+
+  <!-- 3. Tool Changer Flange / V-Groove Collar (Solid Forest Green) -->
+  <rect x="140" y="92" width="36" height="116" rx="2" fill="#1E3A2F" stroke="#142921" stroke-width="1.5"/>
+  <polygon points="152,92 158,102 164,92" fill="#EFECE1"/>
+  <polygon points="152,208 158,198 164,208" fill="#EFECE1"/>
+  <circle cx="158" cy="150" r="6" fill="#142921"/>
+
+  <!-- 4. Front Nose / Clamping Extension -->
+  <polygon points="176,118 310,128 310,172 176,182" fill="#FFFFFF" stroke="#B8AF9C" stroke-width="1.5"/>
+  
+  <!-- Clamping Ring Zone (Solid Forest Sage Green) -->
+  <rect x="230" y="123" width="70" height="54" rx="2" fill="#2D5844" stroke="#1E3A2F" stroke-width="1"/>
+  <text x="238" y="146" font-family="'Courier New', monospace" font-size="8.5" font-weight="700" fill="#F6F4ED">G2.5 25k</text>
+  <text x="238" y="160" font-family="'Courier New', monospace" font-size="7.5" font-weight="600" fill="#C5D6CC">&lt;0.003mm</text>
+
+  <!-- Clamped Tool Shank -->
+  <rect x="310" y="136" width="55" height="28" fill="#E4DEC9" stroke="#B8AF9C" stroke-width="1.5"/>
+  <line x1="330" y1="136" x2="330" y2="164" stroke="#D5CFBE" stroke-width="1"/>
+
+  <!-- Badges -->
+  <rect x="20" y="24" width="145" height="36" rx="4" fill="#1E3A2F"/>
+  <text x="30" y="42" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#F6F4ED">RUNOUT ACCURACY</text>
+  <text x="30" y="53" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#C5D6CC">≤ 0.003mm (3µm) TIR</text>
+
+  <rect x="235" y="238" width="145" height="36" rx="4" fill="#FFFFFF" stroke="#D5CFBE" stroke-width="1"/>
+  <text x="245" y="254" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="700" fill="#1E3A2F">DYNAMIC BALANCE</text>
+  <text x="245" y="266" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#58655E">G2.5 @ 25,000 RPM</text>
+</svg>

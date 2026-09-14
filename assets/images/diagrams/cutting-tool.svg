@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" fill="none">
+  <!-- Flat Design Background: Warm Linen Beige -->
+  <rect width="400" height="300" rx="8" fill="#EFECE1" stroke="#D5CFBE" stroke-width="1"/>
+  
+  <path d="M40 0v300 M80 0v300 M120 0v300 M160 0v300 M200 0v300 M240 0v300 M280 0v300 M320 0v300 M360 0v300" stroke="#E2DEC7" stroke-width="1"/>
+  <path d="M0 30h400 M0 60h400 M0 90h400 M0 120h400 M0 150h400 M0 180h400 M0 210h400 M0 240h400 M0 270h400" stroke="#E2DEC7" stroke-width="1"/>
+
+  <!-- Solid Shank (h6 tolerance) - Flat Crisp Warm Slate / Beige -->
+  <rect x="50" y="115" width="130" height="70" rx="2" fill="#FFFFFF" stroke="#B8AF9C" stroke-width="1.5"/>
+  <line x1="58" y1="115" x2="58" y2="185" stroke="#D5CFBE" stroke-width="1"/>
+  <text x="75" y="145" font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#1E3A2F" letter-spacing="1">KP-EM-4F-D12</text>
+  <text x="75" y="158" font-family="'Courier New', monospace" font-size="8" font-weight="600" fill="#58655E">SOLID CARBIDE h6</text>
+
+  <!-- Neck Transition -->
+  <polygon points="180,115 200,120 200,180 180,185" fill="#E4DEC9" stroke="#B8AF9C" stroke-width="1"/>
+
+  <!-- Fluted Section (Flat Deep Forest Green) -->
+  <path d="M200 120 L325 120 C332 120, 335 125, 335 150 C335 175, 332 180, 325 180 L200 180 Z" fill="#1E3A2F" stroke="#142921" stroke-width="1.5"/>
+
+  <!-- Variable Helix Flute Ribbons (Flat Sage Green) -->
+  <path d="M205 120 Q225 150 245 180" stroke="#4A7C59" stroke-width="3.5" fill="none"/>
+  <path d="M235 120 Q255 150 275 180" stroke="#4A7C59" stroke-width="3.5" fill="none"/>
+  <path d="M265 120 Q285 150 305 180" stroke="#4A7C59" stroke-width="3.5" fill="none"/>
+  <path d="M295 120 Q315 150 330 175" stroke="#4A7C59" stroke-width="3.5" fill="none"/>
+
+  <path d="M216 120 Q236 150 256 180" stroke="#142921" stroke-width="2" fill="none"/>
+  <path d="M246 120 Q266 150 286 180" stroke="#142921" stroke-width="2" fill="none"/>
+  <path d="M276 120 Q296 150 316 180" stroke="#142921" stroke-width="2" fill="none"/>
+
+  <!-- Flat End Face Cutting Teeth Detail (Solid Warm Brass) -->
+  <polygon points="328,122 338,135 334,150 338,165 328,178" fill="#C28B38" stroke="#A3722A" stroke-width="1"/>
+
+  <!-- Badges -->
+  <rect x="20" y="24" width="150" height="36" rx="4" fill="#1E3A2F"/>
+  <text x="30" y="42" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#F6F4ED">MICRO-GRAIN CARBIDE</text>
+  <text x="30" y="53" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#C5D6CC">0.4µm Sub-Micron Grain</text>
+
+  <rect x="235" y="238" width="145" height="36" rx="4" fill="#FFFFFF" stroke="#D5CFBE" stroke-width="1"/>
+  <text x="245" y="254" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="700" fill="#1E3A2F">VARIABLE HELIX 35°/38°</text>
+  <text x="245" y="266" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" fill="#58655E">AlCrN / TiSiN PVD Coat</text>
+</svg>
