@@ -325,7 +325,8 @@ button, input, select, textarea {
   position: relative;
 }
 
-.nav-dropdown-menu {
+.nav-dropdown-menu,
+.dropdown-menu {
   position: absolute;
   top: 100%;
   left: -16px;
@@ -341,7 +342,8 @@ button, input, select, textarea {
   z-index: 1010;
 }
 
-.nav-dropdown:hover .nav-dropdown-menu {
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -1072,7 +1074,8 @@ button, input, select, textarea {
     display: block;
   }
 
-  .nav-dropdown-menu {
+  .nav-dropdown-menu,
+  .dropdown-menu {
     position: static;
     opacity: 1;
     visibility: visible;
