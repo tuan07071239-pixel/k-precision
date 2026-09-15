@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products &amp; Consumables Catalog | K-Precision</title>
   <meta name="description" content="Explore K-Precision's comprehensive catalog of precision manufacturing consumable parts: grinding wheels, solid carbide cutting tools, tool holding systems, and EDM wires.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=4.1">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=4.1">
-  <link rel="shortcut icon" href="favicon.ico?v=4.1">
-  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=4.0">
-  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
-  <link rel="stylesheet" href="assets/css/components.css?v=4.0">
-  <link rel="stylesheet" href="assets/css/inline-admin.css?v=4.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=4.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=4.2">
+  <link rel="shortcut icon" href="favicon.ico?v=4.2">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=4.2">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.2">
+  <link rel="stylesheet" href="assets/css/components.css?v=4.2">
+  <link rel="stylesheet" href="assets/css/inline-admin.css?v=4.2">
   </head>
 <body>
 
@@ -41,7 +41,7 @@
   <header class="site-header">
     <div class="container navbar">
       <a href="index.html" class="nav-brand" aria-label="K-Precision Home">
-        <img src="assets/images/logo-white.svg?v=4.1" alt="K-Precision Logo" class="brand-logo">
+        <img src="assets/images/logo-white.svg?v=4.2" alt="K-Precision Logo" class="brand-logo">
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
@@ -101,9 +101,9 @@
   <section class="page-hero">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="index.html">Home</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
         <span class="separator">/</span>
-        <span class="current">Products &amp; Consumables Catalog</span>
+        <span class="current" data-i18n="nav.products">Products &amp; Consumables Catalog</span>
       </div>
       <h1 class="page-hero-title" data-cms-key="products_hero_title" data-i18n="products.hero.title" data-i18n="products.hero.title">Precision Consumable Parts Catalog</h1>
       <p class="page-hero-desc" data-cms-key="products_hero_desc" data-i18n="products.hero.desc" data-i18n="products.hero.desc">
@@ -121,7 +121,7 @@
         <div class="toolbar-top">
           <div class="search-box">
             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="text" id="productSearch" placeholder="Search by SKU, product name, grit, taper, or material...">
+            <input type="text" id="productSearch" placeholder="Search by SKU, product name, grit, taper, or material..." data-i18n-placeholder="products.search.placeholder">
           </div>
           <div class="catalog-count">Loading catalog...</div>
         </div>
@@ -607,13 +607,13 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+    <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="assets/images/logo-white.svg?v=4.1" alt="K-Precision Logo" class="footer-logo">
-          <p class="footer-desc">
+          <img src="assets/images/logo-white.svg?v=4.2" alt="K-Precision Logo" class="footer-logo">
+          <p class="footer-desc" data-i18n="footer.desc">
             <strong>K-Precision</strong> supplies high-performance precision manufacturing consumables: diamond &amp; CBN grinding wheels, solid carbide cutting tools, tool holding systems, and EDM wires.
           </p>
           <ul class="footer-contact-info">
@@ -622,45 +622,46 @@
               <span data-i18n="topbar.rep">Representative: <strong>Kyunghee Baik</strong></span>
             </li>
             <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+14158016639" style="color: var(--color-accent-light); font-weight: 600;">+1 415-801-6639</a>
+            </li>
+            <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <a href="mailto:consumable@k-precision.net" style="color: var(--color-accent-light);">consumable@k-precision.net</a>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span style="font-size: 0.8125rem; line-height: 1.45;">Room 303, Dong-a Apt. Sangga, 147 Songwol-gil, Jongno-gu, Seoul, South Korea (Zip: 03165)</span>
+              <span style="font-size: 0.8125rem; line-height: 1.45;" data-i18n="footer.address">Room 303, Dong-a Apt. Sangga, 147 Songwol-gil, Jongno-gu, Seoul, South Korea (Zip: 03165)</span>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Product Lines</h4>
+          <h4 class="footer-heading" data-i18n="footer.heading.products">Product Lines</h4>
           <ul class="footer-links">
-            <li><a href="grinding-wheels.html">Grinding Wheels (Diamond &amp; CBN)</a></li>
-            <li><a href="cutting-tools.html">Solid Carbide End Mills &amp; Drills</a></li>
-            <li><a href="tool-holding.html">Shrink Fit &amp; Hydraulic Chucks</a></li>
-            <li><a href="edm-wires.html">Brass &amp; Coated EDM Wires</a></li>
-            <li><a href="others.html">Others &amp; Workshop Consumables</a></li>
-            <li><a href="products.html">Full Consumables Catalog</a></li>
+            <li><a href="products.html" data-i18n="nav.products.all">All Products Catalog</a></li>
+            <li><a href="grinding-wheels.html" data-i18n="nav.products.grinding">Grinding Tools (Diamond &amp; CBN)</a></li>
+            <li><a href="cutting-tools.html" data-i18n="nav.products.cutting">Solid Carbide Cutting Tools</a></li>
+            <li><a href="tool-holding.html" data-i18n="nav.products.toolholding">High-Precision Tool Holding</a></li>
+            <li><a href="edm-wires.html" data-i18n="nav.products.edm">EDM Wires &amp; Electrodes</a></li>
+            <li><a href="others.html" data-i18n="nav.products.others">Others &amp; Workshop Consumables</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Technical &amp; Company</h4>
+          <h4 class="footer-heading" data-i18n="footer.heading.company">Technical &amp; Company</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About K-Precision</a></li>
-            <li><a href="about.html#quality">Quality Metrology Lab</a></li>
-            <li><a href="about.html#standards">ISO 9001:2015 Standards</a></li>
-            <li><a href="contact.html">Request a Quote (RFQ)</a></li>
-            <li><a href="contact.html#faq">Ordering &amp; Delivery FAQ</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="contact.html" data-i18n="footer.rfq">Request a Quote</a></li>
           </ul>
         </div>
 
         <div class="footer-newsletter">
-          <h4 class="footer-heading">Technical Bulletin</h4>
-          <p>Subscribe for cutting parameter guides, speed/feed charts, and superabrasive application updates.</p>
+          <h4 class="footer-heading" data-i18n="newsletter.title">Technical Bulletin</h4>
+          <p data-i18n="newsletter.desc">Subscribe for cutting parameter guides, speed/feed charts, and superabrasive application updates.</p>
           <form class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Enter engineering email..." required>
-            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+            <input type="email" class="newsletter-input" placeholder="Enter engineering email..." data-i18n-placeholder="newsletter.placeholder" required>
+            <button type="submit" class="btn btn-primary btn-sm" data-i18n="newsletter.btn">Subscribe</button>
           </form>
         </div>
       </div>
@@ -670,10 +671,10 @@
         <div class="footer-meta-links">
           <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
           <a href="#" data-i18n="footer.terms">Terms of Sale</a>
-                              <a href="#" data-i18n="footer.quality">Quality Policy</a>
+          <a href="#" data-i18n="footer.quality">Quality Policy</a>
           <a href="#admin" class="kp-admin-trigger" title="Admin Portal" style="opacity: 0.6; display: inline-flex; align-items: center; gap: 4px;">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Admin
+            <span data-i18n="footer.admin">Admin</span>
           </a>
         </div>
       </div>
@@ -682,12 +683,12 @@
 
       <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="assets/js/supabase-client.js?v=4.0"></script>
-  <script src="assets/js/products-data.js?v=4.0"></script>
-  <script src="assets/js/i18n.js?v=4.0"></script>
-  <script src="assets/js/main.js?v=4.0"></script>
-  <script src="assets/js/rfq-basket.js?v=4.0"></script>
-  <script src="assets/js/product-filter.js?v=4.0"></script>
-  <script src="assets/js/inline-admin.js?v=4.0"></script>
+  <script src="assets/js/supabase-client.js?v=4.2"></script>
+  <script src="assets/js/products-data.js?v=4.2"></script>
+  <script src="assets/js/i18n.js?v=4.2"></script>
+  <script src="assets/js/main.js?v=4.2"></script>
+  <script src="assets/js/rfq-basket.js?v=4.2"></script>
+  <script src="assets/js/product-filter.js?v=4.2"></script>
+  <script src="assets/js/inline-admin.js?v=4.2"></script>
 </body>
 </html>
