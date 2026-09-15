@@ -654,8 +654,8 @@ button, input, select, textarea {
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
 
 .category-card {
@@ -674,13 +674,13 @@ button, input, select, textarea {
 }
 
 .category-media {
-  height: 180px;
+  height: 150px;
   background-color: var(--bg-surface-alt);
   border-bottom: 1px solid var(--border-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 10px;
 }
 
 .category-media img,
@@ -691,7 +691,7 @@ button, input, select, textarea {
 }
 
 .category-body {
-  padding: 24px;
+  padding: 20px 14px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -700,59 +700,135 @@ button, input, select, textarea {
 .category-badge {
   font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--color-primary-sage);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .category-title {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: var(--text-dark-primary);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
 
 .category-desc {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-dark-secondary);
-  line-height: 1.55;
-  margin-bottom: 16px;
+  line-height: 1.5;
+  margin-bottom: 14px;
   flex-grow: 1;
 }
 
 .category-specs-list {
   border-top: 1px solid var(--border-light-soft);
-  padding-top: 12px;
-  margin-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 16px;
 }
 
 .category-specs-list li {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--text-dark-secondary);
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
+  gap: 6px;
+  margin-bottom: 5px;
+  line-height: 1.35;
 }
 
 .category-specs-list li::before {
   content: "■";
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--color-accent);
 }
 
 .category-link {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   color: var(--color-primary);
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-top: auto;
 }
 
 .category-link:hover {
   color: var(--color-primary-light);
+}
+
+/* 5 Columns Layout for Popular Production Consumables */
+.products-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.products-grid-5 .product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-grid-5 .product-thumb {
+  height: 150px;
+  padding: 8px;
+}
+
+.products-grid-5 .product-info {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.products-grid-5 .product-sku {
+  font-size: 0.6875rem;
+  margin-bottom: 4px;
+}
+
+.products-grid-5 .product-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  min-height: 2.7em;
+}
+
+.products-grid-5 .product-desc {
+  font-size: 0.78125rem;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.products-grid-5 .product-specs-list {
+  padding: 8px 10px;
+  margin-bottom: 14px;
+  font-size: 0.75rem;
+}
+
+.products-grid-5 .product-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.products-grid-5 .btn-add-rfq {
+  padding: 8px 10px;
+  font-size: 0.78125rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.products-grid-5 .btn-view-details {
+  padding: 7px 10px;
+  font-size: 0.75rem;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: block;
 }
 
 /* ==========================================================================
@@ -1029,8 +1105,9 @@ button, input, select, textarea {
    ========================================================================== */
 
 @media (max-width: 1120px) {
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .category-grid,
+  .products-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
   }
   .industry-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1117,6 +1194,11 @@ button, input, select, textarea {
     display: none;
   }
 
+  .category-grid,
+  .products-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .industry-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1126,7 +1208,8 @@ button, input, select, textarea {
   .topbar {
     display: none;
   }
-  .category-grid {
+  .category-grid,
+  .products-grid-5 {
     grid-template-columns: 1fr;
   }
   .industry-grid {
