@@ -46,16 +46,13 @@
           <a href="products.html" class="nav-link active">Products &amp; Consumables &#9662;</a>
           <div class="nav-dropdown-menu">
             <a href="products.html" class="dropdown-item">All Products Catalog</a>
-            <a href="grinding-wheels.html" class="dropdown-item">Grinding Wheels (Diamond &amp; CBN)</a>
+            <a href="grinding-wheels.html" class="dropdown-item active">Grinding Tools (Diamond &amp; CBN)</a>
             <a href="cutting-tools.html" class="dropdown-item">Solid Carbide Cutting Tools</a>
             <a href="tool-holding.html" class="dropdown-item">High-Precision Tool Holding</a>
-            <a href="edm-wires.html" class="dropdown-item">EDM Wires &amp; Consumables</a>
+            <a href="edm-wires.html" class="dropdown-item">EDM Wires &amp; Electrodes</a>
+            <a href="others.html" class="dropdown-item">Others &amp; Workshop Consumables</a>
           </div>
         </div>
-        <a href="grinding-wheels.html" class="nav-link active">Grinding</a>
-        <a href="cutting-tools.html" class="nav-link">Cutting Tools</a>
-        <a href="tool-holding.html" class="nav-link">Tool Holding</a>
-        <a href="edm-wires.html" class="nav-link">EDM Wires</a>
         <a href="about.html" class="nav-link">About Us</a>
         <a href="contact.html" class="nav-link">Contact &amp; RFQ</a>
       </nav>
@@ -166,12 +163,169 @@
         </div>
       </div>
 
+      <!-- INDIVIDUAL PRODUCT CARDS -->
+      <div id="product-cards" style="scroll-margin-top: 100px; margin-bottom: 60px;">
+        <div class="section-header" style="text-align: left; margin-bottom: 28px;">
+          <span class="section-tag tag-cyan">Individual Tool Specifications</span>
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--color-primary-dark);">Superabrasive Grinding Wheels &amp; Dressers</h2>
+          <p style="color: var(--text-dark-secondary); font-size: 0.9375rem;">Explore comprehensive technical specifications, workpiece compatibility, and operating speed parameters for each precision wheel.</p>
+        </div>
+
+        <div class="category-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+
+          <!-- 1. 1A1 Vitrified -->
+          <div class="category-card" style="background: #FFFFFF;">
+            <div class="category-img" style="background: #FAF8F2; padding: 24px; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/diagrams/grinding-wheel.svg" alt="1A1 Diamond Vitrified Wheel" style="max-height: 160px; object-fit: contain;">
+            </div>
+            <div class="category-body">
+              <span class="category-badge">Vitrified Superabrasive</span>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">KP-GW-D150-V120</div>
+              <h3 class="category-title" style="font-size: 1.15rem; color: var(--color-primary-dark); margin-bottom: 8px;">1A1 Diamond Vitrified Peripheral Wheel Ø150mm</h3>
+              <p class="category-desc" style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 16px;">
+                Sub-micron precision peripheral wheel for high-volume solid carbide fluting, technical ceramics, and cermets.
+              </p>
+              <ul class="category-specs-list" style="border-color: #E2E8F0; margin-bottom: 20px;">
+                <li style="color: var(--text-secondary);">Profile: 1A1 Straight Peripheral (Ø150x10x31.75)</li>
+                <li style="color: var(--text-secondary);">Abrasive: Synthetic Monocrystalline Diamond D120 C100</li>
+                <li style="color: var(--text-secondary);">Balance: TIR &lt; 0.002 mm (45 m/s max)</li>
+              </ul>
+              <div style="display: flex; gap: 8px; margin-top: auto;">
+                <a href="product-detail.html?sku=KP-GW-D150-V120" class="btn btn-outline-light btn-sm" style="flex: 1; text-align: center; color: var(--color-primary); border-color: var(--color-primary);">View Details &amp; Specs &rarr;</a>
+                <button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-D150-V120" data-name="1A1 Diamond Vitrified Wheel Ø150mm" data-specs="D120, C100, Ø150x10x31.75" data-category="Grinding Tools">+ Add to RFQ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. 1V1 Resinoid -->
+          <div class="category-card" style="background: #FFFFFF;">
+            <div class="category-img" style="background: #FAF8F2; padding: 24px; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/diagrams/grinding-wheel.svg" alt="1V1 Diamond Resinoid Wheel" style="max-height: 160px; object-fit: contain;">
+            </div>
+            <div class="category-body">
+              <span class="category-badge">Resinoid Profiling</span>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">KP-GW-1V1-D100-B</div>
+              <h3 class="category-title" style="font-size: 1.15rem; color: var(--color-primary-dark); margin-bottom: 8px;">1V1 Diamond Resinoid Angular Profiling Wheel Ø100mm</h3>
+              <p class="category-desc" style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 16px;">
+                Elastic damping resin bond for chatter-free edge profiling, carbide insert chamfering, and sharp corner relief.
+              </p>
+              <ul class="category-specs-list" style="border-color: #E2E8F0; margin-bottom: 20px;">
+                <li style="color: var(--text-secondary);">Profile: 1V1 45° Taper Angle (Ø100x10x20)</li>
+                <li style="color: var(--text-secondary);">Abrasive: Diamond D150 C75 (Phenolic Resin)</li>
+                <li style="color: var(--text-secondary);">Surface: Ra &lt; 0.08 µm mirror edge</li>
+              </ul>
+              <div style="display: flex; gap: 8px; margin-top: auto;">
+                <a href="product-detail.html?sku=KP-GW-1V1-D100-B" class="btn btn-outline-light btn-sm" style="flex: 1; text-align: center; color: var(--color-primary); border-color: var(--color-primary);">View Details &amp; Specs &rarr;</a>
+                <button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-1V1-D100-B" data-name="1V1 Diamond Resinoid Wheel Ø100mm" data-specs="D150, 45° Angle, Ø100x10x20" data-category="Grinding Tools">+ Add to RFQ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 11V9 CBN Cup -->
+          <div class="category-card" style="background: #FFFFFF;">
+            <div class="category-img" style="background: #FAF8F2; padding: 24px; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/diagrams/grinding-wheel.svg" alt="11V9 CBN Resin Cup Wheel" style="max-height: 160px; object-fit: contain;">
+            </div>
+            <div class="category-body">
+              <span class="category-badge">CBN Tool Steel Fluting</span>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">KP-GW-CBN-11V9-100</div>
+              <h3 class="category-title" style="font-size: 1.15rem; color: var(--color-primary-dark); margin-bottom: 8px;">11V9 CBN Resin Fluting &amp; Gashing Cup Wheel Ø100mm</h3>
+              <p class="category-desc" style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 16px;">
+                Engineered for end-gashing and primary flute relief on HSS, Cobalt M42, and hardened tool steels up to 68 HRC.
+              </p>
+              <ul class="category-specs-list" style="border-color: #E2E8F0; margin-bottom: 20px;">
+                <li style="color: var(--text-secondary);">Profile: 11V9 70° Taper Cup (Ø100x35x20)</li>
+                <li style="color: var(--text-secondary);">Abrasive: Amber CBN B126 C100 (Polyimide)</li>
+                <li style="color: var(--text-secondary);">Thermal: Stable to 650°C without crystal oxidation</li>
+              </ul>
+              <div style="display: flex; gap: 8px; margin-top: auto;">
+                <a href="product-detail.html?sku=KP-GW-CBN-11V9-100" class="btn btn-outline-light btn-sm" style="flex: 1; text-align: center; color: var(--color-primary); border-color: var(--color-primary);">View Details &amp; Specs &rarr;</a>
+                <button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-CBN-11V9-100" data-name="11V9 CBN Resin Cup Wheel Ø100mm" data-specs="B126, 70° Cup, Ø100x35x20" data-category="Grinding Tools">+ Add to RFQ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. 12V9 Diamond Dish -->
+          <div class="category-card" style="background: #FFFFFF;">
+            <div class="category-img" style="background: #FAF8F2; padding: 24px; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/diagrams/grinding-wheel.svg" alt="12V9 Diamond Vitrified Dish Wheel" style="max-height: 160px; object-fit: contain;">
+            </div>
+            <div class="category-body">
+              <span class="category-badge">PCD / Carbide Clearance</span>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">KP-GW-12V9-D125-V</div>
+              <h3 class="category-title" style="font-size: 1.15rem; color: var(--color-primary-dark); margin-bottom: 8px;">12V9 Diamond Vitrified Dish Wheel Ø125mm</h3>
+              <p class="category-desc" style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 16px;">
+                Special dish angle designed for secondary relief clearance angles on complex milling cutter profiles and PCD tipped tools.
+              </p>
+              <ul class="category-specs-list" style="border-color: #E2E8F0; margin-bottom: 20px;">
+                <li style="color: var(--text-secondary);">Profile: 12V9 45° Dish Angle (Ø125x25x32)</li>
+                <li style="color: var(--text-secondary);">Abrasive: Diamond D64 Fine C125</li>
+                <li style="color: var(--text-secondary);">Feature: Zero thermal degradation on brazed joints</li>
+              </ul>
+              <div style="display: flex; gap: 8px; margin-top: auto;">
+                <a href="product-detail.html?sku=KP-GW-12V9-D125-V" class="btn btn-outline-light btn-sm" style="flex: 1; text-align: center; color: var(--color-primary); border-color: var(--color-primary);">View Details &amp; Specs &rarr;</a>
+                <button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-12V9-D125-V" data-name="12V9 Diamond Vitrified Dish Ø125mm" data-specs="D64 Fine, C125, Ø125x25x32" data-category="Grinding Tools">+ Add to RFQ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. 14A1 CBN Cylindrical -->
+          <div class="category-card" style="background: #FFFFFF;">
+            <div class="category-img" style="background: #FAF8F2; padding: 24px; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/diagrams/grinding-wheel.svg" alt="14A1 CBN Vitrified Stepped Wheel" style="max-height: 160px; object-fit: contain;">
+            </div>
+            <div class="category-body">
+              <span class="category-badge">Cylindrical Production</span>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">KP-GW-14A1-CBN200</div>
+              <h3 class="category-title" style="font-size: 1.15rem; color: var(--color-primary-dark); margin-bottom: 8px;">14A1 CBN Vitrified Stepped Wheel Ø200mm</h3>
+              <p class="category-desc" style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 16px;">
+                High-rigidity stepped wheel for OD cylindrical shaft grinding, automotive transmission gears, and bearing raceways.
+              </p>
+              <ul class="category-specs-list" style="border-color: #E2E8F0; margin-bottom: 20px;">
+                <li style="color: var(--text-secondary);">Profile: 14A1 Stepped Flange (Ø200x15x50.8)</li>
+                <li style="color: var(--text-secondary);">Abrasive: CBN B91 C100 (Vitrified Matrix)</li>
+                <li style="color: var(--text-secondary);">Operating Speed: Up to 60 m/s</li>
+              </ul>
+              <div style="display: flex; gap: 8px; margin-top: auto;">
+                <a href="product-detail.html?sku=KP-GW-14A1-CBN200" class="btn btn-outline-light btn-sm" style="flex: 1; text-align: center; color: var(--color-primary); border-color: var(--color-primary);">View Details &amp; Specs &rarr;</a>
+                <button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-14A1-CBN200" data-name="14A1 CBN Vitrified Wheel Ø200mm" data-specs="B91, C100, Ø200x15x50.8" data-category="Grinding Tools">+ Add to RFQ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. CNC Rotary Roll -->
+          <div class="category-card" style="background: #FFFFFF;">
+            <div class="category-img" style="background: #FAF8F2; padding: 24px; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/diagrams/grinding-wheel.svg" alt="CNC Rotary Diamond Dressing Roll" style="max-height: 160px; object-fit: contain;">
+            </div>
+            <div class="category-body">
+              <span class="category-badge">CMM Qualified Dresser</span>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">KP-DR-ROTARY-D125</div>
+              <h3 class="category-title" style="font-size: 1.15rem; color: var(--color-primary-dark); margin-bottom: 8px;">CNC Rotary Diamond Dressing Roll Ø125mm</h3>
+              <p class="category-desc" style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 16px;">
+                Natural hand-set &amp; CVD diamond dressing roll holding sub-micron profile form accuracy for automated wheel reconditioning.
+              </p>
+              <ul class="category-specs-list" style="border-color: #E2E8F0; margin-bottom: 20px;">
+                <li style="color: var(--text-secondary);">Dimensions: Ø125 x 20 x 52 mm (Runout &lt; 0.0015mm)</li>
+                <li style="color: var(--text-secondary);">Diamond: Natural Diamond + CVD Reinforcement</li>
+                <li style="color: var(--text-secondary);">Profile: Form profile tolerance &plusmn;0.002 mm</li>
+              </ul>
+              <div style="display: flex; gap: 8px; margin-top: auto;">
+                <a href="product-detail.html?sku=KP-DR-ROTARY-D125" class="btn btn-outline-light btn-sm" style="flex: 1; text-align: center; color: var(--color-primary); border-color: var(--color-primary);">View Details &amp; Specs &rarr;</a>
+                <button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-DR-ROTARY-D125" data-name="CNC Rotary Diamond Dressing Roll" data-specs="CVD Natural Diamond, &plusmn;0.0015mm" data-category="Grinding Tools">+ Add to RFQ</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       <!-- STANDARD WHEEL SPECIFICATION TABLE -->
       <div id="spec-table" style="scroll-margin-top: 100px;">
         <div class="section-header" style="text-align: left; margin-bottom: 24px;">
           <span class="section-tag tag-cyan">Standard Product Selection</span>
           <h2 style="font-size: 1.8rem; font-weight: 800;">High-Precision Wheel Configurations</h2>
-          <p style="color: var(--text-dark-secondary); font-size: 0.9375rem;">Click "+ Add to RFQ" to compile your quotation request with quantities and custom bore requirements.</p>
+          <p style="color: var(--text-dark-secondary); font-size: 0.9375rem;">Click any SKU or "+ Add to RFQ" to review technical drawings and compile your quotation.</p>
         </div>
 
         <div class="table-responsive">
@@ -189,58 +343,58 @@
             </thead>
             <tbody>
               <tr>
-                <td class="mono" style="font-weight: 700; color: var(--color-primary);">KP-GW-1A1-D150-V</td>
+                <td class="mono" style="font-weight: 700;"><a href="product-detail.html?sku=KP-GW-D150-V120" style="color: var(--color-primary); text-decoration: underline;">KP-GW-D150-V120</a></td>
                 <td><strong>1A1</strong> Peripheral Flat</td>
                 <td>Diamond / Vitrified</td>
                 <td>D120 / C100</td>
                 <td class="mono">Ø150 x 10 x 31.75</td>
                 <td>Carbide End Mill Fluting</td>
-                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-1A1-D150-V" data-name="1A1 Diamond Vitrified Wheel Ø150" data-specs="D120, C100, Ø150x10x31.75" data-category="Grinding Wheels">+ Add to RFQ</button></td>
+                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-D150-V120" data-name="1A1 Diamond Vitrified Wheel Ø150" data-specs="D120, C100, Ø150x10x31.75" data-category="Grinding Tools">+ Add to RFQ</button></td>
               </tr>
               <tr>
-                <td class="mono" style="font-weight: 700; color: var(--color-primary);">KP-GW-1V1-D100-B</td>
+                <td class="mono" style="font-weight: 700;"><a href="product-detail.html?sku=KP-GW-1V1-D100-B" style="color: var(--color-primary); text-decoration: underline;">KP-GW-1V1-D100-B</a></td>
                 <td><strong>1V1</strong> Taper Angle (45°)</td>
                 <td>Diamond / Resinoid</td>
                 <td>D150 / C75</td>
                 <td class="mono">Ø100 x 10 x 20</td>
                 <td>Carbide Insert Profiling</td>
-                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-1V1-D100-B" data-name="1V1 Diamond Resinoid Wheel Ø100" data-specs="D150, 45° Angle, Ø100x10x20" data-category="Grinding Wheels">+ Add to RFQ</button></td>
+                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-1V1-D100-B" data-name="1V1 Diamond Resinoid Wheel Ø100" data-specs="D150, 45° Angle, Ø100x10x20" data-category="Grinding Tools">+ Add to RFQ</button></td>
               </tr>
               <tr>
-                <td class="mono" style="font-weight: 700; color: var(--color-primary);">KP-GW-11V9-CBN100</td>
+                <td class="mono" style="font-weight: 700;"><a href="product-detail.html?sku=KP-GW-CBN-11V9-100" style="color: var(--color-primary); text-decoration: underline;">KP-GW-CBN-11V9-100</a></td>
                 <td><strong>11V9</strong> Taper Cup (70°)</td>
                 <td>CBN / Polyimide Resin</td>
                 <td>B126 / C100</td>
                 <td class="mono">Ø100 x 35 x 20</td>
                 <td>HSS &amp; Tool Steel Fluting</td>
-                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-11V9-CBN100" data-name="11V9 CBN Resin Cup Wheel Ø100" data-specs="B126, 70° Cup, Ø100x35x20" data-category="Grinding Wheels">+ Add to RFQ</button></td>
+                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-CBN-11V9-100" data-name="11V9 CBN Resin Cup Wheel Ø100" data-specs="B126, 70° Cup, Ø100x35x20" data-category="Grinding Tools">+ Add to RFQ</button></td>
               </tr>
               <tr>
-                <td class="mono" style="font-weight: 700; color: var(--color-primary);">KP-GW-12V9-D125-V</td>
+                <td class="mono" style="font-weight: 700;"><a href="product-detail.html?sku=KP-GW-12V9-D125-V" style="color: var(--color-primary); text-decoration: underline;">KP-GW-12V9-D125-V</a></td>
                 <td><strong>12V9</strong> Dish Cup (45°)</td>
                 <td>Diamond / Vitrified</td>
                 <td>D64 / C125 (Fine)</td>
                 <td class="mono">Ø125 x 25 x 32</td>
                 <td>PCD Tool Clearance Angles</td>
-                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-12V9-D125-V" data-name="12V9 Diamond Vitrified Dish Ø125" data-specs="D64 Fine, C125, Ø125x25x32" data-category="Grinding Wheels">+ Add to RFQ</button></td>
+                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-12V9-D125-V" data-name="12V9 Diamond Vitrified Dish Ø125" data-specs="D64 Fine, C125, Ø125x25x32" data-category="Grinding Tools">+ Add to RFQ</button></td>
               </tr>
               <tr>
-                <td class="mono" style="font-weight: 700; color: var(--color-primary);">KP-GW-14A1-CBN200</td>
+                <td class="mono" style="font-weight: 700;"><a href="product-detail.html?sku=KP-GW-14A1-CBN200" style="color: var(--color-primary); text-decoration: underline;">KP-GW-14A1-CBN200</a></td>
                 <td><strong>14A1</strong> Stepped Flange</td>
                 <td>CBN / Vitrified</td>
                 <td>B91 / C100</td>
                 <td class="mono">Ø200 x 15 x 50.8</td>
                 <td>Cylindrical Shaft Grinding</td>
-                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-14A1-CBN200" data-name="14A1 CBN Vitrified Wheel Ø200" data-specs="B91, C100, Ø200x15x50.8" data-category="Grinding Wheels">+ Add to RFQ</button></td>
+                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-GW-14A1-CBN200" data-name="14A1 CBN Vitrified Wheel Ø200" data-specs="B91, C100, Ø200x15x50.8" data-category="Grinding Tools">+ Add to RFQ</button></td>
               </tr>
               <tr>
-                <td class="mono" style="font-weight: 700; color: var(--color-primary);">KP-DR-ROTARY-D125</td>
+                <td class="mono" style="font-weight: 700;"><a href="product-detail.html?sku=KP-DR-ROTARY-D125" style="color: var(--color-primary); text-decoration: underline;">KP-DR-ROTARY-D125</a></td>
                 <td>CNC Rotary Roll</td>
                 <td>CVD Diamond Dresser</td>
                 <td>Natural Diamond Electro</td>
                 <td class="mono">Ø125 x 20 x 52</td>
                 <td>CNC Wheel Dressing &amp; Profiling</td>
-                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-DR-ROTARY-D125" data-name="CNC Rotary Diamond Dressing Roll" data-specs="CVD Natural Diamond, &plusmn;0.0015mm" data-category="Grinding Wheels">+ Add to RFQ</button></td>
+                <td><button class="btn btn-primary btn-sm btn-add-rfq" data-sku="KP-DR-ROTARY-D125" data-name="CNC Rotary Diamond Dressing Roll" data-specs="CVD Natural Diamond, &plusmn;0.0015mm" data-category="Grinding Tools">+ Add to RFQ</button></td>
               </tr>
             </tbody>
           </table>
@@ -321,10 +475,11 @@
         <div>
           <h4 class="footer-heading">Product Lines</h4>
           <ul class="footer-links">
-            <li><a href="grinding-wheels.html">Grinding Wheels (Diamond &amp; CBN)</a></li>
+            <li><a href="grinding-wheels.html">Grinding Tools (Diamond &amp; CBN)</a></li>
             <li><a href="cutting-tools.html">Solid Carbide End Mills &amp; Drills</a></li>
             <li><a href="tool-holding.html">Shrink Fit &amp; Hydraulic Chucks</a></li>
             <li><a href="edm-wires.html">Brass &amp; Coated EDM Wires</a></li>
+            <li><a href="others.html">Others &amp; Workshop Consumables</a></li>
             <li><a href="products.html">Full Consumables Catalog</a></li>
           </ul>
         </div>
@@ -362,7 +517,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/products-data.js"></script>
   <script src="assets/js/rfq-basket.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
