@@ -7,6 +7,7 @@
 (function() {
   let currentUser = null;
   let adminBar = null;
+  let wasLoggedIn = false; // Track explicit login; suppress logout toast for normal visitors
 
   // Initialize Admin on DOM load
   document.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +23,7 @@
       const { data } = await window.KP_SUPABASE.client.auth.getSession();
       if (data && data.session && data.session.user) {
         currentUser = data.session.user;
+        wasLoggedIn = true;
         enableAdminMode();
       }
 
@@ -29,6 +31,7 @@
       window.KP_SUPABASE.client.auth.onAuthStateChange((event, session) => {
         if (session && session.user) {
           currentUser = session.user;
+          wasLoggedIn = true;
           enableAdminMode();
         } else {
           currentUser = null;
@@ -42,7 +45,7 @@
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
         e.preventDefault();
         if (currentUser) {
-          showToast('Bạn đang ở chế độ Quản trị viên');
+          showToast('You are in Administrator mode');
         } else {
           showLoginModal();
         }
@@ -62,7 +65,7 @@
       el.addEventListener('click', (e) => {
         e.preventDefault();
         if (currentUser) {
-          showToast('Bạn đang ở chế độ Quản trị viên');
+          showToast('You are in Administrator mode');
         } else {
           showLoginModal();
         }
@@ -78,7 +81,7 @@
     attachProductCardActions();
     attachDetailPageActions();
     enableInlineTextEditing();
-    showToast(`Đã đăng nhập: ${currentUser.email}`);
+    showToast(`Logged in as: ${currentUser.email}`);
   }
 
   function attachDetailPageActions() {
@@ -95,7 +98,7 @@
     editBtn.style.cssText = 'display: inline-flex; margin-bottom: 12px;';
     editBtn.innerHTML = `
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      Sửa thông tin & Đổi ảnh sản phẩm này
+      Edit Details & Image for this Product
     `;
     editBtn.addEventListener('click', () => {
       const product = (window.KP_PRODUCTS && window.KP_PRODUCTS[sku]) || null;
@@ -115,7 +118,11 @@
       el.removeAttribute('contenteditable');
       el.classList.remove('kp-editable-active');
     });
-    showToast('Đã đăng xuất khỏi chế độ Quản trị.');
+    // Only notify on explicit logout (not on initial page load for visitors)
+    if (wasLoggedIn) {
+      showToast('Signed out of Admin Mode.');
+      wasLoggedIn = false;
+    }
   }
 
   /* ==========================================================================
@@ -129,14 +136,14 @@
     adminBar.innerHTML = `
       <div class="kp-admin-status">
         <span class="kp-admin-dot"></span>
-        <span>Chế độ Quản trị: BẬT</span>
+        <span>Admin Mode: ACTIVE</span>
       </div>
       <button class="kp-admin-btn kp-admin-btn-primary" id="kp-btn-add-product">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Thêm sản phẩm mới
+        Add New Product
       </button>
       <button class="kp-admin-btn kp-admin-btn-danger" id="kp-btn-logout">
-        Đăng xuất
+        Sign Out
       </button>
     `;
 
@@ -171,14 +178,10 @@
       const actions = document.createElement('div');
       actions.className = 'kp-card-admin-actions';
       actions.innerHTML = `
-        <button class="kp-card-btn kp-card-edit-btn" title="Chỉnh sửa sản phẩm">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          Sửa
-        </button>
-        <button class="kp-card-btn kp-card-delete-btn" title="Xoá sản phẩm">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-          Xoá
-        </button>
+        <button class="kp-card-btn kp-card-edit-btn" title="Edit Product">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Edit</button>
+        <button class="kp-card-btn kp-card-delete-btn" title="Delete Product">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Delete</button>
       `;
 
       card.appendChild(actions);
@@ -202,7 +205,7 @@
         const titleEl = card.querySelector('.product-title');
         const name = titleEl ? titleEl.textContent : sku;
 
-        if (confirm(`Bạn có chắc chắn muốn xoá sản phẩm "${name}" (${sku}) không? Thao tác này không thể hoàn tác.`)) {
+        if (confirm(`Are you sure you want to delete product "${name}" (${sku}) ? This action cannot be undone.`)) {
           try {
             await window.KP_SUPABASE.deleteProduct(sku);
             if (window.KP_PRODUCTS && window.KP_PRODUCTS[sku]) {
@@ -212,9 +215,9 @@
             card.style.opacity = '0';
             card.style.transform = 'scale(0.9)';
             setTimeout(() => card.remove(), 300);
-            showToast(`Đã xoá sản phẩm: ${name}`);
+            showToast(`Deleted product: ${name}`);
           } catch (err) {
-            alert('Lỗi khi xoá sản phẩm: ' + err.message);
+            alert('Error deleting product: ' + err.message);
           }
         }
       });
@@ -256,24 +259,24 @@
         <div class="kp-modal-header">
           <h3 class="kp-modal-title">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            ${isEdit ? 'Chỉnh sửa sản phẩm' : 'Thêm sản phẩm mới'}
+            ${isEdit ? 'Edit Product' : 'Add New Product'}
           </h3>
-          <button class="kp-modal-close" aria-label="Đóng">&times;</button>
+          <button class="kp-modal-close" aria-label="Close">&times;</button>
         </div>
         <div class="kp-modal-body">
           <!-- IMAGE UPLOAD -->
           <div class="kp-form-group">
-            <label class="kp-label">Ảnh sản phẩm</label>
+            <label class="kp-label">Product Image</label>
             <div class="kp-image-upload-box">
-              <img src="${initialImage}" alt="Xem trước" class="kp-image-preview" id="kp-img-preview">
+              <img src="${initialImage}" alt="Preview" class="kp-image-preview" id="kp-img-preview">
               <div class="kp-upload-actions">
                 <input type="file" id="kp-file-input" accept="image/*" style="display: none;">
                 <button type="button" class="kp-admin-btn kp-admin-btn-primary" id="kp-btn-pick-file" style="align-self: flex-start;">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                  Tải ảnh mới từ máy tính
+                  Upload Image from Computer
                 </button>
-                <input type="text" class="kp-input" id="kp-input-image" value="${initialImage}" placeholder="Hoặc dán đường dẫn ảnh URL...">
-                <span class="kp-upload-hint" id="kp-upload-status">Hỗ trợ JPG, PNG, WebP, SVG. Ảnh sẽ tự lưu trên Supabase Storage.</span>
+                <input type="text" class="kp-input" id="kp-input-image" value="${initialImage}" placeholder="Or paste direct image URL...">
+                <span class="kp-upload-hint" id="kp-upload-status">Supports JPG, PNG, WebP, SVG. Stored in Supabase Storage.</span>
               </div>
             </div>
           </div>
@@ -281,11 +284,11 @@
           <!-- SKU & NAME -->
           <div class="kp-form-row">
             <div class="kp-form-group">
-              <label class="kp-label">Mã sản phẩm (SKU) *</label>
-              <input type="text" class="kp-input" id="kp-input-sku" value="${initialSku}" placeholder="Ví dụ: KP-EDM-BR25-P5" required>
+              <label class="kp-label">Product SKU *</label>
+              <input type="text" class="kp-input" id="kp-input-sku" value="${initialSku}" placeholder="e.g. KP-EDM-BR25-P5" required>
             </div>
             <div class="kp-form-group">
-              <label class="kp-label">Danh mục sản phẩm</label>
+              <label class="kp-label">Product Category</label>
               <select class="kp-select" id="kp-input-category">
                 <option value="EDM Wires" ${initialCat === 'EDM Wires' ? 'selected' : ''}>EDM Wires</option>
                 <option value="Grinding Tools" ${initialCat === 'Grinding Tools' ? 'selected' : ''}>Grinding Tools</option>
@@ -297,25 +300,25 @@
           </div>
 
           <div class="kp-form-group">
-            <label class="kp-label">Tên sản phẩm *</label>
-            <input type="text" class="kp-input" id="kp-input-name" value="${initialName}" placeholder="Tên sản phẩm đầy đủ..." required>
+            <label class="kp-label">Product Name *</label>
+            <input type="text" class="kp-input" id="kp-input-name" value="${initialName}" placeholder="Full product title..." required>
           </div>
 
           <div class="kp-form-group">
-            <label class="kp-label">Huy hiệu nổi bật (Badge)</label>
-            <input type="text" class="kp-input" id="kp-input-badge" value="${initialBadge}" placeholder="Ví dụ: CuZn35 980 N/mm² hoặc Best Seller">
+            <label class="kp-label">Highlight Badge</label>
+            <input type="text" class="kp-input" id="kp-input-badge" value="${initialBadge}" placeholder="e.g. CuZn35 980 N/mm² or Best Seller">
           </div>
 
           <div class="kp-form-group">
-            <label class="kp-label">Mô tả tóm tắt</label>
-            <textarea class="kp-textarea" id="kp-input-desc" placeholder="Mô tả kỹ thuật ngắn gọn về công dụng sản phẩm...">${initialDesc}</textarea>
+            <label class="kp-label">Short Description</label>
+            <textarea class="kp-textarea" id="kp-input-desc" placeholder="Brief technical summary of product applications and features...">${initialDesc}</textarea>
           </div>
 
           <!-- SPECS BUILDER -->
           <div class="kp-form-group">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-              <label class="kp-label">Thông số kỹ thuật chính (Specs)</label>
-              <button type="button" class="kp-admin-btn" id="kp-btn-add-spec" style="color: #0284c7; padding: 2px 10px; font-size: 11px;">+ Thêm dòng</button>
+              <label class="kp-label">Key Technical Specifications (Specs)</label>
+              <button type="button" class="kp-admin-btn" id="kp-btn-add-spec" style="color: #0284c7; padding: 2px 10px; font-size: 11px;">+ Add Row</button>
             </div>
             <div class="kp-specs-builder" id="kp-specs-container">
               <!-- Specs rows populated below -->
@@ -324,10 +327,10 @@
         </div>
 
         <div class="kp-modal-footer">
-          <button type="button" class="kp-admin-btn" id="kp-btn-cancel-modal">Hủy</button>
+          <button type="button" class="kp-admin-btn" id="kp-btn-cancel-modal">Cancel</button>
           <button type="button" class="kp-admin-btn kp-admin-btn-primary" id="kp-btn-save-modal">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-            Lưu thay đổi ngay
+            Save Changes Now
           </button>
         </div>
       </div>
@@ -341,9 +344,9 @@
       const row = document.createElement('div');
       row.className = 'kp-spec-row';
       row.innerHTML = `
-        <input type="text" class="kp-input kp-spec-key" placeholder="Tên thông số (e.g. Đường kính)" value="${key}">
-        <input type="text" class="kp-input kp-spec-val" placeholder="Giá trị (e.g. Ø0.25mm)" value="${val}">
-        <button type="button" class="kp-spec-remove" title="Xoá dòng">&times;</button>
+        <input type="text" class="kp-input kp-spec-key" placeholder="Spec Name (e.g. Diameter)" value="${key}">
+        <input type="text" class="kp-input kp-spec-val" placeholder="Spec Value (e.g. Ø0.25mm)" value="${val}">
+        <button type="button" class="kp-spec-remove" title="Remove row">&times;</button>
       `;
       row.querySelector('.kp-spec-remove').addEventListener('click', () => row.remove());
       specsContainer.appendChild(row);
@@ -353,8 +356,8 @@
     if (specEntries.length > 0) {
       specEntries.forEach(([k, v]) => addSpecRow(k, v));
     } else {
-      addSpecRow('Quy cách', '');
-      addSpecRow('Vật liệu', '');
+      addSpecRow('Specification', '');
+      addSpecRow('Material', '');
     }
 
     overlay.querySelector('#kp-btn-add-spec').addEventListener('click', () => addSpecRow('', ''));
@@ -372,7 +375,7 @@
       const file = fileInput.files[0];
       if (!file) return;
 
-      uploadStatus.textContent = '⏳ Đang tải ảnh lên Supabase Storage...';
+      uploadStatus.textContent = '⏳ Uploading image to Supabase Storage...';
       uploadStatus.style.color = '#0284c7';
       pickBtn.disabled = true;
 
@@ -380,10 +383,10 @@
         const publicUrl = await window.KP_SUPABASE.uploadImage(file);
         imageInput.value = publicUrl;
         imgPreview.src = publicUrl;
-        uploadStatus.textContent = '✅ Đã tải ảnh lên thành công!';
+        uploadStatus.textContent = '✅ Image uploaded successfully!';
         uploadStatus.style.color = '#10b981';
       } catch (err) {
-        uploadStatus.textContent = '❌ Lỗi tải ảnh: ' + err.message;
+        uploadStatus.textContent = '❌ Image upload error: ' + err.message;
         uploadStatus.style.color = '#ef4444';
       } finally {
         pickBtn.disabled = false;
@@ -414,11 +417,11 @@
       const image = imageInput.value.trim() || 'assets/images/diagrams/edm-wire.svg';
 
       if (!sku) {
-        alert('Vui lòng nhập Mã sản phẩm (SKU)');
+        alert('Please enter Product SKU');
         return;
       }
       if (!name) {
-        alert('Vui lòng nhập Tên sản phẩm');
+        alert('Please enter Product Name');
         return;
       }
 
@@ -442,7 +445,7 @@
 
       const saveBtn = overlay.querySelector('#kp-btn-save-modal');
       saveBtn.disabled = true;
-      saveBtn.innerHTML = '⏳ Đang lưu...';
+      saveBtn.innerHTML = '⏳ Saving...';
 
       try {
         const productPayload = {
@@ -543,11 +546,11 @@
         }
 
         closeModal();
-        showToast(`✅ Đã lưu sản phẩm "${name}" thành công!`);
+        showToast(`✅ Product "${name}" saved successfully!`);
       } catch (err) {
-        alert('Lỗi lưu sản phẩm: ' + err.message);
+        alert('Error saving product: ' + err.message);
         saveBtn.disabled = false;
-        saveBtn.innerHTML = 'Lưu thay đổi ngay';
+        saveBtn.innerHTML = 'Save Changes Now';
       }
     });
   }
@@ -576,7 +579,7 @@
         const text = el.innerHTML.trim();
         try {
           await window.KP_SUPABASE.saveSiteContent(key, text);
-          showToast(`💾 Đã lưu thay đổi: ${key}`);
+          showToast(`💾 Saved changes: ${key}`);
         } catch (err) {
           console.error('Failed to save text:', err);
         }
@@ -598,26 +601,26 @@
         <div class="kp-modal-header">
           <h3 class="kp-modal-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Đăng nhập Quản trị K-Precision
+            K-Precision Admin Login
           </h3>
           <button class="kp-modal-close">&times;</button>
         </div>
         <form id="kp-login-form">
           <div class="kp-modal-body">
             <div class="kp-form-group">
-              <label class="kp-label">Email Quản trị</label>
+              <label class="kp-label">Admin Email</label>
               <input type="email" class="kp-input" id="kp-login-email" value="tuan.nguyen@k-precision.net" required autocomplete="username">
             </div>
             <div class="kp-form-group">
-              <label class="kp-label">Mật khẩu</label>
-              <input type="password" class="kp-input" id="kp-login-pass" placeholder="Nhập mật khẩu..." required autocomplete="current-password">
+              <label class="kp-label">Password</label>
+              <input type="password" class="kp-input" id="kp-login-pass" placeholder="Enter password..." required autocomplete="current-password">
             </div>
             <div id="kp-login-error" style="color: #ef4444; font-size: 13px; display: none;"></div>
           </div>
           <div class="kp-modal-footer">
-            <button type="button" class="kp-admin-btn" id="kp-login-cancel">Hủy</button>
+            <button type="button" class="kp-admin-btn" id="kp-login-cancel">Cancel</button>
             <button type="submit" class="kp-admin-btn kp-admin-btn-primary" id="kp-login-submit">
-              Đăng nhập &rarr;
+              Sign In &rarr;
             </button>
           </div>
         </form>
@@ -643,7 +646,7 @@
 
       errBox.style.display = 'none';
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '⏳ Đang xác thực...';
+      submitBtn.innerHTML = '⏳ Authenticating...';
 
       try {
         const { data, error } = await window.KP_SUPABASE.client.auth.signInWithPassword({
@@ -656,10 +659,10 @@
         currentUser = data.user;
         enableAdminMode();
       } catch (err) {
-        errBox.textContent = 'Đăng nhập không thành công: ' + (err.message || 'Mật khẩu không đúng.');
+        errBox.textContent = 'Sign in failed: ' + (err.message || 'Invalid password.');
         errBox.style.display = 'block';
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Đăng nhập &rarr;';
+        submitBtn.innerHTML = 'Sign In &rarr;';
       }
     });
   }

@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initNewsletterForm();
   highlightActiveNav();
+  // Initialize multilingual system
+  if (window.KP_I18N) window.KP_I18N.init();
 });
 
 /* Navigation & Mobile Menu */
