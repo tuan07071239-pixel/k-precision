@@ -1,11 +1,4 @@
-/**
- * K-PRECISION OFFICIAL PRODUCT DATABASE
- * High-precision manufacturing consumables, specifications, applications, and operating conditions.
- * Automatically compiled from data/products/*.json by scripts/build-products.js
- * Total products: 15
- */
-
-const KP_PRODUCTS = {
+{
   "KP-ACC-CLEAN-5L": {
     "sku": "KP-ACC-CLEAN-5L",
     "name": "Dielectric Tank & Ultrasonic Machine Cleaner Concentrate (5L)",
@@ -1025,14 +1018,4 @@ const KP_PRODUCTS = {
       }
     ]
   }
-};
-
-// Expose globally for browser usage
-if (typeof window !== 'undefined') {
-  window.KP_PRODUCTS = KP_PRODUCTS;
-}
-
-// CommonJS export for Node.js build tools and test suites
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { KP_PRODUCTS };
 }
