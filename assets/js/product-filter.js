@@ -1,6 +1,6 @@
 /**
  * K-PRECISION PRODUCT CATALOG FILTER & SEARCH
- * Dynamically renders product cards from KP_PRODUCTS (compiled from CMS)
+ * Dynamically renders product cards from Supabase (with fallback to KP_PRODUCTS)
  * and enables instant client-side filtering by category & full-text search.
  */
 
@@ -8,13 +8,48 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductCatalog();
 });
 
-function initProductCatalog() {
+let filterHandlerAttached = false;
+let currentActiveCategory = 'all';
+let currentSearchQuery = '';
+
+async function initProductCatalog() {
   const gridContainer = document.querySelector('.products-grid');
   if (!gridContainer) return;
 
-  // Dynamically render cards if KP_PRODUCTS is loaded
+  // 1. Immediate render from local KP_PRODUCTS
   renderCatalogGrid(gridContainer);
+  setupFilterAndSearch();
 
+  // 2. Asynchronous sync with Supabase
+  if (window.KP_SUPABASE) {
+    try {
+      const remoteProducts = await window.KP_SUPABASE.getProducts();
+      if (remoteProducts && remoteProducts.length > 0) {
+        if (!window.KP_PRODUCTS) window.KP_PRODUCTS = {};
+        remoteProducts.forEach(rp => {
+          const item = rp.data || {};
+          item.sku = rp.sku || rp.id;
+          item.name = rp.name;
+          item.category = rp.category;
+          item.categorySlug = rp.category_slug || 'others';
+          item.badge = rp.badge || '';
+          item.image = rp.image || '';
+          item.shortDesc = rp.short_desc || '';
+          item.specs = rp.specs || {};
+          window.KP_PRODUCTS[item.sku] = item;
+        });
+
+        // Re-render with live Supabase data
+        renderCatalogGrid(gridContainer);
+        setupFilterAndSearch();
+      }
+    } catch (err) {
+      console.warn('Using offline catalog cache:', err);
+    }
+  }
+}
+
+function setupFilterAndSearch() {
   const searchInput = document.querySelector('#productSearch');
   const filterChips = document.querySelectorAll('.chip-btn');
   const productCards = document.querySelectorAll('.product-card');
@@ -22,10 +57,7 @@ function initProductCatalog() {
 
   if (!productCards.length) return;
 
-  let activeCategory = 'all';
-  let searchQuery = '';
-
-  function filterProducts() {
+  function applyFilter() {
     let matchCount = 0;
 
     productCards.forEach(card => {
@@ -35,12 +67,12 @@ function initProductCatalog() {
       const desc = (card.querySelector('.product-desc')?.textContent || '').toLowerCase();
       const specs = (card.querySelector('.product-specs-list')?.textContent || '').toLowerCase();
 
-      const matchesCategory = (activeCategory === 'all' || category.toLowerCase() === activeCategory.toLowerCase());
-      const matchesSearch = !searchQuery || 
-        sku.includes(searchQuery) || 
-        title.includes(searchQuery) || 
-        desc.includes(searchQuery) || 
-        specs.includes(searchQuery);
+      const matchesCategory = (currentActiveCategory === 'all' || category.toLowerCase() === currentActiveCategory.toLowerCase());
+      const matchesSearch = !currentSearchQuery || 
+        sku.includes(currentSearchQuery) || 
+        title.includes(currentSearchQuery) || 
+        desc.includes(currentSearchQuery) || 
+        specs.includes(currentSearchQuery);
 
       if (matchesCategory && matchesSearch) {
         card.style.display = 'flex';
@@ -56,7 +88,8 @@ function initProductCatalog() {
 
     // Empty state handling
     let emptyNotice = document.querySelector('.no-products-found');
-    if (matchCount === 0) {
+    const gridContainer = document.querySelector('.products-grid');
+    if (matchCount === 0 && gridContainer) {
       if (!emptyNotice) {
         emptyNotice = document.createElement('div');
         emptyNotice.className = 'no-products-found';
@@ -70,12 +103,12 @@ function initProductCatalog() {
 
         emptyNotice.querySelector('.reset-filter-btn').addEventListener('click', () => {
           if (searchInput) searchInput.value = '';
-          searchQuery = '';
-          activeCategory = 'all';
+          currentSearchQuery = '';
+          currentActiveCategory = 'all';
           filterChips.forEach(c => c.classList.remove('active'));
           const allChip = document.querySelector('.chip-btn[data-filter="all"]');
           if (allChip) allChip.classList.add('active');
-          filterProducts();
+          applyFilter();
         });
       }
       emptyNotice.style.display = 'block';
@@ -84,37 +117,39 @@ function initProductCatalog() {
     }
   }
 
-  // Filter chips click
-  filterChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      filterChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      activeCategory = chip.getAttribute('data-filter') || 'all';
-      filterProducts();
+  // Attach chip events once
+  if (!filterHandlerAttached) {
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        currentActiveCategory = chip.getAttribute('data-filter') || 'all';
+        applyFilter();
+      });
     });
-  });
 
-  // Search input debounce
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      searchQuery = e.target.value.trim().toLowerCase();
-      filterProducts();
-    });
-  }
-
-  // Check URL query parameters (e.g. ?category=grinding)
-  const urlParams = new URLSearchParams(window.location.search);
-  const categoryParam = urlParams.get('category');
-  if (categoryParam) {
-    const targetChip = document.querySelector(`.chip-btn[data-filter="${categoryParam}"]`);
-    if (targetChip) {
-      filterChips.forEach(c => c.classList.remove('active'));
-      targetChip.classList.add('active');
-      activeCategory = categoryParam;
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentSearchQuery = e.target.value.trim().toLowerCase();
+        applyFilter();
+      });
     }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+      const targetChip = document.querySelector(`.chip-btn[data-filter="${categoryParam}"]`);
+      if (targetChip) {
+        filterChips.forEach(c => c.classList.remove('active'));
+        targetChip.classList.add('active');
+        currentActiveCategory = categoryParam;
+      }
+    }
+
+    filterHandlerAttached = true;
   }
 
-  filterProducts();
+  applyFilter();
 }
 
 /**
@@ -171,4 +206,9 @@ function renderCatalogGrid(gridContainer) {
 
     gridContainer.appendChild(card);
   });
+
+  // Attach admin controls if Admin is logged in
+  if (typeof window.KP_ATTACH_ADMIN_ACTIONS === 'function') {
+    window.KP_ATTACH_ADMIN_ACTIONS();
+  }
 }

@@ -12,8 +12,8 @@ media_folder: assets/images/products
 public_folder: assets/images/products
 
 # Thông tin hiển thị trang
-site_url: https://k-precision.com
-display_url: https://k-precision.com
+site_url: https://k-precision.net
+display_url: https://k-precision.net
 
 # Danh mục nội dung
 collections:
@@ -21,6 +21,8 @@ collections:
     label: "Sản phẩm (Products)"
     label_singular: "Sản phẩm (Product)"
     folder: data/products
+    extension: "json"
+    format: "json"
     create: true
     delete: true
     slug: "{{sku}}"

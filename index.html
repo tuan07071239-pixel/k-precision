@@ -18,6 +18,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css?v=2.3">
   <link rel="stylesheet" href="assets/css/components.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/inline-admin.css">
 </head>
 <body>
 
@@ -90,10 +91,10 @@
           <span class="pulse-dot"></span>
           <span>NEXT-DAY DISPATCH ON HIGH-VELOCITY CONSUMABLES</span>
         </div>
-        <h1 class="hero-title">
+        <h1 class="hero-title" data-cms-key="home_hero_title">
           Engineered Precision. <span>Peak Machining Performance.</span>
         </h1>
-        <p class="hero-desc">
+        <p class="hero-desc" data-cms-key="home_hero_desc">
           K-Precision supplies tier-one manufacturing facilities with premium consumable tooling: Superabrasive Grinding Wheels, Solid Carbide Cutters, Ultra-Low Runout Tool Holding, and High-Speed EDM Wires.
         </p>
 
@@ -614,14 +615,21 @@
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Sale</a>
           <a href="#">Quality Policy</a>
+          <a href="#admin" class="kp-admin-trigger" title="Admin Portal" style="opacity: 0.6; display: inline-flex; align-items: center; gap: 4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Admin
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-client.js"></script>
   <script src="assets/js/products-data.js"></script>
   <script src="assets/js/rfq-basket.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/inline-admin.js"></script>
 </body>
 </html>

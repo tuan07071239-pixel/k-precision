@@ -8,6 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/inline-admin.css">
 </head>
 <body>
 
@@ -80,8 +81,8 @@
         <span class="separator">/</span>
         <span class="current">Products &amp; Consumables Catalog</span>
       </div>
-      <h1 class="page-hero-title">Precision Consumable Parts Catalog</h1>
-      <p class="page-hero-desc">
+      <h1 class="page-hero-title" data-cms-key="products_hero_title">Precision Consumable Parts Catalog</h1>
+      <p class="page-hero-desc" data-cms-key="products_hero_desc">
         Browse our comprehensive portfolio of high-precision industrial consumable tooling. Filter by category, search by SKU, or build your custom multi-item RFQ for rapid engineering quotes.
       </p>
     </div>
@@ -646,15 +647,22 @@
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Sale</a>
           <a href="#">Quality Policy</a>
+          <a href="#admin" class="kp-admin-trigger" title="Admin Portal" style="opacity: 0.6; display: inline-flex; align-items: center; gap: 4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Admin
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-client.js"></script>
   <script src="assets/js/products-data.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/rfq-basket.js"></script>
   <script src="assets/js/product-filter.js"></script>
+  <script src="assets/js/inline-admin.js"></script>
 </body>
 </html>

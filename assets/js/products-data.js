@@ -2,7 +2,7 @@
  * K-PRECISION OFFICIAL PRODUCT DATABASE
  * High-precision manufacturing consumables, specifications, applications, and operating conditions.
  * Automatically compiled from data/products/*.json by scripts/build-products.js
- * Total products: 30
+ * Total products: 31
  */
 
 const KP_PRODUCTS = {
@@ -2205,6 +2205,24 @@ const KP_PRODUCTS = {
         "val": "80 - 90 Nm"
       }
     ]
+  },
+  "test": {
+    "sku": "test",
+    "name": "test",
+    "category": "EDM Wires",
+    "categorySlug": "edm",
+    "categoryUrl": "edm-wires.html",
+    "badge": "",
+    "image": "assets/images/diagrams/edm-wire.svg",
+    "shortDesc": "test",
+    "purpose": "",
+    "workpieceMaterials": [],
+    "keyFeatures": [],
+    "specs": {},
+    "specList": [],
+    "operatingConditions": {},
+    "paramList": [],
+    "certifications": "ISO 9001:2015, Metrology CMM Inspection Sheet enclosed."
   }
 };
 
