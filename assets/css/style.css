@@ -989,12 +989,39 @@ button, input, select, textarea {
   box-shadow: 0 4px 14px rgba(30, 58, 47, 0.1);
 }
 
+.faq-q-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.faq-q-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #E6EFEA;
+  color: var(--color-primary);
+  border: 1px solid #BACEC2;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
 .faq-question {
   color: var(--color-primary);
   font-size: 1.125rem;
   font-weight: 700;
-  margin-bottom: 10px;
-  line-height: 1.35;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.faq-answer-body {
+  padding-left: 42px;
 }
 
 .faq-answer {
@@ -1006,6 +1033,16 @@ button, input, select, textarea {
 .faq-answer strong {
   color: var(--text-dark-primary);
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .faq-card {
+    padding: 18px 18px;
+  }
+  .faq-answer-body {
+    padding-left: 0;
+    margin-top: 8px;
+  }
 }
 
 /* ==========================================================================
