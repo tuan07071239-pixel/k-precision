@@ -1,0 +1,152 @@
+# K-PRECISION OFFICIAL CONTENT MANAGEMENT SYSTEM (CMS) CONFIGURATION
+# Powered by Sveltia CMS / Decap CMS
+# For GitHub Pages & Git-based workflow
+
+backend:
+  name: github
+  repo: tuan07071239-pixel/k-precision
+  branch: main
+
+# Đường dẫn lưu trữ ảnh thực tế tải lên từ máy tính
+media_folder: assets/images/products
+public_folder: assets/images/products
+
+# Thông tin hiển thị trang
+site_url: https://k-precision.com
+display_url: https://k-precision.com
+
+# Danh mục nội dung
+collections:
+  - name: products
+    label: "Sản phẩm (Products)"
+    label_singular: "Sản phẩm (Product)"
+    folder: data/products
+    create: true
+    delete: true
+    slug: "{{sku}}"
+    identifier_field: sku
+    summary: "{{sku}} — {{name}} [{{category}}]"
+    sortable_fields: ["sku", "name", "category"]
+    view_filters:
+      - label: "Đá mài (Grinding)"
+        field: categorySlug
+        pattern: grinding
+      - label: "Dụng cụ cắt (Cutting)"
+        field: categorySlug
+        pattern: cutting
+      - label: "Đầu kẹp dao (Tool Holding)"
+        field: categorySlug
+        pattern: toolholding
+      - label: "Dây cắt EDM"
+        field: categorySlug
+        pattern: edm
+      - label: "Vật tư phụ trợ (Others)"
+        field: categorySlug
+        pattern: others
+    fields:
+      - label: "Mã SKU (Định danh duy nhất, ví dụ: KP-GW-D150-V120)"
+        name: sku
+        widget: string
+        required: true
+        hint: "Mã sản phẩm dùng để định danh và tạo đường dẫn chi tiết"
+
+      - label: "Tên sản phẩm đầy đủ"
+        name: name
+        widget: string
+        required: true
+        hint: "Ví dụ: 1A1 Diamond Vitrified Peripheral Wheel Ø150mm"
+
+      - label: "Danh mục sản phẩm"
+        name: category
+        widget: select
+        required: true
+        options:
+          - "Grinding Tools"
+          - "Cutting Tools"
+          - "Tool Holding"
+          - "EDM Wires"
+          - "Others & Workshop Consumables"
+
+      - label: "Mã nhóm danh mục (Dùng để lọc trên web)"
+        name: categorySlug
+        widget: select
+        required: true
+        options:
+          - { label: "grinding (Đá mài)", value: "grinding" }
+          - { label: "cutting (Dụng cụ cắt)", value: "cutting" }
+          - { label: "toolholding (Đầu kẹp dao)", value: "toolholding" }
+          - { label: "edm (Dây cắt EDM)", value: "edm" }
+          - { label: "others (Vật tư phụ trợ)", value: "others" }
+
+      - label: "Trang chuyên mục liên kết"
+        name: categoryUrl
+        widget: select
+        required: true
+        options:
+          - { label: "grinding-wheels.html (Trang Đá mài)", value: "grinding-wheels.html" }
+          - { label: "cutting-tools.html (Trang Dụng cụ cắt)", value: "cutting-tools.html" }
+          - { label: "tool-holding.html (Trang Đầu kẹp dao)", value: "tool-holding.html" }
+          - { label: "edm-wires.html (Trang Dây EDM)", value: "edm-wires.html" }
+          - { label: "others.html (Trang Vật tư tiêu hao khác)", value: "others.html" }
+
+      - label: "Huy hiệu kỹ thuật (Badge)"
+        name: badge
+        widget: string
+        required: false
+        hint: "Ví dụ: Vitrified Superabrasive, Nano-Coated AlCrN, Runout ≤ 0.003mm..."
+
+      - label: "Ảnh sản phẩm thực tế (Product Image)"
+        name: image
+        widget: image
+        required: false
+        choose_url: false
+        hint: "Bấm để tải ảnh thực tế từ máy tính lên. Ảnh sẽ tự động lưu vào assets/images/products/"
+
+      - label: "Mô tả tóm tắt (Short Description)"
+        name: shortDesc
+        widget: text
+        required: true
+        hint: "1 đến 2 câu tóm tắt nhanh ứng dụng và đặc tính chính"
+
+      - label: "Mục đích sử dụng chi tiết (Engineering Purpose)"
+        name: purpose
+        widget: text
+        required: false
+        hint: "Mô tả chi tiết mục đích gia công, tương thích dòng máy CNC nào (Walter, Rollomatic, Makino...)"
+
+      - label: "Vật liệu gia công áp dụng (Workpiece Materials)"
+        name: workpieceMaterials
+        widget: list
+        required: false
+        field: { label: "Tên vật liệu gia công", name: "material", widget: "string" }
+        hint: "Ví dụ: Tungsten Carbide, Technical Ceramics, HRC 55-65 Hardened Steels..."
+
+      - label: "Đặc tính kỹ thuật nổi bật (Key Features)"
+        name: keyFeatures
+        widget: list
+        required: false
+        field: { label: "Đặc tính", name: "feature", widget: "string" }
+
+      - label: "Bảng thông số kỹ thuật (Specifications)"
+        name: specList
+        widget: list
+        required: false
+        summary: "{{fields.key}}: {{fields.val}}"
+        fields:
+          - { label: "Tên thông số (Key)", name: "key", widget: "string", hint: "Ví dụ: Outer Diameter (D), Rim Thickness (T), Arbor Bore..." }
+          - { label: "Giá trị (Value)", name: "val", widget: "string", hint: "Ví dụ: 150 mm, 10 mm, H31.75 mm..." }
+
+      - label: "Điều kiện vận hành CNC khuyến nghị (Operating Conditions)"
+        name: paramList
+        widget: list
+        required: false
+        summary: "{{fields.key}}: {{fields.val}}"
+        fields:
+          - { label: "Thông số vận hành (Key)", name: "key", widget: "string", hint: "Ví dụ: Wheel Speed (Vc), Feed Rate (Vf), Depth of Cut..." }
+          - { label: "Giá trị khuyến nghị (Value)", name: "val", widget: "string", hint: "Ví dụ: 25 - 38 m/s, 150 - 600 mm/min..." }
+
+      - label: "Tiêu chuẩn kiểm định (Certifications)"
+        name: certifications
+        widget: string
+        required: false
+        default: "ISO 9001:2015, Metrology CMM Inspection Sheet enclosed."

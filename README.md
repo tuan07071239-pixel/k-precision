@@ -89,9 +89,22 @@ Host: www   Type: CNAME   Points to: <YOUR_GITHUB_USERNAME>.github.io
 
 ```
 .
+├── admin/                      # Trang quản trị CMS (Sveltia / Decap CMS)
+│   ├── config.yml              # Cấu hình form nhập liệu sản phẩm, upload ảnh
+│   ├── index.html              # Giao diện CMS trực quan (/admin/)
+│   └── README.md               # Hướng dẫn chi tiết cách đăng nhập & sử dụng CMS
+├── data/
+│   ├── products/               # 30 file JSON độc lập của 30 sản phẩm kỹ thuật
+│   └── products.json           # File JSON tổng hợp toàn bộ sản phẩm
+├── scripts/
+│   ├── build-products.js       # Script biên dịch tự động data/products/*.json sang products-data.js
+│   └── export-to-json.js       # Script trích xuất dữ liệu mẫu sang JSON
+├── .github/workflows/
+│   └── build-products.yml      # GitHub Actions tự động compile khi đăng bài từ CMS
 ├── CNAME                       # File định tuyến tên miền cho GitHub Pages
 ├── index.html                  # Trang chủ (Hero, thông số sub-micron, sản phẩm nổi bật, quy chuẩn ISO)
 ├── products.html               # Danh mục sản phẩm (Tìm kiếm tức thì theo SKU, lọc danh mục)
+├── product-detail.html         # Trang chi tiết thông số kỹ thuật sản phẩm
 ├── grinding-wheels.html        # Trang chi tiết: Đá mài Kim cương & CBN Superabrasives
 ├── cutting-tools.html          # Trang chi tiết: Dao phay ngón Solid Carbide, mũi khoan tưới nguội
 ├── tool-holding.html           # Trang chi tiết: Đầu kẹp nhiệt Shrink Fit, thủy lực & collet UP
@@ -104,20 +117,28 @@ Host: www   Type: CNAME   Points to: <YOUR_GITHUB_USERNAME>.github.io
 │   │   └── components.css      # Giỏ báo giá RFQ trượt, bảng thông số, thanh tìm kiếm
 │   ├── js/
 │   │   ├── main.js             # Menu di động, active link, thông báo toast
+│   │   ├── products-data.js    # Dữ liệu sản phẩm tập trung (tự động biên dịch từ CMS)
 │   │   ├── rfq-basket.js       # Giỏ hàng B2B RFQ (lưu localStorage, tạo form báo giá tự động)
-│   │   └── product-filter.js   # Bộ lọc tìm kiếm sản phẩm theo thời gian thực
+│   │   └── product-filter.js   # Render động và bộ lọc tìm kiếm sản phẩm
 │   └── images/
+│       ├── products/           # Thư mục lưu trữ ảnh thực tế tải lên từ trang quản trị
 │       ├── logo.svg            # Logo phẳng K-Precision (Forest Green & Brass)
 │       ├── logo-white.svg      # Logo phiên bản sáng (cho header & footer xanh trầm)
 │       ├── favicon.svg         # Favicon phẳng hiện đại
-│       └── diagrams/
-│           ├── grinding-wheel.svg  # Sơ đồ vector phẳng: Mặt cắt đá mài kim cương
-│           ├── cutting-tool.svg    # Sơ đồ vector phẳng: Dao phay ngón xoắn biến thiên
-│           ├── tool-holding.svg    # Sơ đồ vector phẳng: Đầu kẹp BT40 Shrink Fit
-│           ├── edm-wire.svg        # Sơ đồ vector phẳng: Cuộn dây EDM & tia lửa phóng điện
-│           └── precision-lab.svg   # Sơ đồ vector phẳng: Trạm đo tọa độ quang học CMM
-└── README.md                   # Hướng dẫn chi tiết
+│       └── diagrams/           # Sơ đồ vector kỹ thuật
+└── package.json                # Lệnh npm run build để biên dịch thủ công nếu cần
 ```
+
+---
+
+## 💻 Quản trị nội dung & Đăng ảnh thực tế (CMS)
+
+Để tải ảnh chụp thực tế và thay đổi mô tả sản phẩm mà không cần sửa code:
+1. Mở trình duyệt và truy cập: `https://k-precision.com/admin/` (hoặc `https://<username>.github.io/<repo>/admin/`).
+2. Đăng nhập bằng **GitHub Personal Access Token (PAT)** có quyền `Contents: Read & write` trên repository.
+3. Chọn sản phẩm cần sửa &rarr; Bấm **Choose an image** để upload ảnh thật từ máy tính &rarr; Chỉnh sửa mô tả, bảng thông số &rarr; Bấm **Publish**.
+4. GitHub Actions sẽ tự động đồng bộ hóa và cập nhật website trong vòng 30 - 60 giây.
+*Xem chi tiết hướng dẫn tại [admin/README.md](admin/README.md).*
 
 ---
 

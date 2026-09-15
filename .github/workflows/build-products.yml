@@ -1,0 +1,43 @@
+name: Build & Sync Products Database
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/products/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Compile products data
+        run: node scripts/build-products.js
+
+      - name: Commit and push compiled files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are changes in products-data.js or data/products.json
+          if git status --porcelain assets/js/products-data.js data/products.json | grep -q .; then
+            git add assets/js/products-data.js data/products.json
+            git commit -m "chore(cms): auto-compile products-data.js from CMS updates [skip ci]"
+            git push
+          else
+            echo "No compiled changes to commit."
+          fi
