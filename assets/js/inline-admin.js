@@ -282,7 +282,7 @@
           <div class="kp-form-row">
             <div class="kp-form-group">
               <label class="kp-label">Mã sản phẩm (SKU) *</label>
-              <input type="text" class="kp-input" id="kp-input-sku" value="${initialSku}" ${isEdit && initialSku ? 'readonly style="background: #f1f5f9; cursor: not-allowed;"' : ''} placeholder="Ví dụ: KP-EDM-BR25-P5" required>
+              <input type="text" class="kp-input" id="kp-input-sku" value="${initialSku}" placeholder="Ví dụ: KP-EDM-BR25-P5" required>
             </div>
             <div class="kp-form-group">
               <label class="kp-label">Danh mục sản phẩm</label>
@@ -467,14 +467,44 @@
         productPayload.shortDesc = shortDesc;
         productPayload.specs = specs;
 
-        await window.KP_SUPABASE.saveProduct(productPayload);
+        await window.KP_SUPABASE.saveProduct(productPayload, initialSku);
 
-        // Update local KP_PRODUCTS
+        // Update local KP_PRODUCTS and remove old SKU if changed
+        if (initialSku && initialSku !== sku && window.KP_PRODUCTS) {
+          delete window.KP_PRODUCTS[initialSku];
+        }
         if (!window.KP_PRODUCTS) window.KP_PRODUCTS = {};
         window.KP_PRODUCTS[sku] = productPayload;
 
+        // If on product-detail page, update SKU badge and URL
+        const detailSkuBadge = document.getElementById('detailSkuBadge');
+        if (detailSkuBadge) {
+          detailSkuBadge.textContent = sku;
+          const detailTitle = document.getElementById('detailName');
+          if (detailTitle) detailTitle.textContent = name;
+          const detailImg = document.getElementById('detailImg');
+          if (detailImg) detailImg.src = image;
+          const detailDesc = document.getElementById('detailShortDesc');
+          if (detailDesc) detailDesc.textContent = shortDesc;
+
+          if (window.location.search.includes('sku=')) {
+            const newUrl = new URL(window.location);
+            newUrl.searchParams.set('sku', sku);
+            window.history.replaceState({}, '', newUrl);
+          }
+        }
+
         // If card exists on page, update it directly
         if (cardElement) {
+          const skuEl = cardElement.querySelector('.product-sku');
+          if (skuEl) skuEl.textContent = `SKU: ${sku}`;
+
+          const rfqBtn = cardElement.querySelector('.btn-add-rfq');
+          if (rfqBtn) rfqBtn.setAttribute('data-sku', sku);
+
+          const detailLink = cardElement.querySelector('.btn-view-details');
+          if (detailLink) detailLink.href = `product-detail.html?sku=${encodeURIComponent(sku)}`;
+
           const imgEl = cardElement.querySelector('.product-thumb img');
           if (imgEl) imgEl.src = image;
 

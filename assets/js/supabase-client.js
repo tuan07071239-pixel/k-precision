@@ -38,9 +38,9 @@ window.KP_SUPABASE = {
   },
 
   /**
-   * Save or update a product
+   * Save or update a product (supports renaming SKU via oldId)
    */
-  async saveProduct(productData) {
+  async saveProduct(productData, oldId = null) {
     if (!sbClient) throw new Error('Supabase client not initialized');
     const sku = productData.sku || productData.id;
     if (!sku) throw new Error('Product SKU is required');
@@ -67,13 +67,22 @@ window.KP_SUPABASE = {
       updated_at: new Date().toISOString()
     };
 
-    const { data, error } = await sbClient
-      .from('products')
-      .upsert(payload, { onConflict: 'id' })
-      .select();
-
-    if (error) throw error;
-    return data && data[0];
+    if (oldId && oldId !== sku) {
+      const { data, error } = await sbClient
+        .from('products')
+        .update(payload)
+        .eq('id', oldId)
+        .select();
+      if (error) throw error;
+      return data && data[0];
+    } else {
+      const { data, error } = await sbClient
+        .from('products')
+        .upsert(payload, { onConflict: 'id' })
+        .select();
+      if (error) throw error;
+      return data && data[0];
+    }
   },
 
   /**
