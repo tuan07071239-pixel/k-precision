@@ -548,6 +548,8 @@ function applyLanguage(lang) {
   localStorage.setItem('kp-lang', lang);
 }
 
+let _i18nEventsBound = false;
+
 /**
  * Initialize i18n on page load
  */
@@ -555,8 +557,13 @@ function initI18n() {
   const saved = localStorage.getItem('kp-lang') || 'en';
   applyLanguage(saved);
 
+  if (_i18nEventsBound) return;
+  _i18nEventsBound = true;
+
   // Dropdown toggle
   document.querySelectorAll('.kp-lang-dropdown-btn').forEach(btn => {
+    if (btn.dataset.i18nBound) return;
+    btn.dataset.i18nBound = 'true';
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -570,6 +577,8 @@ function initI18n() {
 
   // Dropdown item selection
   document.querySelectorAll('.kp-lang-item').forEach(item => {
+    if (item.dataset.i18nBound) return;
+    item.dataset.i18nBound = 'true';
     item.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
