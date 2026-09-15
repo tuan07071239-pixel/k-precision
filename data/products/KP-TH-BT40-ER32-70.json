@@ -1,0 +1,58 @@
+{
+  "sku": "KP-TH-BT40-ER32-70",
+  "name": "BT40 Ultra-Precision ER32 Collet Chuck (L=70mm)",
+  "category": "Tool Holding",
+  "categorySlug": "toolholding",
+  "categoryUrl": "tool-holding.html",
+  "badge": "Versatile Collet System",
+  "image": "assets/images/diagrams/tool-holding.svg",
+  "shortDesc": "Short, rigid BT40 ER32 collet chuck with ball-bearing clamping nut for high-feed drilling, tapping, and general milling.",
+  "purpose": "Universal shop floor tooling for drilling, reaming, tap holders, and general milling operations.",
+  "workpieceMaterials": [
+    "BT40 Spindles"
+  ],
+  "keyFeatures": [
+    "Short projection L=70mm maximizes rigidity",
+    "Special anti-friction nut coating prevents collet twist",
+    "TIR ≤ 0.005mm with UP collets"
+  ],
+  "specs": {
+    "Spindle Taper": "BT40",
+    "Collet Series": "ER32 (DIN 6499B)",
+    "Clamping Range": "Ø2.0 mm to Ø20.0 mm",
+    "Gauge Length": "70 mm",
+    "Balance": "G2.5 @ 20,000 RPM"
+  },
+  "operatingConditions": {
+    "Recommended Tightening Torque": "170 Nm for ER32"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Spindle Taper",
+      "val": "BT40"
+    },
+    {
+      "key": "Collet Series",
+      "val": "ER32 (DIN 6499B)"
+    },
+    {
+      "key": "Clamping Range",
+      "val": "Ø2.0 mm to Ø20.0 mm"
+    },
+    {
+      "key": "Gauge Length",
+      "val": "70 mm"
+    },
+    {
+      "key": "Balance",
+      "val": "G2.5 @ 20,000 RPM"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Recommended Tightening Torque",
+      "val": "170 Nm for ER32"
+    }
+  ]
+}

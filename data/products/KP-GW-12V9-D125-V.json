@@ -1,0 +1,81 @@
+{
+  "sku": "KP-GW-12V9-D125-V",
+  "name": "12V9 Diamond Vitrified Dish Wheel Ø125mm",
+  "category": "Grinding Tools",
+  "categorySlug": "grinding",
+  "categoryUrl": "grinding-wheels.html",
+  "badge": "PCD / Carbide Fine Finishing",
+  "image": "assets/images/diagrams/grinding-wheel.svg",
+  "shortDesc": "45-degree dish wheel designed for PCD tool fabrication, fine gashing, and micro-fluting with sub-micron edge definition.",
+  "purpose": "Specialized for producing razor-sharp cutting edges on polycrystalline diamond (PCD) tipped tooling, woodworking router cutters, and micro-grain carbide drill tips.",
+  "workpieceMaterials": [
+    "PCD tips",
+    "CVD diamond plates",
+    "Tungsten carbide shanks",
+    "Cermet inserts"
+  ],
+  "keyFeatures": [
+    "Extremely rigid vitrified bonding",
+    "Maintains sub-micron edge radius on cutter flutes",
+    "Superior wheel roundness < 0.001mm"
+  ],
+  "specs": {
+    "Standard Profile": "12V9 Dish Cup (45°)",
+    "Outer Diameter": "125 mm",
+    "Thickness": "25 mm",
+    "Bore": "32.0 mm",
+    "Grit Size": "D64 Fine (Mesh 230/270)",
+    "Concentration": "C125 (5.5 ct/cm³)",
+    "Bond": "Vitrified Low-Temperature Glass"
+  },
+  "operatingConditions": {
+    "Wheel Speed": "28 - 36 m/s",
+    "Infeed": "0.005 - 0.02 mm/pass",
+    "Coolant": "Filtered synthetic coolant (1µm filtration)"
+  },
+  "certifications": "ISO 9001:2015 Quality Tested.",
+  "specList": [
+    {
+      "key": "Standard Profile",
+      "val": "12V9 Dish Cup (45°)"
+    },
+    {
+      "key": "Outer Diameter",
+      "val": "125 mm"
+    },
+    {
+      "key": "Thickness",
+      "val": "25 mm"
+    },
+    {
+      "key": "Bore",
+      "val": "32.0 mm"
+    },
+    {
+      "key": "Grit Size",
+      "val": "D64 Fine (Mesh 230/270)"
+    },
+    {
+      "key": "Concentration",
+      "val": "C125 (5.5 ct/cm³)"
+    },
+    {
+      "key": "Bond",
+      "val": "Vitrified Low-Temperature Glass"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Wheel Speed",
+      "val": "28 - 36 m/s"
+    },
+    {
+      "key": "Infeed",
+      "val": "0.005 - 0.02 mm/pass"
+    },
+    {
+      "key": "Coolant",
+      "val": "Filtered synthetic coolant (1µm filtration)"
+    }
+  ]
+}

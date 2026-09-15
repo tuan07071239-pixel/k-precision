@@ -1,0 +1,58 @@
+{
+  "sku": "KP-TH-BT40-SF16-100",
+  "name": "BT40 Shrink Fit Tool Holder Ø16mm (Gauge Length 100mm)",
+  "category": "Tool Holding",
+  "categorySlug": "toolholding",
+  "categoryUrl": "tool-holding.html",
+  "badge": "Heavy Duty Thermal",
+  "image": "assets/images/diagrams/tool-holding.svg",
+  "shortDesc": "Rigid thermal shrink holder for heavy roughing and dynamic milling with large carbide end mills.",
+  "purpose": "Heavy stock removal in mold cavities, automotive stamping dies, and structural steel components.",
+  "workpieceMaterials": [
+    "BT40 Spindles"
+  ],
+  "keyFeatures": [
+    "Massive gripping torque > 500 Nm",
+    "Runout ≤ 0.003mm",
+    "Extends carbide tool life significantly"
+  ],
+  "specs": {
+    "Spindle Taper": "BT40",
+    "Bore": "Ø16.0 mm (h6)",
+    "Gauge Length": "100 mm",
+    "Balance": "G2.5 @ 25,000 RPM",
+    "Runout": "≤ 0.003 mm"
+  },
+  "operatingConditions": {
+    "Max Speed": "25,000 RPM"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Spindle Taper",
+      "val": "BT40"
+    },
+    {
+      "key": "Bore",
+      "val": "Ø16.0 mm (h6)"
+    },
+    {
+      "key": "Gauge Length",
+      "val": "100 mm"
+    },
+    {
+      "key": "Balance",
+      "val": "G2.5 @ 25,000 RPM"
+    },
+    {
+      "key": "Runout",
+      "val": "≤ 0.003 mm"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Max Speed",
+      "val": "25,000 RPM"
+    }
+  ]
+}

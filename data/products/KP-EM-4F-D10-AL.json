@@ -1,0 +1,70 @@
+{
+  "sku": "KP-EM-4F-D10-AL",
+  "name": "4-Flute Variable Helix Solid Carbide End Mill Ø10.0mm",
+  "category": "Cutting Tools",
+  "categorySlug": "cutting",
+  "categoryUrl": "cutting-tools.html",
+  "badge": "Heavy Roughing & Finishing",
+  "image": "assets/images/diagrams/cutting-tool.svg",
+  "shortDesc": "Versatile 10mm end mill delivering high metal removal rates with excellent surface roughness in tool steels up to 58 HRC.",
+  "purpose": "General production milling, dynamic roughing, and fine side-finishing across CNC manufacturing operations.",
+  "workpieceMaterials": [
+    "Hardened steels up to 58 HRC",
+    "Stainless steels",
+    "Pre-hardened tool steels"
+  ],
+  "keyFeatures": [
+    "Reinforced core diameter increases rigidity by 20%",
+    "Micro-polished flutes prevent chip packing",
+    "h6 shank fits precision holders"
+  ],
+  "specs": {
+    "Cutting Diameter": "10.0 mm",
+    "Flute Length": "25.0 mm",
+    "Overall Length": "75.0 mm",
+    "Shank Diameter": "10.0 mm (h6)",
+    "Flutes": "4 Flutes",
+    "Coating": "AlCrN Nano-PVD"
+  },
+  "operatingConditions": {
+    "Cutting Speed": "130 - 190 m/min",
+    "Feed per tooth": "0.05 - 0.09 mm/tooth"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Cutting Diameter",
+      "val": "10.0 mm"
+    },
+    {
+      "key": "Flute Length",
+      "val": "25.0 mm"
+    },
+    {
+      "key": "Overall Length",
+      "val": "75.0 mm"
+    },
+    {
+      "key": "Shank Diameter",
+      "val": "10.0 mm (h6)"
+    },
+    {
+      "key": "Flutes",
+      "val": "4 Flutes"
+    },
+    {
+      "key": "Coating",
+      "val": "AlCrN Nano-PVD"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Cutting Speed",
+      "val": "130 - 190 m/min"
+    },
+    {
+      "key": "Feed per tooth",
+      "val": "0.05 - 0.09 mm/tooth"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "sku": "KP-TH-ER32-UP-SET",
+  "name": "ER32 Ultra-Precision Spring Collet Set (18 pcs, 3 - 20mm)",
+  "category": "Tool Holding",
+  "categorySlug": "toolholding",
+  "categoryUrl": "tool-holding.html",
+  "badge": "TIR ≤ 0.005mm (UP Grade)",
+  "image": "assets/images/diagrams/tool-holding.svg",
+  "shortDesc": "Complete set of 18 ultra-precision ground spring collets from 3mm to 20mm with sub-micron concentricity inspection.",
+  "purpose": "Precision clamping of drills, reamers, and end mills across toolroom and production CNC centers.",
+  "workpieceMaterials": [
+    "Fits all standard ER32 collet chucks"
+  ],
+  "keyFeatures": [
+    "Ultra-Precision grade (UP) runout ≤ 0.005mm",
+    "Cryogenically treated spring steel",
+    "Includes wooden fitted storage chest"
+  ],
+  "specs": {
+    "Standard": "DIN 6499B",
+    "Quantity": "18 pieces (Ø3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 mm)",
+    "Runout": "≤ 0.005 mm (5 microns)",
+    "Collapse Range": "1.0 mm per collet"
+  },
+  "operatingConditions": {
+    "Cleaning": "Always wipe clean before insertion into nut"
+  },
+  "certifications": "ISO 9001:2015, 100% Runout Verified.",
+  "specList": [
+    {
+      "key": "Standard",
+      "val": "DIN 6499B"
+    },
+    {
+      "key": "Quantity",
+      "val": "18 pieces (Ø3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 mm)"
+    },
+    {
+      "key": "Runout",
+      "val": "≤ 0.005 mm (5 microns)"
+    },
+    {
+      "key": "Collapse Range",
+      "val": "1.0 mm per collet"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Cleaning",
+      "val": "Always wipe clean before insertion into nut"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "sku": "KP-GW-D150-V120",
+  "name": "1A1 Diamond Vitrified Peripheral Wheel Ø150mm",
+  "category": "Grinding Tools",
+  "categorySlug": "grinding",
+  "categoryUrl": "grinding-wheels.html",
+  "badge": "Vitrified Superabrasive",
+  "image": "assets/images/diagrams/grinding-wheel.svg",
+  "shortDesc": "Sub-micron precision peripheral grinding wheel for high-volume solid carbide fluting, technical ceramics, cermets, and thermal spray coatings.",
+  "purpose": "Specifically engineered for CNC 5-axis tool and cutter grinders (Walter, Rollomatic, ANCA, Schütte) to perform primary fluting, OD cylindrical cylindrical grinding, and end gashing of solid tungsten carbide cutting tools with zero thermal surface damage.",
+  "workpieceMaterials": [
+    "Tungsten Carbide (Cobalt binder 6% - 15%)",
+    "Technical Ceramics (Silicon Nitride Si3N4, Alumina Al2O3, Zirconia)",
+    "Polycrystalline Diamond (PCD) & Cermets",
+    "HVOF & Plasma Thermal Spray Hard Coatings"
+  ],
+  "keyFeatures": [
+    "Engineered ceramic vitrified bond with controlled micro-porosity for maximum coolant delivery into the grinding arc.",
+    "High thermal conductivity prevents micro-cracking and cobalt leaching in carbide substrates.",
+    "Dressable on-machine using CNC rotary diamond rolls, holding edge radius tolerances under 0.005mm.",
+    "Up to 3x longer dressing intervals compared to standard resinoid wheels, dramatically reducing cycle times."
+  ],
+  "specs": {
+    "Standard Profile": "1A1 Straight Peripheral",
+    "Outer Diameter (D)": "150 mm",
+    "Rim Thickness (T)": "10 mm",
+    "Arbor Bore (H)": "31.75 mm (Standard) / Optional H20, H32, H50",
+    "Abrasive Layer Depth (X)": "5.0 mm",
+    "Superabrasive Type": "Synthetic Monocrystalline Diamond",
+    "Grit Size": "D120 (US Mesh 120/140, Mean particle size 125µm)",
+    "Abrasive Concentration": "C100 (4.4 carats/cm³)",
+    "Bonding Matrix": "Vitrified Porous Ceramic (High Heat Dissipation)",
+    "Max Operating Speed": "45 m/s (5,700 RPM max)",
+    "Dynamic Balance Runout": "Concentricity TIR < 0.002 mm"
+  },
+  "operatingConditions": {
+    "Wheel Peripheral Speed (Vc)": "25 - 38 m/s (Dry run strictly prohibited)",
+    "Table Feed Rate (Vf)": "150 - 600 mm/min (depending on carbide cobalt grade)",
+    "Depth of Cut (ap)": "0.5 - 3.0 mm (Creep-feed single-pass fluting)",
+    "Recommended Coolant": "Synthetic neat grinding oil (viscosity 8 - 12 cSt @ 40°C) at 15 - 25 Bar pressure",
+    "Dressing Method": "Rotary Diamond Dressing Roll at speed ratio q = +0.6 to +0.8"
+  },
+  "certifications": "ISO 9001:2015, EN 13236 Safety Standard, Metrology CMM Inspection Sheet enclosed.",
+  "specList": [
+    {
+      "key": "Standard Profile",
+      "val": "1A1 Straight Peripheral"
+    },
+    {
+      "key": "Outer Diameter (D)",
+      "val": "150 mm"
+    },
+    {
+      "key": "Rim Thickness (T)",
+      "val": "10 mm"
+    },
+    {
+      "key": "Arbor Bore (H)",
+      "val": "31.75 mm (Standard) / Optional H20, H32, H50"
+    },
+    {
+      "key": "Abrasive Layer Depth (X)",
+      "val": "5.0 mm"
+    },
+    {
+      "key": "Superabrasive Type",
+      "val": "Synthetic Monocrystalline Diamond"
+    },
+    {
+      "key": "Grit Size",
+      "val": "D120 (US Mesh 120/140, Mean particle size 125µm)"
+    },
+    {
+      "key": "Abrasive Concentration",
+      "val": "C100 (4.4 carats/cm³)"
+    },
+    {
+      "key": "Bonding Matrix",
+      "val": "Vitrified Porous Ceramic (High Heat Dissipation)"
+    },
+    {
+      "key": "Max Operating Speed",
+      "val": "45 m/s (5,700 RPM max)"
+    },
+    {
+      "key": "Dynamic Balance Runout",
+      "val": "Concentricity TIR < 0.002 mm"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Wheel Peripheral Speed (Vc)",
+      "val": "25 - 38 m/s (Dry run strictly prohibited)"
+    },
+    {
+      "key": "Table Feed Rate (Vf)",
+      "val": "150 - 600 mm/min (depending on carbide cobalt grade)"
+    },
+    {
+      "key": "Depth of Cut (ap)",
+      "val": "0.5 - 3.0 mm (Creep-feed single-pass fluting)"
+    },
+    {
+      "key": "Recommended Coolant",
+      "val": "Synthetic neat grinding oil (viscosity 8 - 12 cSt @ 40°C) at 15 - 25 Bar pressure"
+    },
+    {
+      "key": "Dressing Method",
+      "val": "Rotary Diamond Dressing Roll at speed ratio q = +0.6 to +0.8"
+    }
+  ]
+}

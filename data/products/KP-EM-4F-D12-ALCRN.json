@@ -1,0 +1,107 @@
+{
+  "sku": "KP-EM-4F-D12-ALCRN",
+  "name": "4-Flute Variable Helix Solid Carbide End Mill Ø12mm",
+  "category": "Cutting Tools",
+  "categorySlug": "cutting",
+  "categoryUrl": "cutting-tools.html",
+  "badge": "Sub-Micron Solid Carbide",
+  "image": "assets/images/diagrams/cutting-tool.svg",
+  "shortDesc": "High-efficiency anti-vibration roughing and finishing end mill with nano-composite AlCrN coating for hardened steels up to 60 HRC.",
+  "purpose": "Engineered for heavy metal removal (HEM), dynamic trochoidal milling, and finishing in mold & die making, aerospace brackets, and precision automotive tooling.",
+  "workpieceMaterials": [
+    "Hardened Mold Steels: P20, H13, NAK80, SKD61 (45 - 60 HRC)",
+    "Stainless Steels: 304, 316L, 17-4 PH",
+    "Alloy & Carbon Steels: 4140, 4340, S45C",
+    "Cast Irons: Ductile, Nodular, and Grey"
+  ],
+  "keyFeatures": [
+    "Ultra-fine 0.4µm sub-micron tungsten carbide substrate with 10% cobalt for superior edge toughness and wear resistance.",
+    "Unequal flute indexing and variable helix (35° / 38°) cancels machining harmonics and eliminates chatter.",
+    "AlCrN nano-layer PVD coating provides thermal barrier up to 1,100°C for dry or MQL high-speed machining.",
+    "h6 ground shank tolerance ensures 100% clamping reliability in shrink-fit and hydraulic chucks."
+  ],
+  "specs": {
+    "Tool Type": "Square Flat End Mill (Center Cutting)",
+    "Number of Flutes": "4 Flutes",
+    "Helix Angle": "35° / 38° Variable Helix",
+    "Cutting Diameter (D1)": "12.0 mm (0 / -0.015mm)",
+    "Flute Length (L1)": "30.0 mm",
+    "Overall Length (L2)": "75.0 mm",
+    "Shank Diameter (D2)": "12.0 mm (h6 tolerance: 0 / -0.008mm)",
+    "Corner Preparation": "0.2mm 45° Protective Chamfer",
+    "Substrate": "0.4µm Ultra-Fine Micro-Grain Tungsten Carbide (WC+Co)",
+    "Coating": "AlCrN Nano-Composite PVD (Hardness 3400 HV)"
+  },
+  "operatingConditions": {
+    "Cutting Speed (Vc)": "120 - 180 m/min (Hardened Steel 50 HRC) / 220 m/min (Carbon Steel)",
+    "Feed Per Tooth (fz)": "0.06 - 0.12 mm/tooth",
+    "Radial Depth (ae)": "0.08 - 0.25 x D (Trochoidal: up to 0.15 x D)",
+    "Axial Depth (ap)": "1.0 - 2.0 x D (Trochoidal full flute depth)",
+    "Coolant Strategy": "Air blow / MQL for steels > 50 HRC; High-pressure flood emulsion for stainless"
+  },
+  "certifications": "ISO 9001:2015, Laser Concentricity Inspected, Lot Traceability.",
+  "specList": [
+    {
+      "key": "Tool Type",
+      "val": "Square Flat End Mill (Center Cutting)"
+    },
+    {
+      "key": "Number of Flutes",
+      "val": "4 Flutes"
+    },
+    {
+      "key": "Helix Angle",
+      "val": "35° / 38° Variable Helix"
+    },
+    {
+      "key": "Cutting Diameter (D1)",
+      "val": "12.0 mm (0 / -0.015mm)"
+    },
+    {
+      "key": "Flute Length (L1)",
+      "val": "30.0 mm"
+    },
+    {
+      "key": "Overall Length (L2)",
+      "val": "75.0 mm"
+    },
+    {
+      "key": "Shank Diameter (D2)",
+      "val": "12.0 mm (h6 tolerance: 0 / -0.008mm)"
+    },
+    {
+      "key": "Corner Preparation",
+      "val": "0.2mm 45° Protective Chamfer"
+    },
+    {
+      "key": "Substrate",
+      "val": "0.4µm Ultra-Fine Micro-Grain Tungsten Carbide (WC+Co)"
+    },
+    {
+      "key": "Coating",
+      "val": "AlCrN Nano-Composite PVD (Hardness 3400 HV)"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Cutting Speed (Vc)",
+      "val": "120 - 180 m/min (Hardened Steel 50 HRC) / 220 m/min (Carbon Steel)"
+    },
+    {
+      "key": "Feed Per Tooth (fz)",
+      "val": "0.06 - 0.12 mm/tooth"
+    },
+    {
+      "key": "Radial Depth (ae)",
+      "val": "0.08 - 0.25 x D (Trochoidal: up to 0.15 x D)"
+    },
+    {
+      "key": "Axial Depth (ap)",
+      "val": "1.0 - 2.0 x D (Trochoidal full flute depth)"
+    },
+    {
+      "key": "Coolant Strategy",
+      "val": "Air blow / MQL for steels > 50 HRC; High-pressure flood emulsion for stainless"
+    }
+  ]
+}

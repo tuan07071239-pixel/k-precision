@@ -1,0 +1,99 @@
+{
+  "sku": "KP-TH-BT40-SF12-90",
+  "name": "BT40 Shrink Fit Tool Holder Ø12mm (Gauge Length 90mm)",
+  "category": "Tool Holding",
+  "categorySlug": "toolholding",
+  "categoryUrl": "tool-holding.html",
+  "badge": "Runout ≤ 0.003mm | G2.5 25k",
+  "image": "assets/images/diagrams/tool-holding.svg",
+  "shortDesc": "High-precision inductive thermal clamping holder with slim 3° nose contour for high-speed 5-axis CNC machining centers.",
+  "purpose": "Delivers maximum clamping force and sub-micron concentricity for high-speed milling, deep mold cavity finishing, and chatter-free cutting with solid carbide cutters.",
+  "workpieceMaterials": [
+    "Used on all CNC spindles with BT40 MAS 403 / JIS B6339 taper"
+  ],
+  "keyFeatures": [
+    "Total Indicated Runout (TIR) guaranteed ≤ 0.003 mm measured at 3x tool diameter (36mm from nose).",
+    "Pre-balanced dynamically to ISO 1940-1 Grade G2.5 at 25,000 RPM to safeguard spindle bearings.",
+    "High-alloy hot-working tool steel withstands thousands of inductive heating and water-chilling cycles.",
+    "Slim 3° outer nose profile provides maximum clearance around deep molds and tall fixtures."
+  ],
+  "specs": {
+    "Spindle Interface": "BT40 (MAS 403 / JIS B6339)",
+    "Clamping Diameter (d)": "Ø12 mm (for h6 shank cutters)",
+    "Gauge Length (A)": "90 mm",
+    "Nose Diameter (D1)": "24 mm",
+    "Body Diameter (D2)": "32 mm",
+    "Runout Accuracy": "≤ 0.003 mm TIR @ 3xD",
+    "Balancing Grade": "G2.5 @ 25,000 RPM (fine balancing holes)",
+    "Clamping Type": "Thermal Induction Shrink Fit",
+    "Coolant Capability": "Through-tool coolant (AD/B dual style ready)"
+  },
+  "operatingConditions": {
+    "Max Spindle Speed": "25,000 RPM",
+    "Compatible Heating Unit": "Standard 10 - 13 kW inductive shrink fit machines",
+    "Heating Time": "Approximately 5 - 8 seconds",
+    "Cooling Time": "30 - 45 seconds on liquid/air cooling contact bell",
+    "Tool Shank Tolerance Required": "ISO h6 strictly required (carbide or HSS)"
+  },
+  "certifications": "ISO 9001:2015, Laser Dynamic Balance Certificate Enclosed.",
+  "specList": [
+    {
+      "key": "Spindle Interface",
+      "val": "BT40 (MAS 403 / JIS B6339)"
+    },
+    {
+      "key": "Clamping Diameter (d)",
+      "val": "Ø12 mm (for h6 shank cutters)"
+    },
+    {
+      "key": "Gauge Length (A)",
+      "val": "90 mm"
+    },
+    {
+      "key": "Nose Diameter (D1)",
+      "val": "24 mm"
+    },
+    {
+      "key": "Body Diameter (D2)",
+      "val": "32 mm"
+    },
+    {
+      "key": "Runout Accuracy",
+      "val": "≤ 0.003 mm TIR @ 3xD"
+    },
+    {
+      "key": "Balancing Grade",
+      "val": "G2.5 @ 25,000 RPM (fine balancing holes)"
+    },
+    {
+      "key": "Clamping Type",
+      "val": "Thermal Induction Shrink Fit"
+    },
+    {
+      "key": "Coolant Capability",
+      "val": "Through-tool coolant (AD/B dual style ready)"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Max Spindle Speed",
+      "val": "25,000 RPM"
+    },
+    {
+      "key": "Compatible Heating Unit",
+      "val": "Standard 10 - 13 kW inductive shrink fit machines"
+    },
+    {
+      "key": "Heating Time",
+      "val": "Approximately 5 - 8 seconds"
+    },
+    {
+      "key": "Cooling Time",
+      "val": "30 - 45 seconds on liquid/air cooling contact bell"
+    },
+    {
+      "key": "Tool Shank Tolerance Required",
+      "val": "ISO h6 strictly required (carbide or HSS)"
+    }
+  ]
+}

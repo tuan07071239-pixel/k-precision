@@ -1,0 +1,53 @@
+{
+  "sku": "KP-TH-PULLSTUD-BT40",
+  "name": "BT40 45° High-Pressure Coolant Pull Stud Retention Knob",
+  "category": "Tool Holding",
+  "categorySlug": "toolholding",
+  "categoryUrl": "tool-holding.html",
+  "badge": "Retention Knob JIS 40P",
+  "image": "assets/images/diagrams/tool-holding.svg",
+  "shortDesc": "Precision ground retention knob for BT40 tool holders with central through-coolant hole and dual O-ring seal.",
+  "purpose": "Locks the BT40 toolholder into the CNC machine drawbar gripper with zero taper distortion.",
+  "workpieceMaterials": [
+    "BT40 Spindles with 45° Gripper Balls"
+  ],
+  "keyFeatures": [
+    "High-grade alloy steel case-hardened to HRC 58-60",
+    "Through-bore for high-pressure coolant up to 70 Bar",
+    "Rolled M16 threads for maximum fatigue life"
+  ],
+  "specs": {
+    "Standard": "JIS B6339 40P (45° Head Angle)",
+    "Thread": "M16 x 2.0P",
+    "Through Hole": "Ø4.0 mm Coolant-Thru",
+    "Hardness": "HRC 58 - 60 (Core HRC 35-40)"
+  },
+  "operatingConditions": {
+    "Tightening Torque": "80 - 90 Nm"
+  },
+  "certifications": "ISO 9001:2015, Magnetic Particle Crack Inspected.",
+  "specList": [
+    {
+      "key": "Standard",
+      "val": "JIS B6339 40P (45° Head Angle)"
+    },
+    {
+      "key": "Thread",
+      "val": "M16 x 2.0P"
+    },
+    {
+      "key": "Through Hole",
+      "val": "Ø4.0 mm Coolant-Thru"
+    },
+    {
+      "key": "Hardness",
+      "val": "HRC 58 - 60 (Core HRC 35-40)"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Tightening Torque",
+      "val": "80 - 90 Nm"
+    }
+  ]
+}

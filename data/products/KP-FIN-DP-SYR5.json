@@ -1,0 +1,66 @@
+{
+  "sku": "KP-FIN-DP-SYR5",
+  "name": "Precision Monocrystalline Diamond Lapping Paste Set (5 Syringes)",
+  "category": "Others & Consumables",
+  "categorySlug": "others",
+  "categoryUrl": "others.html",
+  "badge": "Optical Mirror Polish",
+  "image": "assets/images/diagrams/precision-lab.svg",
+  "shortDesc": "Calibrated monocrystalline diamond compound set (0.5µm, 1µm, 3µm, 6µm, 9µm) in 5g dosing syringes for mold cavity mirror polishing.",
+  "purpose": "Precision hand and rotary polishing of plastic injection mold cavities, optical dies, carbide drawing dies, and metrology gauge blocks.",
+  "workpieceMaterials": [
+    "Hardened Mold Steels (Stavax, NAK80, H13)",
+    "Tungsten Carbide",
+    "Technical Ceramics",
+    "Titanium & Stainless"
+  ],
+  "keyFeatures": [
+    "Uniform blocky monocrystalline diamond grains ensure zero stray scratch lines on mirror finishes.",
+    "Water/oil soluble synthetic base spreads evenly and cleans off effortlessly with ultrasonic cleaners.",
+    "Calibrated 5g syringe dispenser prevents contamination and eliminates material wastage."
+  ],
+  "specs": {
+    "Included Micron Grades": "0.5µm (Final Mirror), 1.0µm (Super Finish), 3.0µm (Fine Lapping), 6.0µm (Pre-Polish), 9.0µm (Rapid Stock Removal)",
+    "Carrier Base": "Water and Alcohol Soluble Synthetic Gel",
+    "Quantity": "5 Syringes x 5 grams each (25g total)",
+    "Color Coded": "Grey (0.5µ), White (1µ), Yellow (3µ), Orange (6µ), Green (9µ)",
+    "Achievable Roughness": "Ra < 0.02 µm (Mirror Class #14)"
+  },
+  "operatingConditions": {
+    "Lap Materials": "Hard felt bobs, copper laps, cast iron plates, wooden sticks",
+    "Cleaning": "Clean part thoroughly between grit transitions with alcohol or ultrasonic bath"
+  },
+  "certifications": "ISO 9001:2015, Micro-Screened Mesh Guarantee.",
+  "specList": [
+    {
+      "key": "Included Micron Grades",
+      "val": "0.5µm (Final Mirror), 1.0µm (Super Finish), 3.0µm (Fine Lapping), 6.0µm (Pre-Polish), 9.0µm (Rapid Stock Removal)"
+    },
+    {
+      "key": "Carrier Base",
+      "val": "Water and Alcohol Soluble Synthetic Gel"
+    },
+    {
+      "key": "Quantity",
+      "val": "5 Syringes x 5 grams each (25g total)"
+    },
+    {
+      "key": "Color Coded",
+      "val": "Grey (0.5µ), White (1µ), Yellow (3µ), Orange (6µ), Green (9µ)"
+    },
+    {
+      "key": "Achievable Roughness",
+      "val": "Ra < 0.02 µm (Mirror Class #14)"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Lap Materials",
+      "val": "Hard felt bobs, copper laps, cast iron plates, wooden sticks"
+    },
+    {
+      "key": "Cleaning",
+      "val": "Clean part thoroughly between grit transitions with alcohol or ultrasonic bath"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "sku": "KP-GW-14A1-CBN200",
+  "name": "14A1 CBN Vitrified Stepped Wheel Ø200mm",
+  "category": "Grinding Tools",
+  "categorySlug": "grinding",
+  "categoryUrl": "grinding-wheels.html",
+  "badge": "Cylindrical Shaft Grinding",
+  "image": "assets/images/diagrams/grinding-wheel.svg",
+  "shortDesc": "High-rigidity stepped flange wheel for OD cylindrical, centerless, and precision surface grinding of hardened steel shafts and pins.",
+  "purpose": "Used in cylindrical CNC grinding machines (Studer, Kellenberger, Toyoda) for high-precision shafts, hydraulic valve spools, and automotive powertrain components.",
+  "workpieceMaterials": [
+    "Case-hardened steel 16MnCr5",
+    "Tool steel D2 / SKD11 (60+ HRC)",
+    "High-speed steel M2/M35",
+    "Chrome-plated alloy rods"
+  ],
+  "keyFeatures": [
+    "High thermal dissipation vitrified core",
+    "Maintains cylindrical runout under 0.0015mm over 500mm shaft length",
+    "Low dressing frequency"
+  ],
+  "specs": {
+    "Standard Profile": "14A1 Stepped Flange",
+    "Dimensions": "Ø200 x 15 x 50.8 mm",
+    "Abrasive": "CBN Crystal Grade B",
+    "Grit": "B91 (Mesh 170/200)",
+    "Concentration": "C100",
+    "Bond": "Vitrified Ceramic"
+  },
+  "operatingConditions": {
+    "Wheel Speed": "45 - 60 m/s (High-speed approved)",
+    "Workpiece Speed": "20 - 35 m/min",
+    "Coolant": "Neat grinding oil or 10% semi-synthetic emulsion with EP additives"
+  },
+  "certifications": "ISO 9001:2015, Balancing DIN ISO 1940.",
+  "specList": [
+    {
+      "key": "Standard Profile",
+      "val": "14A1 Stepped Flange"
+    },
+    {
+      "key": "Dimensions",
+      "val": "Ø200 x 15 x 50.8 mm"
+    },
+    {
+      "key": "Abrasive",
+      "val": "CBN Crystal Grade B"
+    },
+    {
+      "key": "Grit",
+      "val": "B91 (Mesh 170/200)"
+    },
+    {
+      "key": "Concentration",
+      "val": "C100"
+    },
+    {
+      "key": "Bond",
+      "val": "Vitrified Ceramic"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Wheel Speed",
+      "val": "45 - 60 m/s (High-speed approved)"
+    },
+    {
+      "key": "Workpiece Speed",
+      "val": "20 - 35 m/min"
+    },
+    {
+      "key": "Coolant",
+      "val": "Neat grinding oil or 10% semi-synthetic emulsion with EP additives"
+    }
+  ]
+}

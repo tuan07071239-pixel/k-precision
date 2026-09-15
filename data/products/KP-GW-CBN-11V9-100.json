@@ -1,0 +1,101 @@
+{
+  "sku": "KP-GW-CBN-11V9-100",
+  "name": "11V9 CBN Resin Fluting & End Gashing Cup Wheel Ø100mm",
+  "category": "Grinding Tools",
+  "categorySlug": "grinding",
+  "categoryUrl": "grinding-wheels.html",
+  "badge": "CBN Cup Superabrasive",
+  "image": "assets/images/diagrams/grinding-wheel.svg",
+  "shortDesc": "70-degree cup wheel engineered for fluting and end tooth gashing of High-Speed Steel (HSS), cobalt steel, and hardened tool steels.",
+  "purpose": "Designed for tool manufacturing and re-sharpening operations on high-speed CNC grinders. Cubic Boron Nitride (CBN) does not react chemically with iron at elevated temperatures, providing extreme wheel life on ferrous steels.",
+  "workpieceMaterials": [
+    "Hardened Tool Steels: H13, D2, S7, O1 (55 - 65 HRC)",
+    "Powder Metallurgy High-Speed Steels (PM-HSS, ASP2023, ASP2060)",
+    "High-Chromium, High-Vanadium Cold Work Steels",
+    "Bearing Steels (100Cr6 / 52100)"
+  ],
+  "keyFeatures": [
+    "Zero chemical affinity to iron prevents catalytic wear common with diamond on steel.",
+    "70° taper cup geometry provides deep clearance when sharpening multi-flute end mill ends.",
+    "Polyimide heat-resistant resin withstands dry touch-ups and heavy wet production grinding."
+  ],
+  "specs": {
+    "Standard Profile": "11V9 Taper Cup (70° Angle)",
+    "Outer Diameter (D)": "100 mm",
+    "Cup Height (T)": "35 mm",
+    "Arbor Bore (H)": "20.0 mm",
+    "Rim Width (W)": "3.0 mm",
+    "Abrasive Depth (X)": "6.0 mm",
+    "Abrasive Type": "Cubic Boron Nitride (CBN) Amber crystal",
+    "Grit Size": "B126 (Mesh 120/140)",
+    "Concentration": "C100 (4.4 ct/cm³)",
+    "Bond": "High-Temp Polyimide Resinoid"
+  },
+  "operatingConditions": {
+    "Wheel Peripheral Speed": "30 - 45 m/s",
+    "Table Feed Rate": "200 - 800 mm/min",
+    "Coolant": "Heavy-duty ester-based grinding oil with extreme pressure (EP) additives",
+    "Trueing & Dressing": "Brake-controlled truing device with green silicon carbide wheels"
+  },
+  "certifications": "ISO 9001:2015, FEPA Safety Certified.",
+  "specList": [
+    {
+      "key": "Standard Profile",
+      "val": "11V9 Taper Cup (70° Angle)"
+    },
+    {
+      "key": "Outer Diameter (D)",
+      "val": "100 mm"
+    },
+    {
+      "key": "Cup Height (T)",
+      "val": "35 mm"
+    },
+    {
+      "key": "Arbor Bore (H)",
+      "val": "20.0 mm"
+    },
+    {
+      "key": "Rim Width (W)",
+      "val": "3.0 mm"
+    },
+    {
+      "key": "Abrasive Depth (X)",
+      "val": "6.0 mm"
+    },
+    {
+      "key": "Abrasive Type",
+      "val": "Cubic Boron Nitride (CBN) Amber crystal"
+    },
+    {
+      "key": "Grit Size",
+      "val": "B126 (Mesh 120/140)"
+    },
+    {
+      "key": "Concentration",
+      "val": "C100 (4.4 ct/cm³)"
+    },
+    {
+      "key": "Bond",
+      "val": "High-Temp Polyimide Resinoid"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Wheel Peripheral Speed",
+      "val": "30 - 45 m/s"
+    },
+    {
+      "key": "Table Feed Rate",
+      "val": "200 - 800 mm/min"
+    },
+    {
+      "key": "Coolant",
+      "val": "Heavy-duty ester-based grinding oil with extreme pressure (EP) additives"
+    },
+    {
+      "key": "Trueing & Dressing",
+      "val": "Brake-controlled truing device with green silicon carbide wheels"
+    }
+  ]
+}

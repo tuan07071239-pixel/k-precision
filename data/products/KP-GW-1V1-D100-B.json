@@ -1,0 +1,111 @@
+{
+  "sku": "KP-GW-1V1-D100-B",
+  "name": "1V1 Diamond Resinoid Angular Profiling Wheel Ø100mm",
+  "category": "Grinding Tools",
+  "categorySlug": "grinding",
+  "categoryUrl": "grinding-wheels.html",
+  "badge": "Resinoid 45° Profile",
+  "image": "assets/images/diagrams/grinding-wheel.svg",
+  "shortDesc": "45-degree angle diamond wheel designed for precision indexable insert edge preparation, chamfering, and clearance relief angles.",
+  "purpose": "Ideal for grinding primary and secondary relief angles on carbide inserts, stepped drills, and reamers where elastic bond vibration damping is essential to eliminate micro-chipping on cutting edges.",
+  "workpieceMaterials": [
+    "Micro-grain Tungsten Carbide",
+    "Titanium-coated indexable inserts",
+    "Cermet cutting tips",
+    "Silicon Carbide (SiC) tooling components"
+  ],
+  "keyFeatures": [
+    "Phenolic-polyimide resin matrix absorbs high-frequency vibrations, achieving optical mirror finishes (Ra < 0.08µm).",
+    "Sharp 45° taper allows clearance access into tight shoulder geometries.",
+    "High self-sharpening behavior prevents wheel loading and eliminates chatter marks."
+  ],
+  "specs": {
+    "Standard Profile": "1V1 Angular Taper (45°)",
+    "Outer Diameter (D)": "100 mm",
+    "Rim Thickness (T)": "10 mm",
+    "Arbor Bore (H)": "20.0 mm",
+    "Profile Angle (V)": "45° Symmetric",
+    "Abrasive Layer Depth (X)": "3.0 mm",
+    "Superabrasive Type": "Premium Blocky Diamond",
+    "Grit Size": "D150 (Mesh 140/170)",
+    "Concentration": "C75 (3.3 carats/cm³)",
+    "Bonding Matrix": "Advanced Thermoset Resinoid",
+    "Max Speed": "35 m/s"
+  },
+  "operatingConditions": {
+    "Wheel Peripheral Speed": "22 - 32 m/s",
+    "Feed Rate": "100 - 350 mm/min",
+    "Depth of Cut (ap)": "0.02 - 0.15 mm per pass",
+    "Recommended Coolant": "Water-soluble emulsion (8-10% concentration) or low-viscosity grinding oil",
+    "Dressing Method": "Silicon carbide dressing stick (Al2O3 / SiC brake dresser)"
+  },
+  "certifications": "ISO 9001:2015, Dynamic Balancing Grade G1.0 @ 6,000 RPM.",
+  "specList": [
+    {
+      "key": "Standard Profile",
+      "val": "1V1 Angular Taper (45°)"
+    },
+    {
+      "key": "Outer Diameter (D)",
+      "val": "100 mm"
+    },
+    {
+      "key": "Rim Thickness (T)",
+      "val": "10 mm"
+    },
+    {
+      "key": "Arbor Bore (H)",
+      "val": "20.0 mm"
+    },
+    {
+      "key": "Profile Angle (V)",
+      "val": "45° Symmetric"
+    },
+    {
+      "key": "Abrasive Layer Depth (X)",
+      "val": "3.0 mm"
+    },
+    {
+      "key": "Superabrasive Type",
+      "val": "Premium Blocky Diamond"
+    },
+    {
+      "key": "Grit Size",
+      "val": "D150 (Mesh 140/170)"
+    },
+    {
+      "key": "Concentration",
+      "val": "C75 (3.3 carats/cm³)"
+    },
+    {
+      "key": "Bonding Matrix",
+      "val": "Advanced Thermoset Resinoid"
+    },
+    {
+      "key": "Max Speed",
+      "val": "35 m/s"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Wheel Peripheral Speed",
+      "val": "22 - 32 m/s"
+    },
+    {
+      "key": "Feed Rate",
+      "val": "100 - 350 mm/min"
+    },
+    {
+      "key": "Depth of Cut (ap)",
+      "val": "0.02 - 0.15 mm per pass"
+    },
+    {
+      "key": "Recommended Coolant",
+      "val": "Water-soluble emulsion (8-10% concentration) or low-viscosity grinding oil"
+    },
+    {
+      "key": "Dressing Method",
+      "val": "Silicon carbide dressing stick (Al2O3 / SiC brake dresser)"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "sku": "KP-TH-HSK63-HC20-100",
+  "name": "HSK-A63 Hydraulic Expansion Chuck Ø20mm (L=100mm)",
+  "category": "Tool Holding",
+  "categorySlug": "toolholding",
+  "categoryUrl": "tool-holding.html",
+  "badge": "Hydraulic Vibration Damping",
+  "image": "assets/images/diagrams/tool-holding.svg",
+  "shortDesc": "High-damping hydraulic chuck for reaming, finish milling, and micro-mirror finishing on HSK-A63 spindles.",
+  "purpose": "Internal oil chamber absorbs machining micro-vibrations, preventing chatter on long-overhang tools and delivering mirror finishes (Ra < 0.1µm).",
+  "workpieceMaterials": [
+    "HSK-A63 DIN 69893 Spindles"
+  ],
+  "keyFeatures": [
+    "2.5x higher vibration damping than mechanical collet chucks.",
+    "Quick 10-second tool change using a single Allen T-wrench.",
+    "Compatible with reduction sleeves from Ø20mm down to Ø3mm, Ø4mm, Ø6mm, Ø8mm, Ø12mm."
+  ],
+  "specs": {
+    "Spindle Interface": "HSK-A63 (DIN 69893)",
+    "Direct Clamping Bore": "Ø20.0 mm (H6)",
+    "Gauge Length": "100 mm",
+    "Runout Accuracy": "≤ 0.003 mm TIR at 2.5xD",
+    "Balance": "G2.5 @ 25,000 RPM",
+    "Actuation": "Radial Pressure Piston with Safety Stop"
+  },
+  "operatingConditions": {
+    "Max Speed": "25,000 RPM",
+    "Clamping Torque": "Up to 400 Nm (Ø20mm)",
+    "Max Operating Temp": "50°C continuous"
+  },
+  "certifications": "ISO 9001:2015, CMM Metrology Certificate.",
+  "specList": [
+    {
+      "key": "Spindle Interface",
+      "val": "HSK-A63 (DIN 69893)"
+    },
+    {
+      "key": "Direct Clamping Bore",
+      "val": "Ø20.0 mm (H6)"
+    },
+    {
+      "key": "Gauge Length",
+      "val": "100 mm"
+    },
+    {
+      "key": "Runout Accuracy",
+      "val": "≤ 0.003 mm TIR at 2.5xD"
+    },
+    {
+      "key": "Balance",
+      "val": "G2.5 @ 25,000 RPM"
+    },
+    {
+      "key": "Actuation",
+      "val": "Radial Pressure Piston with Safety Stop"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Max Speed",
+      "val": "25,000 RPM"
+    },
+    {
+      "key": "Clamping Torque",
+      "val": "Up to 400 Nm (Ø20mm)"
+    },
+    {
+      "key": "Max Operating Temp",
+      "val": "50°C continuous"
+    }
+  ]
+}

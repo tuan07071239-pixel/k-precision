@@ -1,0 +1,63 @@
+{
+  "sku": "KP-TH-BT30-SF06-80",
+  "name": "BT30 Shrink Fit Tool Holder Ø6.0mm (Gauge Length 80mm)",
+  "category": "Tool Holding",
+  "categorySlug": "toolholding",
+  "categoryUrl": "tool-holding.html",
+  "badge": "Ultra-High RPM (30k)",
+  "image": "assets/images/diagrams/tool-holding.svg",
+  "shortDesc": "Compact thermal shrink chuck for high-speed BT30 machining centers (Fanuc Robodrill, Brother Speedio) balanced up to 30,000 RPM.",
+  "purpose": "High-speed tapping centers and micro-milling in semiconductor parts, electronics housings, and medical components.",
+  "workpieceMaterials": [
+    "BT30 Spindles"
+  ],
+  "keyFeatures": [
+    "Balanced to G2.5 @ 30,000 RPM",
+    "Nose diameter only 17mm",
+    "Zero moving parts prevents centrifugal unbalance"
+  ],
+  "specs": {
+    "Spindle Taper": "BT30",
+    "Bore Diameter": "Ø6.0 mm (h6)",
+    "Gauge Length": "80 mm",
+    "Runout": "≤ 0.003 mm",
+    "Balance": "G2.5 @ 30,000 RPM"
+  },
+  "operatingConditions": {
+    "Max Speed": "30,000 RPM",
+    "Coolant": "Form AD"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Spindle Taper",
+      "val": "BT30"
+    },
+    {
+      "key": "Bore Diameter",
+      "val": "Ø6.0 mm (h6)"
+    },
+    {
+      "key": "Gauge Length",
+      "val": "80 mm"
+    },
+    {
+      "key": "Runout",
+      "val": "≤ 0.003 mm"
+    },
+    {
+      "key": "Balance",
+      "val": "G2.5 @ 30,000 RPM"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Max Speed",
+      "val": "30,000 RPM"
+    },
+    {
+      "key": "Coolant",
+      "val": "Form AD"
+    }
+  ]
+}
