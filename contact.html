@@ -5,9 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact &amp; Request for Quote (RFQ) | K-Precision</title>
   <meta name="description" content="Submit an official Request for Quote (RFQ) for precision grinding wheels, carbide cutters, tool holding, and EDM wires. Direct access to K-Precision technical sales.">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.4">
+  <link rel="stylesheet" href="assets/css/components.css?v=2.4">
+  <style>
+    /* Instant-render FAQ Card Styles */
+    .faq-list {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .faq-card {
+      background-color: #FFFFFF !important;
+      border: 1px solid #D5CFBE !important;
+      border-left: 5px solid #1E3A2F !important;
+      border-radius: 6px !important;
+      padding: 24px 28px !important;
+      box-shadow: 0 2px 8px rgba(30, 58, 47, 0.08) !important;
+      transition: all 0.2s ease-out;
+    }
+    .faq-card:hover {
+      border-color: #1E3A2F !important;
+      border-left-color: #C28B38 !important;
+      box-shadow: 0 4px 14px rgba(30, 58, 47, 0.12) !important;
+    }
+    .faq-q-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .faq-q-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background-color: #E6EFEA;
+      color: #1E3A2F;
+      border: 1px solid #BACEC2;
+      border-radius: 4px;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .faq-question {
+      color: #1E3A2F !important;
+      font-size: 1.125rem !important;
+      font-weight: 700 !important;
+      line-height: 1.4 !important;
+      margin: 0 !important;
+    }
+    .faq-answer-body {
+      padding-left: 42px;
+    }
+    .faq-answer {
+      color: #425248 !important;
+      font-size: 0.9375rem !important;
+      line-height: 1.65 !important;
+      margin: 0 !important;
+    }
+    .faq-answer strong {
+      color: #14231C !important;
+      font-weight: 700 !important;
+    }
+    @media (max-width: 600px) {
+      .faq-card {
+        padding: 18px 18px !important;
+      }
+      .faq-answer-body {
+        padding-left: 0;
+        margin-top: 8px;
+      }
+    }
+  </style>
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css?v=2.3">
-  <link rel="stylesheet" href="assets/css/components.css?v=2.3">
 </head>
 <body>
 
@@ -247,33 +321,57 @@
         <p class="section-subtitle">Common questions regarding minimum orders, custom tooling turnaround, and delivery guarantees.</p>
       </div>
 
-      <div class="faq-list">
-        <div class="faq-card">
-          <h4 class="faq-question">What are the Minimum Order Quantities (MOQs)?</h4>
-          <p class="faq-answer">
-            For standard catalog items (solid carbide end mills, shrink fit holders, EDM wire spools, and standard grinding wheels), there is <strong>no MOQ</strong>—you can order single piece evaluation units. For custom-profiled grinding wheels and custom step tools, typical prototype MOQs are 2-5 pieces.
-          </p>
+      <div class="faq-list" style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px;">
+        <!-- Card 1 -->
+        <div class="faq-card" style="background-color: #FFFFFF; border: 1px solid #D5CFBE; border-left: 5px solid #1E3A2F; border-radius: 6px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(30, 58, 47, 0.08);">
+          <div class="faq-q-header" style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;">
+            <span class="faq-q-badge" style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background-color: #E6EFEA; color: #1E3A2F; border: 1px solid #BACEC2; border-radius: 4px; font-size: 0.8125rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;">Q</span>
+            <h4 class="faq-question" style="color: #1E3A2F; font-size: 1.125rem; font-weight: 700; line-height: 1.4; margin: 0;">What are the Minimum Order Quantities (MOQs)?</h4>
+          </div>
+          <div class="faq-answer-body" style="padding-left: 42px;">
+            <p class="faq-answer" style="color: #425248; font-size: 0.9375rem; line-height: 1.65; margin: 0;">
+              For standard catalog items (solid carbide end mills, shrink fit holders, EDM wire spools, and standard grinding wheels), there is <strong style="color: #14231C; font-weight: 700;">no MOQ</strong>—you can order single piece evaluation units. For custom-profiled grinding wheels and custom step tools, typical prototype MOQs are 2-5 pieces.
+            </p>
+          </div>
         </div>
 
-        <div class="faq-card">
-          <h4 class="faq-question">How quickly do standard consumable items dispatch?</h4>
-          <p class="faq-answer">
-            Standard stock orders placed before 3:00 PM EST ship the same business day via UPS, FedEx, or dedicated freight for multi-pallet wire shipments. Standard overnight delivery is available across North America and international destinations.
-          </p>
+        <!-- Card 2 -->
+        <div class="faq-card" style="background-color: #FFFFFF; border: 1px solid #D5CFBE; border-left: 5px solid #1E3A2F; border-radius: 6px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(30, 58, 47, 0.08);">
+          <div class="faq-q-header" style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;">
+            <span class="faq-q-badge" style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background-color: #E6EFEA; color: #1E3A2F; border: 1px solid #BACEC2; border-radius: 4px; font-size: 0.8125rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;">Q</span>
+            <h4 class="faq-question" style="color: #1E3A2F; font-size: 1.125rem; font-weight: 700; line-height: 1.4; margin: 0;">How quickly do standard consumable items dispatch?</h4>
+          </div>
+          <div class="faq-answer-body" style="padding-left: 42px;">
+            <p class="faq-answer" style="color: #425248; font-size: 0.9375rem; line-height: 1.65; margin: 0;">
+              Standard stock orders placed before 3:00 PM EST ship the same business day via UPS, FedEx, or dedicated freight for multi-pallet wire shipments. Standard overnight delivery is available across North America and international destinations.
+            </p>
+          </div>
         </div>
 
-        <div class="faq-card">
-          <h4 class="faq-question">Can K-Precision grind custom diamond/CBN wheels according to our machine drawings?</h4>
-          <p class="faq-answer">
-            Yes. We regularly engineer custom wheel shapes (1V1, 14A1, 11V9, and custom radius profiles) with specific arbor bores, keyways, and grit concentrations. Typical custom wheel lead times are 2-3 weeks from drawing sign-off.
-          </p>
+        <!-- Card 3 -->
+        <div class="faq-card" style="background-color: #FFFFFF; border: 1px solid #D5CFBE; border-left: 5px solid #1E3A2F; border-radius: 6px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(30, 58, 47, 0.08);">
+          <div class="faq-q-header" style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;">
+            <span class="faq-q-badge" style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background-color: #E6EFEA; color: #1E3A2F; border: 1px solid #BACEC2; border-radius: 4px; font-size: 0.8125rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;">Q</span>
+            <h4 class="faq-question" style="color: #1E3A2F; font-size: 1.125rem; font-weight: 700; line-height: 1.4; margin: 0;">Can K-Precision grind custom diamond/CBN wheels according to our machine drawings?</h4>
+          </div>
+          <div class="faq-answer-body" style="padding-left: 42px;">
+            <p class="faq-answer" style="color: #425248; font-size: 0.9375rem; line-height: 1.65; margin: 0;">
+              Yes. We regularly engineer custom wheel shapes (1V1, 14A1, 11V9, and custom radius profiles) with specific arbor bores, keyways, and grit concentrations. Typical custom wheel lead times are 2-3 weeks from drawing sign-off.
+            </p>
+          </div>
         </div>
 
-        <div class="faq-card">
-          <h4 class="faq-question">Do you provide Certificates of Conformity and CMM inspection data?</h4>
-          <p class="faq-answer">
-            Yes. Every production lot is tracked under our ISO 9001:2015 quality system. Material test reports, hardness certificates, and coordinate metrology runout sheets can be enclosed with your shipment or emailed directly to your QA department.
-          </p>
+        <!-- Card 4 -->
+        <div class="faq-card" style="background-color: #FFFFFF; border: 1px solid #D5CFBE; border-left: 5px solid #1E3A2F; border-radius: 6px; padding: 24px 28px; box-shadow: 0 2px 8px rgba(30, 58, 47, 0.08);">
+          <div class="faq-q-header" style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;">
+            <span class="faq-q-badge" style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background-color: #E6EFEA; color: #1E3A2F; border: 1px solid #BACEC2; border-radius: 4px; font-size: 0.8125rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;">Q</span>
+            <h4 class="faq-question" style="color: #1E3A2F; font-size: 1.125rem; font-weight: 700; line-height: 1.4; margin: 0;">Do you provide Certificates of Conformity and CMM inspection data?</h4>
+          </div>
+          <div class="faq-answer-body" style="padding-left: 42px;">
+            <p class="faq-answer" style="color: #425248; font-size: 0.9375rem; line-height: 1.65; margin: 0;">
+              Yes. Every production lot is tracked under our ISO 9001:2015 quality system. Material test reports, hardness certificates, and coordinate metrology runout sheets can be enclosed with your shipment or emailed directly to your QA department.
+            </p>
+          </div>
         </div>
       </div>
     </div>
