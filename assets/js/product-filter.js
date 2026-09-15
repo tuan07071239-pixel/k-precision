@@ -1,5 +1,7 @@
 /**
  * K-PRECISION PRODUCT CATALOG FILTER & SEARCH
+ * Dynamically renders product cards from KP_PRODUCTS (compiled from CMS)
+ * and enables instant client-side filtering by category & full-text search.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,13 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initProductCatalog() {
+  const gridContainer = document.querySelector('.products-grid');
+  if (!gridContainer) return;
+
+  // Dynamically render cards if KP_PRODUCTS is loaded
+  renderCatalogGrid(gridContainer);
+
   const searchInput = document.querySelector('#productSearch');
   const filterChips = document.querySelectorAll('.chip-btn');
   const productCards = document.querySelectorAll('.product-card');
   const countDisplay = document.querySelector('.catalog-count');
-  const gridContainer = document.querySelector('.products-grid');
 
-  if (!gridContainer || !productCards.length) return;
+  if (!productCards.length) return;
 
   let activeCategory = 'all';
   let searchQuery = '';
@@ -108,4 +115,60 @@ function initProductCatalog() {
   }
 
   filterProducts();
+}
+
+/**
+ * Render product cards dynamically from window.KP_PRODUCTS
+ */
+function renderCatalogGrid(gridContainer) {
+  if (!window.KP_PRODUCTS) return;
+  const products = Object.values(window.KP_PRODUCTS);
+  if (!products.length) return;
+
+  gridContainer.innerHTML = '';
+
+  products.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.setAttribute('data-category', p.categorySlug || 'others');
+
+    const badgeHtml = p.badge ? `<span class="product-badge-corner">${p.badge}</span>` : '';
+    const imgUrl = p.image || 'assets/images/diagrams/grinding-wheel.svg';
+
+    let specsHtml = '';
+    if (p.specs && typeof p.specs === 'object') {
+      const entries = Object.entries(p.specs).slice(0, 3);
+      specsHtml = entries.map(([k, v]) => `
+        <div class="spec-row"><span class="spec-name">${k}:</span><span class="spec-val">${v}</span></div>
+      `).join('');
+    }
+
+    const firstSpec = p.specs ? Object.values(p.specs)[0] || '' : '';
+    const rfqSpecs = p.badge ? `${p.badge}, ${firstSpec}` : firstSpec;
+
+    card.innerHTML = `
+      <div class="product-thumb">
+        <img src="${imgUrl}" alt="${p.name}" loading="lazy">
+        ${badgeHtml}
+      </div>
+      <div class="product-info">
+        <div class="product-sku">SKU: ${p.sku}</div>
+        <h4 class="product-title">${p.name}</h4>
+        <p class="product-desc">${p.shortDesc || ''}</p>
+        <div class="product-specs-list">
+          ${specsHtml}
+        </div>
+        <div class="product-card-footer">
+          <button class="btn-add-rfq" 
+                  data-sku="${p.sku}" 
+                  data-name="${p.name}" 
+                  data-specs="${rfqSpecs}" 
+                  data-category="${p.category}">+ Add to RFQ</button>
+          <a href="product-detail.html?sku=${encodeURIComponent(p.sku)}" class="btn-view-details">Details &amp; Specs &rarr;</a>
+        </div>
+      </div>
+    `;
+
+    gridContainer.appendChild(card);
+  });
 }
