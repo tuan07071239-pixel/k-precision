@@ -13,14 +13,15 @@
   <meta property="og:type" content="website">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png?v=3.2">
+  <link rel="shortcut icon" href="favicon.ico?v=3.2">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=3.2">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.3">
-  <link rel="stylesheet" href="assets/css/components.css?v=2.3">
-  <link rel="stylesheet" href="assets/css/inline-admin.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.2">
+  <link rel="stylesheet" href="assets/css/components.css?v=3.2">
+  <link rel="stylesheet" href="assets/css/inline-admin.css?v=3.2">
   </head>
 <body>
 
@@ -71,10 +72,26 @@
       </nav>
 
       <div class="nav-actions">
-                <div class="kp-lang-switcher">
-          <button class="kp-lang-btn active" data-lang="en"><span class="kp-lang-flag">🇺🇸</span><span class="kp-lang-text"> EN</span></button>
-          <button class="kp-lang-btn" data-lang="ko"><span class="kp-lang-flag">🇰🇷</span><span class="kp-lang-text"> KO</span></button>
-          <button class="kp-lang-btn" data-lang="vi"><span class="kp-lang-flag">🇻🇳</span><span class="kp-lang-text"> VI</span></button>
+                        <div class="kp-lang-dropdown">
+          <button class="kp-lang-dropdown-btn" id="kpLangDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+            <span class="kp-lang-current-flag">🇺🇸</span>
+            <span class="kp-lang-current-label">EN</span>
+            <svg class="kp-lang-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="kp-lang-menu" id="kpLangMenu">
+            <button class="kp-lang-item active" data-lang="en" type="button">
+              <span class="kp-lang-flag">🇺🇸</span>
+              <span>English (EN)</span>
+            </button>
+            <button class="kp-lang-item" data-lang="ko" type="button">
+              <span class="kp-lang-flag">🇰🇷</span>
+              <span>한국어 (KO)</span>
+            </button>
+            <button class="kp-lang-item" data-lang="vi" type="button">
+              <span class="kp-lang-flag">🇻🇳</span>
+              <span>Tiếng Việt (VI)</span>
+            </button>
+          </div>
         </div>
 <button class="rfq-trigger-btn" aria-label="Open Quote Basket">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -631,11 +648,11 @@
 
       <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="assets/js/supabase-client.js"></script>
-  <script src="assets/js/products-data.js"></script>
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/rfq-basket.js"></script>
-  <script src="assets/js/inline-admin.js"></script>
+  <script src="assets/js/supabase-client.js?v=3.2"></script>
+  <script src="assets/js/products-data.js?v=3.2"></script>
+  <script src="assets/js/i18n.js?v=3.2"></script>
+  <script src="assets/js/main.js?v=3.2"></script>
+  <script src="assets/js/rfq-basket.js?v=3.2"></script>
+  <script src="assets/js/inline-admin.js?v=3.2"></script>
 </body>
 </html>

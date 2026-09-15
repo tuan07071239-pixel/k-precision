@@ -5,67 +5,111 @@
    ========================================================================== */
 
 /* ==========================================================================
-   LANGUAGE SWITCHER (Navbar)
+   LANGUAGE DROPDOWN (Navbar)
    ========================================================================== */
-.kp-lang-switcher {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
-  padding: 3px 5px;
+.kp-lang-dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.kp-lang-btn {
+.kp-lang-dropdown-btn {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 0.75rem;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
   cursor: pointer;
-  padding: 3px 7px;
-  border-radius: 4px;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: all 0.2s ease;
   white-space: nowrap;
 }
 
-.kp-lang-btn:hover {
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.12);
+.kp-lang-dropdown-btn:hover,
+.kp-lang-dropdown.open .kp-lang-dropdown-btn {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #C28B38;
 }
 
-.kp-lang-btn.active {
-  color: #14231C;
-  background: #C28B38;
-  font-weight: 700;
-}
-
-.kp-lang-btn .kp-lang-flag {
-  font-size: 0.95rem;
+.kp-lang-current-flag {
+  font-size: 1.05rem;
   line-height: 1;
 }
 
-@media (max-width: 768px) {
-  .kp-lang-switcher {
-    padding: 2px 4px;
-    gap: 1px;
-  }
-  .kp-lang-btn {
-    padding: 3px 5px;
-  }
+.kp-lang-current-label {
+  letter-spacing: 0.03em;
 }
 
-@media (max-width: 520px) {
-  .kp-lang-btn .kp-lang-text {
-    display: none;
-  }
-  .kp-lang-btn {
-    padding: 3px 4px;
+.kp-lang-arrow {
+  transition: transform 0.2s ease;
+  opacity: 0.75;
+}
+
+.kp-lang-dropdown.open .kp-lang-arrow {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.kp-lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 160px;
+  background: #14231C;
+  border: 1px solid #2D5844;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 1050;
+}
+
+.kp-lang-dropdown.open .kp-lang-menu {
+  display: flex;
+}
+
+.kp-lang-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.kp-lang-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.kp-lang-item.active {
+  background: #C28B38;
+  color: #14231C;
+  font-weight: 700;
+}
+
+.kp-lang-item .kp-lang-flag {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .kp-lang-dropdown-btn {
+    padding: 6px 9px;
+    font-size: 0.75rem;
   }
 }
 

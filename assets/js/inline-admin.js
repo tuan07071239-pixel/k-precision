@@ -118,11 +118,7 @@
       el.removeAttribute('contenteditable');
       el.classList.remove('kp-editable-active');
     });
-    // Only notify on explicit logout (not on initial page load for visitors)
-    if (wasLoggedIn) {
-      showToast('Signed out of Admin Mode.');
-      wasLoggedIn = false;
-    }
+    wasLoggedIn = false;
   }
 
   /* ==========================================================================
@@ -154,11 +150,13 @@
       showProductModal(null); // Create new product
     });
 
-    // Logout button
+    // Logout button - explicitly show toast ONLY when clicked
     adminBar.querySelector('#kp-btn-logout').addEventListener('click', async () => {
       if (window.KP_SUPABASE && window.KP_SUPABASE.client) {
         await window.KP_SUPABASE.client.auth.signOut();
       }
+      disableAdminMode();
+      showToast('Signed out of Admin Mode.');
     });
   }
 

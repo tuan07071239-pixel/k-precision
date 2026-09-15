@@ -308,7 +308,22 @@ function applyLanguage(lang) {
     }
   });
 
-  // Update lang switcher buttons
+  // Update lang dropdown UI
+  const langConfig = {
+    en: { flag: '🇺🇸', label: 'EN' },
+    ko: { flag: '🇰🇷', label: 'KO' },
+    vi: { flag: '🇻🇳', label: 'VI' }
+  };
+  const cur = langConfig[lang] || langConfig.en;
+
+  document.querySelectorAll('.kp-lang-current-flag').forEach(el => el.textContent = cur.flag);
+  document.querySelectorAll('.kp-lang-current-label').forEach(el => el.textContent = cur.label);
+
+  document.querySelectorAll('.kp-lang-item').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+
+  // Also update legacy buttons if any
   document.querySelectorAll('.kp-lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
@@ -324,14 +339,54 @@ function initI18n() {
   const saved = localStorage.getItem('kp-lang') || 'en';
   applyLanguage(saved);
 
-  // Bind language switcher buttons
-  document.querySelectorAll('.kp-lang-btn').forEach(btn => {
+  // Dropdown toggle
+  document.querySelectorAll('.kp-lang-dropdown-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      const lang = btn.getAttribute('data-lang');
-      if (lang) applyLanguage(lang);
+      const dropdown = btn.closest('.kp-lang-dropdown');
+      if (dropdown) {
+        const isOpen = dropdown.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+      }
     });
+  });
+
+  // Dropdown item selection
+  document.querySelectorAll('.kp-lang-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const lang = item.getAttribute('data-lang');
+      if (lang) {
+        applyLanguage(lang);
+      }
+      const dropdown = item.closest('.kp-lang-dropdown');
+      if (dropdown) {
+        dropdown.classList.remove('open');
+        dropdown.querySelector('.kp-lang-dropdown-btn')?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.kp-lang-dropdown')) {
+      document.querySelectorAll('.kp-lang-dropdown.open').forEach(dropdown => {
+        dropdown.classList.remove('open');
+        dropdown.querySelector('.kp-lang-dropdown-btn')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.kp-lang-dropdown.open').forEach(dropdown => {
+        dropdown.classList.remove('open');
+        dropdown.querySelector('.kp-lang-dropdown-btn')?.setAttribute('aria-expanded', 'false');
+      });
+    }
   });
 }
 
