@@ -1,0 +1,48 @@
+{
+  "sku": "KP-ACC-CLEAN-5L",
+  "name": "Dielectric Tank & Ultrasonic Machine Cleaner Concentrate (5L)",
+  "category": "Others & Consumables",
+  "categorySlug": "others",
+  "categoryUrl": "others.html",
+  "badge": "Eco Sludge Dissolver",
+  "image": "assets/images/diagrams/precision-lab.svg",
+  "shortDesc": "Non-corrosive chemical agent for dissolving hardened EDM sludge, rust deposits, and scale from dielectric tanks and machine way covers.",
+  "purpose": "Routine maintenance and deep cleaning of CNC EDM work tanks, pump circuits, chiller units, and CNC way guards.",
+  "workpieceMaterials": [
+    "Machine worktanks, ceramic plates, stainless guards"
+  ],
+  "keyFeatures": [
+    "Phosphorus-free eco-friendly formula",
+    "Dissolves stubborn copper-iron sludge without etching stainless",
+    "5-liter concentrated container"
+  ],
+  "specs": {
+    "Volume": "5.0 Liters Concentrate",
+    "Dilution Ratio": "1:5 with water for heavy sludge, 1:15 for general wiping",
+    "pH": "Neutral (6.8 - 7.2 non-acidic)"
+  },
+  "operatingConditions": {
+    "Application": "Spray onto tank walls, soak for 10 minutes, rinse with clean water"
+  },
+  "certifications": "RoHS Compliant, Biodegradable.",
+  "specList": [
+    {
+      "key": "Volume",
+      "val": "5.0 Liters Concentrate"
+    },
+    {
+      "key": "Dilution Ratio",
+      "val": "1:5 with water for heavy sludge, 1:15 for general wiping"
+    },
+    {
+      "key": "pH",
+      "val": "Neutral (6.8 - 7.2 non-acidic)"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Application",
+      "val": "Spray onto tank walls, soak for 10 minutes, rinse with clean water"
+    }
+  ]
+}

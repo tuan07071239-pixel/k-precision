@@ -1,0 +1,71 @@
+{
+  "sku": "KP-DR-5XD-D8.5-TC",
+  "name": "Through-Coolant Solid Carbide Drill 5xD Ø8.5mm (M10 Tap Pre-Drill)",
+  "category": "Cutting Tools",
+  "categorySlug": "cutting",
+  "categoryUrl": "cutting-tools.html",
+  "badge": "Internal Coolant 5xD",
+  "image": "assets/images/diagrams/cutting-tool.svg",
+  "shortDesc": "High-feed coolant-fed carbide drill for M10 tap pre-drilling in structural steels, mold blocks, and aerospace alloys.",
+  "purpose": "Deep hole drilling up to 5 times diameter in single-shot operations without chip jamming.",
+  "workpieceMaterials": [
+    "Carbon Steels",
+    "Alloy Steels",
+    "Stainless Steels",
+    "Inconel & Hastelloy"
+  ],
+  "keyFeatures": [
+    "Exceptional hole cylindrical straightness",
+    "Long tool life with internal coolant flushing",
+    "Rigid web thickness"
+  ],
+  "specs": {
+    "Drill Diameter": "8.5 mm (m7)",
+    "Flute Length": "61.0 mm",
+    "Overall Length": "103.0 mm",
+    "Shank Diameter": "10.0 mm (h6)",
+    "Coating": "TiAlN PVD"
+  },
+  "operatingConditions": {
+    "Cutting Speed": "80 - 130 m/min",
+    "Feed Rate": "0.18 - 0.28 mm/rev",
+    "Coolant Pressure": "20 - 70 Bar"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Drill Diameter",
+      "val": "8.5 mm (m7)"
+    },
+    {
+      "key": "Flute Length",
+      "val": "61.0 mm"
+    },
+    {
+      "key": "Overall Length",
+      "val": "103.0 mm"
+    },
+    {
+      "key": "Shank Diameter",
+      "val": "10.0 mm (h6)"
+    },
+    {
+      "key": "Coating",
+      "val": "TiAlN PVD"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Cutting Speed",
+      "val": "80 - 130 m/min"
+    },
+    {
+      "key": "Feed Rate",
+      "val": "0.18 - 0.28 mm/rev"
+    },
+    {
+      "key": "Coolant Pressure",
+      "val": "20 - 70 Bar"
+    }
+  ]
+}

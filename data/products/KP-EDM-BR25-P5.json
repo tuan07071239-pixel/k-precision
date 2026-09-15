@@ -1,0 +1,92 @@
+{
+  "sku": "KP-EDM-BR25-P5",
+  "name": "High-Tensile Precision Brass EDM Wire Ø0.25mm (5kg Spool)",
+  "category": "EDM Wires",
+  "categorySlug": "edm",
+  "categoryUrl": "edm-wires.html",
+  "badge": "CuZn35 980 N/mm²",
+  "image": "assets/images/diagrams/edm-wire.svg",
+  "shortDesc": "Ultra-straight premium CuZn35 brass EDM wire formulated for 100% reliable Automatic Wire Threading (AWT) and consistent spark discharge.",
+  "purpose": "High-precision Wire EDM cutting of press tool dies, plastic mold cavities, tungsten carbide punches, and aerospace components.",
+  "workpieceMaterials": [
+    "Hardened Steels: SKD11, DC53, D2, H13 (up to 65 HRC)",
+    "Tungsten Carbide grades (G2, G5, Micro-grain)",
+    "Titanium Alloys (Ti-6Al-4V)",
+    "Inconel, Monel & Hastelloy superalloys"
+  ],
+  "keyFeatures": [
+    "Continuous in-line annealing eliminates wire curling and ensures zero-jam auto wire threading into submerged jets.",
+    "High tensile strength (980 - 1000 N/mm²) prevents wire vibration and maintains tight corner radii.",
+    "Paraffin-free, ultra-clean surface prevents copper dust deposition in diamond guides and power contacts.",
+    "Uniform diameter tolerance within ±0.001 mm ensures predictable electrical discharge gap."
+  ],
+  "specs": {
+    "Nominal Diameter": "Ø0.25 mm (±0.001 mm)",
+    "Alloy Composition": "CuZn35 (Copper 65%, Zinc 35% virgin raw materials)",
+    "Tensile Strength": "980 - 1000 N/mm²",
+    "Elongation": "1.5% - 2.5%",
+    "Electrical Conductivity": "20% - 22% IACS",
+    "Surface Condition": "Bright, clean, micro-paraffined for smooth feed",
+    "Spool Standard": "DIN 125 (P5 - 5 kg net wire weight)",
+    "Wire Length per Spool": "Approx. 12,000 meters"
+  },
+  "operatingConditions": {
+    "Machine Compatibility": "Sodick, Mitsubishi, GF AgieCharmilles, Fanuc Robocut, Makino, Seibu, Accutex",
+    "Recommended Dielectric": "Deionized water (Resistivity 10 - 15 MΩ·cm)",
+    "Wire Tension": "1000 - 1400 grams (depending on workpiece height)",
+    "Flushing Pressure": "High pressure (0.8 - 1.5 MPa) for roughing"
+  },
+  "certifications": "ISO 9001:2015, RoHS Compliant, Tensile Curve Logged.",
+  "specList": [
+    {
+      "key": "Nominal Diameter",
+      "val": "Ø0.25 mm (±0.001 mm)"
+    },
+    {
+      "key": "Alloy Composition",
+      "val": "CuZn35 (Copper 65%, Zinc 35% virgin raw materials)"
+    },
+    {
+      "key": "Tensile Strength",
+      "val": "980 - 1000 N/mm²"
+    },
+    {
+      "key": "Elongation",
+      "val": "1.5% - 2.5%"
+    },
+    {
+      "key": "Electrical Conductivity",
+      "val": "20% - 22% IACS"
+    },
+    {
+      "key": "Surface Condition",
+      "val": "Bright, clean, micro-paraffined for smooth feed"
+    },
+    {
+      "key": "Spool Standard",
+      "val": "DIN 125 (P5 - 5 kg net wire weight)"
+    },
+    {
+      "key": "Wire Length per Spool",
+      "val": "Approx. 12,000 meters"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Machine Compatibility",
+      "val": "Sodick, Mitsubishi, GF AgieCharmilles, Fanuc Robocut, Makino, Seibu, Accutex"
+    },
+    {
+      "key": "Recommended Dielectric",
+      "val": "Deionized water (Resistivity 10 - 15 MΩ·cm)"
+    },
+    {
+      "key": "Wire Tension",
+      "val": "1000 - 1400 grams (depending on workpiece height)"
+    },
+    {
+      "key": "Flushing Pressure",
+      "val": "High pressure (0.8 - 1.5 MPa) for roughing"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "sku": "KP-EDM-BR25-P10",
+  "name": "High-Tensile Precision Brass EDM Wire Ø0.25mm (10kg Spool)",
+  "category": "EDM Wires",
+  "categorySlug": "edm",
+  "categoryUrl": "edm-wires.html",
+  "badge": "Unattended Lights-Out 10kg",
+  "image": "assets/images/diagrams/edm-wire.svg",
+  "shortDesc": "Large capacity 10kg spool providing over 24,000 meters of continuous wire for unattended overnight weekend shifts.",
+  "purpose": "High-volume production runs and tall workpiece cuts requiring long, uninterrupted machine hours.",
+  "workpieceMaterials": [
+    "All WEDM materials"
+  ],
+  "keyFeatures": [
+    "10kg high-capacity spool fits modern large machines",
+    "Reduces spool change downtime by 50%",
+    "Constant tension throughout spool"
+  ],
+  "specs": {
+    "Diameter": "Ø0.25 mm",
+    "Tensile": "980 N/mm²",
+    "Spool": "P10 (DIN 160, 10 kg net)",
+    "Wire Length": "Approx. 24,000 meters"
+  },
+  "operatingConditions": {
+    "Fits": "Machines with 10kg/16kg spool holders"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Diameter",
+      "val": "Ø0.25 mm"
+    },
+    {
+      "key": "Tensile",
+      "val": "980 N/mm²"
+    },
+    {
+      "key": "Spool",
+      "val": "P10 (DIN 160, 10 kg net)"
+    },
+    {
+      "key": "Wire Length",
+      "val": "Approx. 24,000 meters"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Fits",
+      "val": "Machines with 10kg/16kg spool holders"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "sku": "KP-EM-4F-D06-AL",
+  "name": "4-Flute Variable Helix Solid Carbide End Mill Ø6.0mm",
+  "category": "Cutting Tools",
+  "categorySlug": "cutting",
+  "categoryUrl": "cutting-tools.html",
+  "badge": "High-Feed Milling",
+  "image": "assets/images/diagrams/cutting-tool.svg",
+  "shortDesc": "High-speed pocketing and profiling carbide mill for precision mold cavities, medical fixtures, and alloy steel parts.",
+  "purpose": "Ideal for pocket milling, shoulder contouring, and slotting in tight component features requiring high dimensional accuracy.",
+  "workpieceMaterials": [
+    "Mold Steels (P20, H13)",
+    "Stainless 304/316",
+    "Titanium Ti-6Al-4V",
+    "Alloy Steels 4140"
+  ],
+  "keyFeatures": [
+    "Variable pitch eliminates chatter at high spindle speeds",
+    "AlCrN coating for extended tool life",
+    "Center cutting allows ramping and helical plunge"
+  ],
+  "specs": {
+    "Cutting Diameter": "6.0 mm",
+    "Flute Length": "15.0 mm",
+    "Overall Length": "50.0 mm",
+    "Shank Diameter": "6.0 mm (h6)",
+    "Flutes": "4 Flute Variable",
+    "Coating": "AlCrN Nano-PVD"
+  },
+  "operatingConditions": {
+    "Cutting Speed": "140 - 200 m/min",
+    "Feed per tooth (fz)": "0.035 - 0.06 mm/tooth",
+    "Coolant": "Flood emulsion or high-pressure air"
+  },
+  "certifications": "ISO 9001:2015 Certified.",
+  "specList": [
+    {
+      "key": "Cutting Diameter",
+      "val": "6.0 mm"
+    },
+    {
+      "key": "Flute Length",
+      "val": "15.0 mm"
+    },
+    {
+      "key": "Overall Length",
+      "val": "50.0 mm"
+    },
+    {
+      "key": "Shank Diameter",
+      "val": "6.0 mm (h6)"
+    },
+    {
+      "key": "Flutes",
+      "val": "4 Flute Variable"
+    },
+    {
+      "key": "Coating",
+      "val": "AlCrN Nano-PVD"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Cutting Speed",
+      "val": "140 - 200 m/min"
+    },
+    {
+      "key": "Feed per tooth (fz)",
+      "val": "0.035 - 0.06 mm/tooth"
+    },
+    {
+      "key": "Coolant",
+      "val": "Flood emulsion or high-pressure air"
+    }
+  ]
+}

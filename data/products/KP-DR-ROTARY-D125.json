@@ -1,0 +1,75 @@
+{
+  "sku": "KP-DR-ROTARY-D125",
+  "name": "CNC Rotary Diamond Dressing Roll Ø125mm",
+  "category": "Grinding Tools",
+  "categorySlug": "grinding",
+  "categoryUrl": "grinding-wheels.html",
+  "badge": "CNC Wheel Dressing",
+  "image": "assets/images/diagrams/grinding-wheel.svg",
+  "shortDesc": "Precision CNC rotary dressing disc with reinforced CVD and natural diamond handset profile for automated vitrified wheel profiling.",
+  "purpose": "Mounted on CNC dressing spindles to automatically dress and true vitrified CBN and diamond grinding wheels, generating accurate wheel forms and sharp cutting grains.",
+  "workpieceMaterials": [
+    "Vitrified Diamond Wheels",
+    "Vitrified CBN Wheels",
+    "Ceramic Bonded Abrasives"
+  ],
+  "keyFeatures": [
+    "Handset natural diamonds with CVD diamond reinforcement",
+    "Profile form repeatability ±0.0015mm",
+    "Balanced for up to 8,000 RPM dressing spindles"
+  ],
+  "specs": {
+    "Outer Diameter": "125 mm",
+    "Rim Width": "20 mm",
+    "Bore": "52.0 mm (precision ground)",
+    "Diamond Type": "Selected Natural Diamond + CVD Inserts",
+    "Form Accuracy": "±0.0015 mm",
+    "Runout": "< 0.002 mm TIR"
+  },
+  "operatingConditions": {
+    "Speed Ratio (q)": "+0.6 to +0.8 (unidirectional dressing)",
+    "Radial Infeed (aed)": "0.002 - 0.005 mm/pass",
+    "Overlap Ratio (Ud)": "4 - 8"
+  },
+  "certifications": "ISO 9001:2015, Metrology Calibration Protocol.",
+  "specList": [
+    {
+      "key": "Outer Diameter",
+      "val": "125 mm"
+    },
+    {
+      "key": "Rim Width",
+      "val": "20 mm"
+    },
+    {
+      "key": "Bore",
+      "val": "52.0 mm (precision ground)"
+    },
+    {
+      "key": "Diamond Type",
+      "val": "Selected Natural Diamond + CVD Inserts"
+    },
+    {
+      "key": "Form Accuracy",
+      "val": "±0.0015 mm"
+    },
+    {
+      "key": "Runout",
+      "val": "< 0.002 mm TIR"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Speed Ratio (q)",
+      "val": "+0.6 to +0.8 (unidirectional dressing)"
+    },
+    {
+      "key": "Radial Infeed (aed)",
+      "val": "0.002 - 0.005 mm/pass"
+    },
+    {
+      "key": "Overlap Ratio (Ud)",
+      "val": "4 - 8"
+    }
+  ]
+}

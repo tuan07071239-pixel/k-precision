@@ -1,0 +1,86 @@
+{
+  "sku": "KP-BN-2F-R0.5-D4",
+  "name": "2-Flute Precision Micro Ball Nose End Mill R0.5 (Ø1.0mm)",
+  "category": "Cutting Tools",
+  "categorySlug": "cutting",
+  "categoryUrl": "cutting-tools.html",
+  "badge": "Micro-Machining 65 HRC",
+  "image": "assets/images/diagrams/cutting-tool.svg",
+  "shortDesc": "Ultra-precision micro ball end mill with TiSiN hard coating (4200 HV) for 3D sculptured surfaces in hardened mold steels up to 65 HRC.",
+  "purpose": "Dedicated to micro-machining of injection mold cores, optical cavities, semiconductor contact dies, and miniature medical implants.",
+  "workpieceMaterials": [
+    "Hardened Steels: SKD11, D2, H13 (55 - 65 HRC)",
+    "S-Star, Stavax Stainless Mold Steels",
+    "Pre-sintered ceramics",
+    "Cobalt-Chrome alloy"
+  ],
+  "keyFeatures": [
+    "Ball radius tolerance guaranteed within ±0.002 mm (2 microns).",
+    "TiSiN coating with extreme hardness 4200 HV resists abrasive wear in high-hardness steels.",
+    "Reinforced neck taper prevents tool deflection during high-RPM 3D contouring."
+  ],
+  "specs": {
+    "Radius (R)": "R0.5 mm (±0.002mm)",
+    "Diameter (D)": "1.0 mm",
+    "Flute Length": "2.0 mm",
+    "Neck Reach": "6.0 mm",
+    "Shank (D2)": "4.0 mm (h5 tolerance)",
+    "Overall Length": "50.0 mm",
+    "Coating": "TiSiN Ultra-Hard (4200 HV)"
+  },
+  "operatingConditions": {
+    "Spindle Speed": "25,000 - 45,000 RPM",
+    "Feed per tooth": "0.008 - 0.02 mm/tooth",
+    "Stepover (ae)": "0.03 - 0.08 mm",
+    "Coolant": "Cold air blast with micro-mist MQL"
+  },
+  "certifications": "ISO 9001:2015, 100% Optical Vision Inspected.",
+  "specList": [
+    {
+      "key": "Radius (R)",
+      "val": "R0.5 mm (±0.002mm)"
+    },
+    {
+      "key": "Diameter (D)",
+      "val": "1.0 mm"
+    },
+    {
+      "key": "Flute Length",
+      "val": "2.0 mm"
+    },
+    {
+      "key": "Neck Reach",
+      "val": "6.0 mm"
+    },
+    {
+      "key": "Shank (D2)",
+      "val": "4.0 mm (h5 tolerance)"
+    },
+    {
+      "key": "Overall Length",
+      "val": "50.0 mm"
+    },
+    {
+      "key": "Coating",
+      "val": "TiSiN Ultra-Hard (4200 HV)"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Spindle Speed",
+      "val": "25,000 - 45,000 RPM"
+    },
+    {
+      "key": "Feed per tooth",
+      "val": "0.008 - 0.02 mm/tooth"
+    },
+    {
+      "key": "Stepover (ae)",
+      "val": "0.03 - 0.08 mm"
+    },
+    {
+      "key": "Coolant",
+      "val": "Cold air blast with micro-mist MQL"
+    }
+  ]
+}

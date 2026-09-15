@@ -1,0 +1,73 @@
+{
+  "sku": "KP-EDM-RESIN-25L",
+  "name": "Virgin Nuclear-Grade Mixed-Bed Deionizing Resin (25L Drum)",
+  "category": "Others & Consumables",
+  "categorySlug": "others",
+  "categoryUrl": "others.html",
+  "badge": "18 MΩ·cm Nuclear Grade",
+  "image": "assets/images/diagrams/precision-lab.svg",
+  "shortDesc": "Premium mixed-bed ion exchange resin for rapidly reducing dielectric water conductivity and maintaining 15 - 18 MΩ·cm water purity.",
+  "purpose": "Demineralizes tap and RO water for CNC wire EDM machines, preventing secondary parasitic discharge and ensuring razor-sharp cutting kerfs.",
+  "workpieceMaterials": [
+    "All Wire EDM dielectric water circuits"
+  ],
+  "keyFeatures": [
+    "High chemical capacity 1:1 chemical equivalent ratio of strong acid cation and strong base anion.",
+    "Rapidly brings raw water down to target resistivity (0.1µS/cm / 15-18 MΩ·cm) within minutes.",
+    "Hermetically sealed in 25-liter moisture-barrier poly drums to prevent atmospheric exhaustion."
+  ],
+  "specs": {
+    "Resin Type": "Virgin Mixed-Bed Ion Exchange Resin (Non-regenerated)",
+    "Matrix Structure": "Gel-type polystyrene crosslinked with divinylbenzene (DVB)",
+    "Ionic Form": "H+ / OH- fully activated",
+    "Particle Size": "0.3 - 1.2 mm uniform spherical beads",
+    "Water Purity Output": "Resistivity > 18.0 MΩ·cm",
+    "Packaging": "25 Liters (approx. 18 kg) in sealed drum"
+  },
+  "operatingConditions": {
+    "Max Operating Temp": "60°C",
+    "Flow Velocity": "20 - 40 Bed Volumes per hour",
+    "Storage": "Store between 5°C and 40°C away from direct sunlight"
+  },
+  "certifications": "ISO 9001:2015, Nuclear Grade Purity Standard.",
+  "specList": [
+    {
+      "key": "Resin Type",
+      "val": "Virgin Mixed-Bed Ion Exchange Resin (Non-regenerated)"
+    },
+    {
+      "key": "Matrix Structure",
+      "val": "Gel-type polystyrene crosslinked with divinylbenzene (DVB)"
+    },
+    {
+      "key": "Ionic Form",
+      "val": "H+ / OH- fully activated"
+    },
+    {
+      "key": "Particle Size",
+      "val": "0.3 - 1.2 mm uniform spherical beads"
+    },
+    {
+      "key": "Water Purity Output",
+      "val": "Resistivity > 18.0 MΩ·cm"
+    },
+    {
+      "key": "Packaging",
+      "val": "25 Liters (approx. 18 kg) in sealed drum"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Max Operating Temp",
+      "val": "60°C"
+    },
+    {
+      "key": "Flow Velocity",
+      "val": "20 - 40 Bed Volumes per hour"
+    },
+    {
+      "key": "Storage",
+      "val": "Store between 5°C and 40°C away from direct sunlight"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "sku": "KP-EDM-CONTACT-TC",
+  "name": "Tungsten Carbide Power Feed Contacts (Pack of 4 pcs)",
+  "category": "EDM Wires",
+  "categorySlug": "edm",
+  "categoryUrl": "edm-wires.html",
+  "badge": "High Wear Resistance",
+  "image": "assets/images/diagrams/edm-wire.svg",
+  "shortDesc": "Ultra-fine grain tungsten carbide electrical power feed contacts for upper and lower heads on wire EDM machines.",
+  "purpose": "Transfers high-frequency pulse electrical discharge currents to the moving wire with minimal electrical erosion.",
+  "workpieceMaterials": [
+    "Compatible with Mitsubishi, Sodick, Fanuc, GF Machining"
+  ],
+  "keyFeatures": [
+    "Special cobalt-free composite carbide",
+    "Extremely low electrical contact resistance",
+    "Reversible multi-position indexing"
+  ],
+  "specs": {
+    "Material": "Ultra-Dense Tungsten Carbide composite",
+    "Quantity": "4 pieces per set",
+    "Lifespan": "Over 500 hours per indexing position",
+    "Surface Finish": "Mirror polished wire track"
+  },
+  "operatingConditions": {
+    "Maintenance": "Index contact position every 80 - 100 hours of cutting"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Material",
+      "val": "Ultra-Dense Tungsten Carbide composite"
+    },
+    {
+      "key": "Quantity",
+      "val": "4 pieces per set"
+    },
+    {
+      "key": "Lifespan",
+      "val": "Over 500 hours per indexing position"
+    },
+    {
+      "key": "Surface Finish",
+      "val": "Mirror polished wire track"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Maintenance",
+      "val": "Index contact position every 80 - 100 hours of cutting"
+    }
+  ]
+}

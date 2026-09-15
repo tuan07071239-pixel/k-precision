@@ -1,0 +1,73 @@
+{
+  "sku": "KP-EDM-FIL-340",
+  "name": "High-Efficiency Sub-Micron EDM Water Filter (3-5µm)",
+  "category": "Others & Consumables",
+  "categorySlug": "others",
+  "categoryUrl": "others.html",
+  "badge": "Filtration 3-5µm",
+  "image": "assets/images/diagrams/edm-wire.svg",
+  "shortDesc": "Dual-pleated synthetic media high-pressure filter cartridge compatible with Sodick, Mitsubishi, GF Machining, and Fanuc wire EDM systems.",
+  "purpose": "Removes fine sub-micron electrical discharge erosion sludge from dielectric water, protecting diamond guides and stabilizing electrical conductivity.",
+  "workpieceMaterials": [
+    "Dielectric water systems for Wire EDM and Sinker EDM"
+  ],
+  "keyFeatures": [
+    "Dual-layer synthetic pleated media captures sludge particles down to 3 - 5 microns.",
+    "High collapse-resistance steel inner core withstands pump pressures up to 3.0 Bar without rupture.",
+    "Extends deionization resin lifespan by preventing resin fouling from metal micro-debris."
+  ],
+  "specs": {
+    "Outer Diameter": "340 mm",
+    "Height": "300 mm",
+    "Connection Style": "Center Nipple (External Thread) or Central Hole",
+    "Filtration Rating": "3 - 5 Microns Nominal",
+    "Flow Direction": "Outside-to-Inside Flow",
+    "Operating Pressure": "Up to 3.0 Bar (43 PSI)",
+    "Lifespan": "250 - 350 operating hours"
+  },
+  "operatingConditions": {
+    "Compatibility": "Sodick, Mitsubishi, Fanuc, GF AgieCharmilles, Makino",
+    "Replacement Trigger": "Replace when filter pressure gauge enters red zone (> 2.0 Bar)"
+  },
+  "certifications": "ISO 9001:2015 Quality Tested.",
+  "specList": [
+    {
+      "key": "Outer Diameter",
+      "val": "340 mm"
+    },
+    {
+      "key": "Height",
+      "val": "300 mm"
+    },
+    {
+      "key": "Connection Style",
+      "val": "Center Nipple (External Thread) or Central Hole"
+    },
+    {
+      "key": "Filtration Rating",
+      "val": "3 - 5 Microns Nominal"
+    },
+    {
+      "key": "Flow Direction",
+      "val": "Outside-to-Inside Flow"
+    },
+    {
+      "key": "Operating Pressure",
+      "val": "Up to 3.0 Bar (43 PSI)"
+    },
+    {
+      "key": "Lifespan",
+      "val": "250 - 350 operating hours"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Compatibility",
+      "val": "Sodick, Mitsubishi, Fanuc, GF AgieCharmilles, Makino"
+    },
+    {
+      "key": "Replacement Trigger",
+      "val": "Replace when filter pressure gauge enters red zone (> 2.0 Bar)"
+    }
+  ]
+}

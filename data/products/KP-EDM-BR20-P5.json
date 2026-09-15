@@ -1,0 +1,55 @@
+{
+  "sku": "KP-EDM-BR20-P5",
+  "name": "High-Tensile Precision Brass EDM Wire Ø0.20mm (5kg Spool)",
+  "category": "EDM Wires",
+  "categorySlug": "edm",
+  "categoryUrl": "edm-wires.html",
+  "badge": "Fine Pitch CuZn35",
+  "image": "assets/images/diagrams/edm-wire.svg",
+  "shortDesc": "Fine diameter 0.20mm brass wire for micro-radius corners, stamping dies, and thin slotting.",
+  "purpose": "Fine-pitch gear dies, connector mold cavities, and small corner radii (R < 0.12mm).",
+  "workpieceMaterials": [
+    "Hardened steels",
+    "Tungsten carbide",
+    "Titanium"
+  ],
+  "keyFeatures": [
+    "High tensile 1000 N/mm² avoids breaks in thin diameters",
+    "Superior straightness for AWT",
+    "Smooth discharge"
+  ],
+  "specs": {
+    "Diameter": "Ø0.20 mm (±0.001mm)",
+    "Alloy": "CuZn35",
+    "Tensile": "1000 N/mm²",
+    "Spool": "P5 (5 kg net weight)"
+  },
+  "operatingConditions": {
+    "Tension": "800 - 1100 g"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Diameter",
+      "val": "Ø0.20 mm (±0.001mm)"
+    },
+    {
+      "key": "Alloy",
+      "val": "CuZn35"
+    },
+    {
+      "key": "Tensile",
+      "val": "1000 N/mm²"
+    },
+    {
+      "key": "Spool",
+      "val": "P5 (5 kg net weight)"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Tension",
+      "val": "800 - 1100 g"
+    }
+  ]
+}

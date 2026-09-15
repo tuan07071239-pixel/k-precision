@@ -1,0 +1,48 @@
+{
+  "sku": "KP-ACC-RUST-SP",
+  "name": "Industrial Moisture-Displacing Anti-Corrosion Spray (400ml)",
+  "category": "Others & Consumables",
+  "categorySlug": "others",
+  "categoryUrl": "others.html",
+  "badge": "Long-Term Protection",
+  "image": "assets/images/diagrams/precision-lab.svg",
+  "shortDesc": "High-performance moisture displacing corrosion inhibitor for precision tooling, machined parts, and CNC chucks.",
+  "purpose": "Protects freshly machined steel parts, EDM workpieces, and toolholders from atmospheric oxidation during storage and transit.",
+  "workpieceMaterials": [
+    "All ferrous steels, cast irons, mold cavities"
+  ],
+  "keyFeatures": [
+    "Displaces moisture instantly",
+    "Forms an ultra-thin dry non-greasy protective film",
+    "Protects against rust for up to 12 months indoors"
+  ],
+  "specs": {
+    "Packaging": "400 ml Aerosol Can",
+    "Film Thickness": "1.5 - 2.5 µm (does not alter precision tolerances)",
+    "Salt Spray Test": "Over 72 hours ASTM B117"
+  },
+  "operatingConditions": {
+    "Removal": "Easily removed with standard degreaser or solvent wipe"
+  },
+  "certifications": "ISO 9001:2015.",
+  "specList": [
+    {
+      "key": "Packaging",
+      "val": "400 ml Aerosol Can"
+    },
+    {
+      "key": "Film Thickness",
+      "val": "1.5 - 2.5 µm (does not alter precision tolerances)"
+    },
+    {
+      "key": "Salt Spray Test",
+      "val": "Over 72 hours ASTM B117"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Removal",
+      "val": "Easily removed with standard degreaser or solvent wipe"
+    }
+  ]
+}

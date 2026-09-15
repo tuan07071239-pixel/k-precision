@@ -1,0 +1,81 @@
+{
+  "sku": "KP-DR-5XD-D6.8-TC",
+  "name": "Through-Coolant Solid Carbide Drill 5xD Ø6.8mm (M8 Tap Pre-Drill)",
+  "category": "Cutting Tools",
+  "categorySlug": "cutting",
+  "categoryUrl": "cutting-tools.html",
+  "badge": "Internal Coolant 5xD",
+  "image": "assets/images/diagrams/cutting-tool.svg",
+  "shortDesc": "High-performance dual spiral internal coolant hole drill for drilling M8 tapping holes in stainless steel, alloy steel, and titanium.",
+  "purpose": "High-feed holemaking with immediate chip evacuation via internal high-pressure coolant channels, eliminating pecking cycles in deep holes.",
+  "workpieceMaterials": [
+    "Stainless Steel (304, 316, Duplex)",
+    "Titanium Ti-6Al-4V",
+    "Alloy Steels 4140/4340",
+    "Tool Steels"
+  ],
+  "keyFeatures": [
+    "140° self-centering point eliminates pre-spotting.",
+    "Dual helical coolant channels supply up to 50 Bar pressure directly to the drill chisel edge.",
+    "TiAlN multi-layer PVD coating prevents built-up edge (BUE) on stainless steels."
+  ],
+  "specs": {
+    "Drill Diameter": "6.8 mm (m7 tolerance)",
+    "Flute Length": "53.0 mm",
+    "Overall Length": "91.0 mm",
+    "Shank Diameter": "8.0 mm (h6)",
+    "Point Angle": "140° Self-Centering",
+    "Coolant": "Internal Dual Coolant Ports",
+    "Coating": "TiAlN Multi-Layer PVD"
+  },
+  "operatingConditions": {
+    "Cutting Speed": "70 - 110 m/min (Stainless) / 110 - 140 m/min (Alloy Steel)",
+    "Feed Rate (f)": "0.14 - 0.22 mm/rev",
+    "Coolant Pressure": "Minimum 15 Bar (Optimal 25 - 50 Bar)"
+  },
+  "certifications": "ISO 9001:2015 Certified.",
+  "specList": [
+    {
+      "key": "Drill Diameter",
+      "val": "6.8 mm (m7 tolerance)"
+    },
+    {
+      "key": "Flute Length",
+      "val": "53.0 mm"
+    },
+    {
+      "key": "Overall Length",
+      "val": "91.0 mm"
+    },
+    {
+      "key": "Shank Diameter",
+      "val": "8.0 mm (h6)"
+    },
+    {
+      "key": "Point Angle",
+      "val": "140° Self-Centering"
+    },
+    {
+      "key": "Coolant",
+      "val": "Internal Dual Coolant Ports"
+    },
+    {
+      "key": "Coating",
+      "val": "TiAlN Multi-Layer PVD"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Cutting Speed",
+      "val": "70 - 110 m/min (Stainless) / 110 - 140 m/min (Alloy Steel)"
+    },
+    {
+      "key": "Feed Rate (f)",
+      "val": "0.14 - 0.22 mm/rev"
+    },
+    {
+      "key": "Coolant Pressure",
+      "val": "Minimum 15 Bar (Optimal 25 - 50 Bar)"
+    }
+  ]
+}

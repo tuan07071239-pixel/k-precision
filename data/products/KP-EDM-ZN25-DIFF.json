@@ -1,0 +1,65 @@
+{
+  "sku": "KP-EDM-ZN25-DIFF",
+  "name": "Gamma-Phase Zinc Coated High-Speed EDM Wire Ø0.25mm",
+  "category": "EDM Wires",
+  "categorySlug": "edm",
+  "categoryUrl": "edm-wires.html",
+  "badge": "Speed Boost (+25%)",
+  "image": "assets/images/diagrams/edm-wire.svg",
+  "shortDesc": "Diffusion-annealed gamma zinc layer wire delivering up to 25% faster cutting speeds and mirror surface finish on tall mold blocks.",
+  "purpose": "High-productivity mold & die shops where cutting speed and surface roughness are critical to reduce polishing times.",
+  "workpieceMaterials": [
+    "Tall block mold steels (H13, P20, SKD61)",
+    "Large stamping dies",
+    "Inconel aerospace components"
+  ],
+  "keyFeatures": [
+    "Gamma-phase zinc coating has lower evaporation temp, creating stronger flushing pressure that purges recast sludge.",
+    "Increases cutting speed by 20% to 30% compared to standard plain brass.",
+    "Yields superior surface finishes (Ra < 0.2µm) and minimal recast layer thickness."
+  ],
+  "specs": {
+    "Diameter": "Ø0.25 mm (±0.001mm)",
+    "Core": "CuZn20 Low-Zinc Brass Core (high electrical conductivity)",
+    "Coating": "Thermally diffused Gamma Zinc outer layer",
+    "Tensile Strength": "900 N/mm²",
+    "Spool": "DIN 200 (8 kg net)"
+  },
+  "operatingConditions": {
+    "Speed Advantage": "Run machine generator on zinc-coated wire technology parameters",
+    "Flushing": "Ensure optimal nozzle sealing against workpiece"
+  },
+  "certifications": "ISO 9001:2015, European Quality Standards.",
+  "specList": [
+    {
+      "key": "Diameter",
+      "val": "Ø0.25 mm (±0.001mm)"
+    },
+    {
+      "key": "Core",
+      "val": "CuZn20 Low-Zinc Brass Core (high electrical conductivity)"
+    },
+    {
+      "key": "Coating",
+      "val": "Thermally diffused Gamma Zinc outer layer"
+    },
+    {
+      "key": "Tensile Strength",
+      "val": "900 N/mm²"
+    },
+    {
+      "key": "Spool",
+      "val": "DIN 200 (8 kg net)"
+    }
+  ],
+  "paramList": [
+    {
+      "key": "Speed Advantage",
+      "val": "Run machine generator on zinc-coated wire technology parameters"
+    },
+    {
+      "key": "Flushing",
+      "val": "Ensure optimal nozzle sealing against workpiece"
+    }
+  ]
+}
