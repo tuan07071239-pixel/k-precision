@@ -73,7 +73,9 @@
   display: flex;
 }
 
-.kp-lang-item {
+.kp-lang-item,
+.kp-lang-option,
+.kp-lang-menu button {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -91,18 +93,24 @@
   white-space: nowrap;
 }
 
-.kp-lang-item:hover {
+.kp-lang-item:hover,
+.kp-lang-option:hover,
+.kp-lang-menu button:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #FFFFFF;
 }
 
-.kp-lang-item.active {
+.kp-lang-item.active,
+.kp-lang-option.active,
+.kp-lang-menu button.active {
   background: #C28B38;
   color: #14231C;
   font-weight: 700;
 }
 
-.kp-lang-item .kp-lang-flag {
+.kp-lang-item .kp-lang-flag,
+.kp-lang-option .kp-lang-flag,
+.kp-lang-menu button .kp-lang-flag {
   font-size: 1.1rem;
 }
 

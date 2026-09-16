@@ -1458,7 +1458,7 @@ function applyLanguage(lang) {
     if (flagEl) flagEl.textContent = conf.flag;
     if (labelEl) labelEl.textContent = conf.label;
 
-    dd.querySelectorAll('.kp-lang-item').forEach(item => {
+    dd.querySelectorAll('.kp-lang-item, .kp-lang-option, .kp-lang-menu [data-lang]').forEach(item => {
       const itemLang = item.getAttribute('data-lang');
       item.classList.toggle('active', itemLang === lang);
     });
@@ -1503,8 +1503,8 @@ function initI18n() {
     });
   });
 
-  // Dropdown item selection
-  document.querySelectorAll('.kp-lang-item').forEach(item => {
+  // Dropdown item selection (supports any .kp-lang-item, .kp-lang-option, or .kp-lang-menu [data-lang])
+  document.querySelectorAll('.kp-lang-menu [data-lang], .kp-lang-item, .kp-lang-option').forEach(item => {
     if (item.dataset.i18nBound) return;
     item.dataset.i18nBound = 'true';
     item.addEventListener('click', (e) => {
