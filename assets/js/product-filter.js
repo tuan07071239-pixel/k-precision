@@ -49,16 +49,16 @@ async function initProductCatalog() {
   }
 }
 
+let currentApplyFilter = null;
+
 function setupFilterAndSearch() {
   const searchInput = document.querySelector('#productSearch');
   const filterChips = document.querySelectorAll('.chip-btn');
-  const productCards = document.querySelectorAll('.product-card');
   const countDisplay = document.querySelector('.catalog-count');
-
-  if (!productCards.length) return;
 
   function applyFilter() {
     let matchCount = 0;
+    const productCards = document.querySelectorAll('.product-card');
 
     productCards.forEach(card => {
       const category = card.getAttribute('data-category') || '';
@@ -156,6 +156,7 @@ function setupFilterAndSearch() {
     filterHandlerAttached = true;
   }
 
+  currentApplyFilter = applyFilter;
   applyFilter();
 }
 
@@ -164,12 +165,18 @@ function setupFilterAndSearch() {
  */
 function renderCatalogGrid(gridContainer) {
   if (!window.KP_PRODUCTS) return;
-  const products = Object.values(window.KP_PRODUCTS);
-  if (!products.length) return;
+  const rawProducts = Object.values(window.KP_PRODUCTS);
+  if (!rawProducts.length) return;
+
+  const curLang = (window.KP_I18N ? window.KP_I18N.currentLang : null) || localStorage.getItem('kp-lang') || 'en';
 
   gridContainer.innerHTML = '';
 
-  products.forEach(p => {
+  const detailsText = curLang === 'ko' ? '상세 사양 보기 &rarr;' : (curLang === 'vi' ? 'Xem chi tiết &rarr;' : 'Details &amp; Specs &rarr;');
+  const addRfqText = curLang === 'ko' ? '+ 견적 목록 추가' : (curLang === 'vi' ? '+ Thêm vào báo giá' : '+ Add to RFQ');
+
+  rawProducts.forEach(rawP => {
+    const p = window.getLocalizedProduct ? window.getLocalizedProduct(rawP, curLang) : rawP;
     const card = document.createElement('div');
     card.className = 'product-card';
     card.setAttribute('data-category', p.categorySlug || 'others');
@@ -205,8 +212,8 @@ function renderCatalogGrid(gridContainer) {
                   data-sku="${p.sku}" 
                   data-name="${p.name}" 
                   data-specs="${rfqSpecs}" 
-                  data-category="${p.category}">+ Add to RFQ</button>
-          <a href="product-detail.html?sku=${encodeURIComponent(p.sku)}" class="btn-view-details">Details &amp; Specs &rarr;</a>
+                  data-category="${p.category}">${addRfqText}</button>
+          <a href="product-detail.html?sku=${encodeURIComponent(p.sku)}" class="btn-view-details">${detailsText}</a>
         </div>
       </div>
     `;
@@ -215,7 +222,7 @@ function renderCatalogGrid(gridContainer) {
   });
 
   if (window.KP_I18N && window.KP_I18N.autoTranslate) {
-    window.KP_I18N.autoTranslate(localStorage.getItem('kp-lang') || 'en');
+    window.KP_I18N.autoTranslate(curLang);
   }
 
   // Attach admin controls if Admin is logged in
@@ -227,9 +234,17 @@ function renderCatalogGrid(gridContainer) {
 
 // Re-apply filter and auto-translations on language change
 window.addEventListener('kp-language-change', (e) => {
+  const curLang = e.detail.lang || 'en';
+  const gridContainer = document.querySelector('.products-grid');
+  if (gridContainer) {
+    renderCatalogGrid(gridContainer);
+    if (typeof currentApplyFilter === 'function') {
+      currentApplyFilter();
+    }
+  }
+
   const countDisplay = document.querySelector('.catalog-count');
   if (countDisplay) {
-    const curLang = e.detail.lang || 'en';
     const matchCount = document.querySelectorAll('.product-card:not([style*="display: none"])').length;
     if (curLang === 'ko') {
       countDisplay.textContent = `${matchCount}개의 정밀 가공 소모품 표시 중`;
@@ -240,6 +255,6 @@ window.addEventListener('kp-language-change', (e) => {
     }
   }
   if (window.KP_I18N && window.KP_I18N.autoTranslate) {
-    window.KP_I18N.autoTranslate(e.detail.lang);
+    window.KP_I18N.autoTranslate(curLang);
   }
 });
