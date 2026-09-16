@@ -83,7 +83,14 @@ function setupFilterAndSearch() {
     });
 
     if (countDisplay) {
-      countDisplay.textContent = `Showing ${matchCount} precision consumable part${matchCount === 1 ? '' : 's'}`;
+      const curLang = localStorage.getItem('kp-lang') || 'en';
+      if (curLang === 'ko') {
+        countDisplay.textContent = `${matchCount}개의 정밀 가공 소모품 표시 중`;
+      } else if (curLang === 'vi') {
+        countDisplay.textContent = `Hiển thị ${matchCount} sản phẩm tiêu hao chính xác`;
+      } else {
+        countDisplay.textContent = `Showing ${matchCount} precision consumable part${matchCount === 1 ? '' : 's'}`;
+      }
     }
 
     // Empty state handling
@@ -207,8 +214,32 @@ function renderCatalogGrid(gridContainer) {
     gridContainer.appendChild(card);
   });
 
+  if (window.KP_I18N && window.KP_I18N.autoTranslate) {
+    window.KP_I18N.autoTranslate(localStorage.getItem('kp-lang') || 'en');
+  }
+
   // Attach admin controls if Admin is logged in
   if (typeof window.KP_ATTACH_ADMIN_ACTIONS === 'function') {
     window.KP_ATTACH_ADMIN_ACTIONS();
   }
 }
+
+
+// Re-apply filter and auto-translations on language change
+window.addEventListener('kp-language-change', (e) => {
+  const countDisplay = document.querySelector('.catalog-count');
+  if (countDisplay) {
+    const curLang = e.detail.lang || 'en';
+    const matchCount = document.querySelectorAll('.product-card:not([style*="display: none"])').length;
+    if (curLang === 'ko') {
+      countDisplay.textContent = `${matchCount}개의 정밀 가공 소모품 표시 중`;
+    } else if (curLang === 'vi') {
+      countDisplay.textContent = `Hiển thị ${matchCount} sản phẩm tiêu hao chính xác`;
+    } else {
+      countDisplay.textContent = `Showing ${matchCount} precision consumable part${matchCount === 1 ? '' : 's'}`;
+    }
+  }
+  if (window.KP_I18N && window.KP_I18N.autoTranslate) {
+    window.KP_I18N.autoTranslate(e.detail.lang);
+  }
+});

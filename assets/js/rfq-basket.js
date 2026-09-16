@@ -277,6 +277,9 @@ class RFQBasket {
       overlay.classList.add('active');
       drawer.classList.add('active');
       document.body.style.overflow = 'hidden';
+      if (window.KP_I18N && window.KP_I18N.autoTranslate) {
+        window.KP_I18N.autoTranslate(localStorage.getItem('kp-lang') || 'en');
+      }
     }
   }
 
@@ -324,4 +327,12 @@ function escapeHTML(str) {
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   window.rfqBasket = new RFQBasket();
+});
+
+
+// Re-apply language translations when language switches
+window.addEventListener('kp-language-change', (e) => {
+  if (window.KP_I18N && window.KP_I18N.autoTranslate) {
+    window.KP_I18N.autoTranslate(e.detail.lang);
+  }
 });
