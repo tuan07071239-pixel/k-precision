@@ -77,6 +77,8 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -86,6 +88,8 @@ body {
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img, svg {
@@ -111,7 +115,7 @@ button, input, select, textarea {
   font-family: "JetBrains Mono", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
-/* Containers (Edge-to-Edge Manufacturing Width) */
+/* Containers */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -128,6 +132,20 @@ button, input, select, textarea {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .container-edge {
   width: 100%;
   max-width: var(--container-max);
@@ -135,6 +153,20 @@ button, input, select, textarea {
   margin-right: auto;
   padding-left: 0;
   padding-right: 0;
+}
+
+@media (max-width: 768px) {
+  .container-edge {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-edge {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 /* Manufacturing Blueprint Background Pattern */
@@ -809,62 +841,6 @@ button, input, select, textarea {
   transform: translateY(-1px);
 }
 
-@media (max-width: 1024px) {
-  .hero-dual-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-visual-tile {
-    min-height: 360px;
-    padding: 36px 28px;
-  }
-  .statement-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .statement-metrics {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 0;
-  }
-  .stmt-metric-item {
-    padding: 0 20px;
-  }
-  .stmt-metric-item:nth-child(2) {
-    border-right: none;
-  }
-  .mfg-tech-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .mfg-tech-media {
-    position: static;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-tile-title {
-    font-size: 1.85rem;
-  }
-  .statement-title {
-    font-size: 1.85rem;
-  }
-  .statement-metrics {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .stmt-metric-item {
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 0 0 16px 0;
-  }
-  .stmt-metric-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  .callout-mfg-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
 
 /* ==========================================================================
    TECHNOLOGY PILLARS (Legacy / Alternative Grid)
@@ -1494,16 +1470,86 @@ button, input, select, textarea {
   line-height: 1.6;
 }
 
+/* Mobile Header Language Dropdown */
+.mobile-lang-switcher {
+  display: none;
+}
+
+.mobile-lang-switcher .kp-lang-dropdown-btn {
+  background: #F1F5F9;
+  border: 1px solid var(--border-color);
+  color: var(--color-primary-dark);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.mobile-lang-switcher .kp-lang-dropdown-btn:hover,
+.mobile-lang-switcher.open .kp-lang-dropdown-btn {
+  background: #E2E8F0;
+  border-color: var(--color-primary);
+}
+
+.mobile-lang-switcher .kp-lang-arrow {
+  color: #64748B;
+}
+
+.mobile-lang-switcher .kp-lang-menu {
+  top: calc(100% + 8px);
+  right: 0;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-lang-switcher .kp-lang-item {
+  color: var(--text-dark-primary);
+}
+
+.mobile-lang-switcher .kp-lang-item:hover {
+  background: #F8FAFC;
+  color: var(--color-primary);
+}
+
+.mobile-lang-switcher .kp-lang-item.active {
+  background: #EFF6FF;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
 /* ==========================================================================
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 1024px) {
-  .hero-grid {
+  .hero-dual-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 24px;
   }
-  .hero-title {
-    font-size: 2.4rem;
+  .hero-visual-tile {
+    min-height: 360px;
+    padding: 36px 28px;
+  }
+  .statement-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .statement-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 0;
+  }
+  .stmt-metric-item {
+    padding: 0 20px;
+  }
+  .stmt-metric-item:nth-child(2) {
+    border-right: none;
+  }
+  .mfg-tech-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .mfg-tech-media {
+    position: static;
   }
   .footer-top {
     grid-template-columns: 1fr 1fr;
@@ -1518,6 +1564,18 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
+  /* Hide thick topbar on mobile as requested — all info is in the footer */
+  .topbar {
+    display: none !important;
+  }
+  .mobile-lang-switcher {
+    display: inline-block;
+  }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   .site-header {
     position: sticky;
     top: 0;
@@ -1579,6 +1637,48 @@ button, input, select, textarea {
   .section-title {
     font-size: 1.75rem;
   }
+
+  /* Compact section spacing on mobile to eliminate large whitespace gaps */
+  .section-statement {
+    padding: 36px 0 20px 0;
+  }
+  .statement-grid {
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+  .statement-metrics {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px 0 0 0;
+    border-bottom: none;
+  }
+  .stmt-metric-item {
+    padding: 0 0 16px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .stmt-metric-item:first-child {
+    padding-left: 0;
+  }
+  .stmt-metric-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .section-technologies-mfg {
+    padding: 36px 0 44px 0;
+  }
+  .mfg-tech-header {
+    margin-bottom: 20px;
+  }
+  .mfg-tech-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .mfg-tech-media {
+    position: static;
+  }
+
   .page-hero {
     padding: 40px 0 32px 0;
   }
@@ -1598,19 +1698,64 @@ button, input, select, textarea {
   .form-control {
     font-size: 16px; /* Prevents auto-zoom on iOS Safari */
   }
-  .cta-banner-box {
-    flex-direction: column;
-    align-items: flex-start;
+
+  /* Callout Bar Mobile Polish */
+  .section-callout-mfg {
+    padding: 24px 0;
   }
   .callout-mfg-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
+  .callout-mfg-msg {
+    font-size: 1.05rem;
+    gap: 12px;
+  }
   .btn-callout-mfg {
     width: 100%;
     text-align: center;
+    justify-content: center;
+    padding: 12px 20px;
   }
+
+  /* CTA Consultation Banner Full-Width Stack to prevent horizontal cutoff */
+  .cta-banner-section {
+    padding: 44px 0;
+  }
+  .cta-banner-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+  .cta-banner-content {
+    width: 100%;
+    max-width: 100%;
+  }
+  .cta-banner-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+  .cta-banner-desc {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+  .cta-banner-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .cta-banner-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.9375rem;
+    white-space: normal;
+  }
+
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -1619,24 +1764,9 @@ button, input, select, textarea {
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .topbar {
-    padding: 6px 0;
-  }
-  .topbar-items {
-    font-size: 0.75rem;
-    gap: 10px;
-  }
-  /* Hide secondary ISO text on ultra-narrow phones so rep and phone fit smoothly */
-  .topbar-items .topbar-item:nth-child(2) {
-    display: none;
-  }
   .hero-visual-tile {
-    min-height: 280px;
-    padding: 24px 16px;
+    min-height: 260px;
+    padding: 22px 16px;
   }
   .hero-tile-tag {
     font-size: 0.6875rem;
@@ -1645,32 +1775,52 @@ button, input, select, textarea {
   .hero-tile-title {
     font-size: 1.45rem;
   }
+
+  /* Seamless statement and metric spacing on small phones */
+  .section-statement {
+    padding: 28px 0 14px 0;
+  }
   .statement-title {
     font-size: 1.45rem;
   }
   .statement-desc {
     font-size: 0.9375rem;
   }
+  .statement-grid {
+    margin-bottom: 16px;
+    gap: 12px;
+  }
   .statement-metrics {
-    grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 12px;
+    padding: 12px 0 0 0;
+    border-bottom: none;
   }
   .stmt-metric-item {
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 0 0 14px 0;
+    padding: 0 0 12px 0;
   }
   .stmt-metric-item:last-child {
     border-bottom: none;
+    padding-bottom: 0;
+  }
+  .stmt-metric-val {
+    font-size: 1.85rem;
+  }
+
+  /* Technologies Section Mobile Spacing */
+  .section-technologies-mfg {
+    padding: 28px 0 36px 0;
   }
   .mfg-tech-header {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .mfg-tech-header .section-title {
     font-size: 1.45rem;
   }
+  .mfg-tech-grid {
+    gap: 20px;
+  }
   .mfg-acc-header {
-    padding: 16px 0;
+    padding: 14px 0;
     font-size: 1.05rem;
   }
   .mfg-acc-purpose {

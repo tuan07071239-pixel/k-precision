@@ -18,10 +18,15 @@
   <link rel="shortcut icon" href="favicon.ico?v=5.1">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=5.1">
   
+  <!-- Prevent Browser Caching of Development Assets -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=7.4">
-  <link rel="stylesheet" href="assets/css/components.css?v=7.4">
-  <link rel="stylesheet" href="assets/css/inline-admin.css?v=7.4">
+  <link rel="stylesheet" href="assets/css/style.css?v=8.0">
+  <link rel="stylesheet" href="assets/css/components.css?v=8.0">
+  <link rel="stylesheet" href="assets/css/inline-admin.css?v=8.0">
 </head>
 <body class="mfg-pattern-bg">
 
@@ -89,6 +94,29 @@
       </nav>
 
       <div class="nav-actions">
+        <!-- Mobile Language Switcher (Visible on Mobile when Topbar is hidden) -->
+        <div class="kp-lang-dropdown mobile-lang-switcher">
+          <button class="kp-lang-dropdown-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+            <span class="kp-lang-current-flag">🇺🇸</span>
+            <span class="kp-lang-current-label">EN</span>
+            <svg class="kp-lang-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="kp-lang-menu">
+            <button class="kp-lang-item active" data-lang="en" type="button">
+              <span class="kp-lang-flag">🇺🇸</span>
+              <span>English (EN)</span>
+            </button>
+            <button class="kp-lang-item" data-lang="ko" type="button">
+              <span class="kp-lang-flag">🇰🇷</span>
+              <span>한국어 (KO)</span>
+            </button>
+            <button class="kp-lang-item" data-lang="vi" type="button">
+              <span class="kp-lang-flag">🇻🇳</span>
+              <span>Tiếng Việt (VI)</span>
+            </button>
+          </div>
+        </div>
+
         <button class="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">&#9776;</button>
       </div>
     </div>
@@ -97,7 +125,7 @@
   <main>
     <!-- HERO SECTION: DUAL-TILE SPLIT VISUAL (Machining.com Signature Style) -->
     <section class="hero-split-section">
-      <div class="container container-edge">
+      <div class="container">
         <div class="hero-dual-grid">
           <!-- Left Tile (High-Tech Manufacturing Floor) -->
           <a href="#technologies" class="hero-visual-tile">
@@ -130,7 +158,7 @@
 
     <!-- STATEMENT & METRICS SECTION (Directly beneath hero, Machining.com Style) -->
     <section class="section-statement">
-      <div class="container container-edge">
+      <div class="container">
         <div class="statement-grid">
           <div class="statement-col-left">
             <h2 class="statement-title" data-i18n="home.stmt.title">
@@ -168,7 +196,7 @@
 
     <!-- OUR INNOVATIVE MANUFACTURING TECHNOLOGIES SECTION (Machining.com Split Accordion) -->
     <section id="technologies" class="section-technologies-mfg">
-      <div class="container container-edge">
+      <div class="container">
         <div class="mfg-tech-header">
           <h2 class="section-title" data-i18n="tech.heading">Our innovative manufacturing technologies</h2>
         </div>
@@ -328,7 +356,7 @@
 
     <!-- ROYAL BLUE PROJECT CALLOUT BAR (Machining.com Style) -->
     <section class="section-callout-mfg">
-      <div class="container container-edge callout-mfg-inner">
+      <div class="container callout-mfg-inner">
         <div class="callout-mfg-msg">
           <svg class="callout-mfg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           <span data-i18n="home.callout.text">Do you have a project or tooling requirement you would like to discuss?</span>
@@ -563,7 +591,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/i18n.js?v=7.4"></script>
-  <script src="assets/js/main.js?v=7.4"></script>
+  <script src="assets/js/i18n.js?v=8.0"></script>
+  <script src="assets/js/main.js?v=8.0"></script>
 </body>
 </html>
