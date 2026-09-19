@@ -3,15 +3,22 @@
  * Core Navigation, Header, Tabs, and Toast System
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAll() {
   initNavigation();
   initHeaderScroll();
   initTabs();
+  initAccordion();
   initNewsletterForm();
   highlightActiveNav();
   // Initialize multilingual system
   if (window.KP_I18N) window.KP_I18N.init();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
 
 /* Navigation & Mobile Menu */
 function initNavigation() {
@@ -98,6 +105,76 @@ function initTabs() {
         targetPane.classList.add('active');
       }
     });
+  });
+}
+
+/* Machining.com Style Manufacturing Technology Accordion & Dynamic Media Switching */
+function updateTechMedia(item) {
+  if (!item) return;
+  const imgSrc = item.getAttribute('data-tech-img');
+  const imgAlt = item.getAttribute('data-tech-alt');
+  const captionKey = item.getAttribute('data-tech-caption-key');
+  if (!imgSrc) return;
+
+  const imgEl = document.querySelector('.mfg-tech-img');
+  const captionEl = document.querySelector('.mfg-tech-caption');
+
+  if (imgEl && imgEl.getAttribute('src') !== imgSrc) {
+    imgEl.classList.add('fade-out');
+    setTimeout(() => {
+      imgEl.src = imgSrc;
+      if (imgAlt) imgEl.alt = imgAlt;
+      imgEl.classList.remove('fade-out');
+    }, 150);
+  }
+
+  if (captionEl && captionKey) {
+    captionEl.setAttribute('data-i18n', captionKey);
+    const lang = (window.KP_I18N && window.KP_I18N.getCurrentLang) ? window.KP_I18N.getCurrentLang() : (localStorage.getItem('kp-lang') || 'en');
+    if (window.KP_TRANSLATIONS && window.KP_TRANSLATIONS[lang] && window.KP_TRANSLATIONS[lang][captionKey]) {
+      captionEl.innerHTML = window.KP_TRANSLATIONS[lang][captionKey];
+    }
+  }
+}
+
+function toggleAccordion(btn) {
+  const item = btn.closest('.mfg-acc-item');
+  if (!item) return;
+  const accordion = item.closest('.mfg-accordion') || document.getElementById('techAccordion');
+
+  if (accordion) {
+    accordion.querySelectorAll('.mfg-acc-item').forEach(i => {
+      i.classList.remove('active');
+      const h = i.querySelector('.mfg-acc-header');
+      if (h) h.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  item.classList.add('active');
+  btn.setAttribute('aria-expanded', 'true');
+  updateTechMedia(item);
+}
+window.toggleAccordion = toggleAccordion;
+window.updateTechMedia = updateTechMedia;
+
+function initAccordion() {
+  const accordion = document.getElementById('techAccordion');
+  if (!accordion) return;
+
+  const headers = accordion.querySelectorAll('.mfg-acc-header');
+  headers.forEach(header => {
+    header.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleAccordion(header);
+    });
+  });
+
+  // Listen for language changes to update active caption
+  window.addEventListener('kp-language-change', (e) => {
+    const activeItem = accordion.querySelector('.mfg-acc-item.active');
+    if (activeItem) {
+      updateTechMedia(activeItem);
+    }
   });
 }
 
