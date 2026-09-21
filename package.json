@@ -4,6 +4,7 @@
   "description": "K-Precision official website with Git-based Headless CMS and auto-syncing product catalog",
   "scripts": {
     "build": "node scripts/build-products.js",
+    "favicon": "node scripts/generate-favicon.js",
     "export": "node scripts/export-to-json.js"
   },
   "keywords": [
