@@ -77,8 +77,6 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
-  width: 100%;
 }
 
 body {
@@ -88,8 +86,7 @@ body {
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  width: 100%;
+  overflow-x: clip;
 }
 
 img, svg {
@@ -180,11 +177,7 @@ button, input, select, textarea {
    TOPBAR UTILITY BAR (Machining.com Style Dark Navy)
    ========================================================================== */
 .topbar {
-  background: var(--bg-dark);
-  color: var(--text-light-secondary);
-  font-size: 0.8125rem;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: none !important;
 }
 
 .topbar-content {
@@ -236,10 +229,17 @@ button, input, select, textarea {
 .site-header {
   background: #FFFFFF;
   border-bottom: 1px solid var(--border-color);
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.site-header.scrolled {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  border-bottom-color: rgba(203, 213, 225, 0.9);
 }
 
 .navbar {
@@ -584,7 +584,6 @@ button, input, select, textarea {
   grid-template-columns: 1fr 1.3fr;
   gap: 60px;
   align-items: start;
-  margin-bottom: 52px;
 }
 
 .statement-title {
@@ -1400,6 +1399,16 @@ button, input, select, textarea {
   margin-top: 3px;
 }
 
+.footer-contact-item a {
+  color: var(--text-light-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-item a:hover {
+  color: #FFFFFF;
+}
+
 .footer-bottom {
   padding: 24px 0;
   font-size: 0.8125rem;
@@ -1470,9 +1479,9 @@ button, input, select, textarea {
   line-height: 1.6;
 }
 
-/* Mobile Header Language Dropdown */
+/* Header Language Dropdown */
 .mobile-lang-switcher {
-  display: none;
+  display: inline-block;
 }
 
 .mobile-lang-switcher .kp-lang-dropdown-btn {
@@ -1577,6 +1586,7 @@ button, input, select, textarea {
     gap: 10px;
   }
   .site-header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -1640,10 +1650,10 @@ button, input, select, textarea {
 
   /* Compact section spacing on mobile to eliminate large whitespace gaps */
   .section-statement {
-    padding: 36px 0 20px 0;
+    padding: 36px 0 32px 0;
   }
   .statement-grid {
-    margin-bottom: 24px;
+    margin-bottom: 0;
     gap: 16px;
   }
   .statement-metrics {
@@ -1778,7 +1788,7 @@ button, input, select, textarea {
 
   /* Seamless statement and metric spacing on small phones */
   .section-statement {
-    padding: 28px 0 14px 0;
+    padding: 28px 0 24px 0;
   }
   .statement-title {
     font-size: 1.45rem;
@@ -1787,7 +1797,7 @@ button, input, select, textarea {
     font-size: 0.9375rem;
   }
   .statement-grid {
-    margin-bottom: 16px;
+    margin-bottom: 0;
     gap: 12px;
   }
   .statement-metrics {
