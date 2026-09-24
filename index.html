@@ -24,9 +24,52 @@
   <meta http-equiv="Expires" content="0">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=9.4">
-  <link rel="stylesheet" href="assets/css/components.css?v=9.4">
-  <link rel="stylesheet" href="assets/css/inline-admin.css?v=9.4">
+  <link rel="stylesheet" href="assets/css/style.css?v=10.0">
+  <link rel="stylesheet" href="assets/css/components.css?v=10.0">
+  <link rel="stylesheet" href="assets/css/inline-admin.css?v=10.0">
+
+  <style>
+    .mfg-tech-media-frame {
+      background: #FFFFFF !important;
+      border: 1px solid var(--border-color, #E2E8F0) !important;
+      border-radius: 8px !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+      padding: 28px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-height: 420px !important;
+      overflow: hidden !important;
+    }
+    .mfg-tech-img {
+      width: auto !important;
+      max-width: 100% !important;
+      height: auto !important;
+      max-height: 480px !important;
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      display: block !important;
+      margin: 0 auto !important;
+    }
+    @media (max-width: 768px) {
+      .mfg-tech-media-frame {
+        padding: 16px !important;
+        min-height: 280px !important;
+      }
+      .mfg-tech-img {
+        max-height: 320px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .mfg-tech-media-frame {
+        padding: 12px !important;
+        min-height: 220px !important;
+      }
+      .mfg-tech-img {
+        max-height: 250px !important;
+      }
+    }
+  </style>
 </head>
 <body class="mfg-pattern-bg">
 
@@ -136,7 +179,7 @@
           <!-- Left Column: High-Resolution Precision Machined Workpiece Media Frame -->
           <div class="mfg-tech-media">
             <div class="mfg-tech-media-frame">
-              <img src="assets/images/tech-grinding.jpg?v=9.5" alt="Vitrified CBN &amp; Diamond Precision Grinding Wheel" class="mfg-tech-img">
+              <img src="assets/images/tech-grinding.jpg?v=10.0" alt="Abrasive and Precision Grinding Wheels" class="mfg-tech-img">
             </div>
           </div>
 
@@ -145,7 +188,7 @@
             <div class="mfg-accordion" id="techAccordion">
 
               <!-- Accordion Item 1: Grinding Wheels -->
-              <div class="mfg-acc-item active" data-acc="1" data-tech-img="assets/images/tech-grinding.jpg?v=9.5" data-tech-alt="Vitrified CBN &amp; Diamond Precision Grinding Wheel" data-tech-caption-key="tech.gw.caption">
+              <div class="mfg-acc-item active" data-acc="1" data-tech-img="assets/images/tech-grinding.jpg?v=10.0" data-tech-alt="Abrasive and Precision Grinding Wheels" data-tech-caption-key="tech.gw.caption">
                 <button class="mfg-acc-header" type="button" aria-expanded="true" onclick="toggleAccordion(this)">
                   <span class="mfg-acc-title" data-i18n="tech.gw.name">Grinding Wheels</span>
                   <svg class="mfg-acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -161,7 +204,7 @@
               </div>
 
               <!-- Accordion Item 2: Cutting Tools -->
-              <div class="mfg-acc-item" data-acc="2" data-tech-img="assets/images/tech-cutting.jpg?v=9.5" data-tech-alt="High-Performance Solid Carbide End Mill in 5-Axis Milling" data-tech-caption-key="tech.ct.caption">
+              <div class="mfg-acc-item" data-acc="2" data-tech-img="assets/images/tech-cutting.jpg?v=10.0" data-tech-alt="Carbide Precision Drill Bits and Cutting Tools" data-tech-caption-key="tech.ct.caption">
                 <button class="mfg-acc-header" type="button" aria-expanded="false" onclick="toggleAccordion(this)">
                   <span class="mfg-acc-title" data-i18n="tech.ct.name">Cutting Tools</span>
                   <svg class="mfg-acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -177,7 +220,7 @@
               </div>
 
               <!-- Accordion Item 3: Tool Holding Systems -->
-              <div class="mfg-acc-item" data-acc="3" data-tech-img="assets/images/tech-holding.jpg" data-tech-alt="Precision Thermal Shrink Fit and Hydraulic Tool Holding Spindle" data-tech-caption-key="tech.th.caption">
+              <div class="mfg-acc-item" data-acc="3" data-tech-img="assets/images/tech-holding.jpg?v=10.0" data-tech-alt="Precision CNC Spindle Tool Holder" data-tech-caption-key="tech.th.caption">
                 <button class="mfg-acc-header" type="button" aria-expanded="false" onclick="toggleAccordion(this)">
                   <span class="mfg-acc-title" data-i18n="tech.th.name">Tool Holding Systems</span>
                   <svg class="mfg-acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -193,7 +236,7 @@
               </div>
 
               <!-- Accordion Item 4: EDM Wires -->
-              <div class="mfg-acc-item" data-acc="4" data-tech-img="assets/images/tech-edm.jpg?v=9.5" data-tech-alt="Precision Wire EDM Spark Erosion in Deionized Water Dielectric" data-tech-caption-key="tech.edm.caption">
+              <div class="mfg-acc-item" data-acc="4" data-tech-img="assets/images/tech-edm.jpg?v=10.0" data-tech-alt="High-Precision EDM Wire Spool" data-tech-caption-key="tech.edm.caption">
                 <button class="mfg-acc-header" type="button" aria-expanded="false" onclick="toggleAccordion(this)">
                   <span class="mfg-acc-title" data-i18n="tech.edm.name">EDM Wires</span>
                   <svg class="mfg-acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -370,17 +413,22 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
-        <!-- Col 1: Brand & Certification -->
+        <!-- Col 1: Brand Logo -->
         <div class="footer-brand">
           <a href="index.html" aria-label="K-Precision Home">
             <img src="assets/images/logo-white.svg?v=9.0" alt="K-Precision White Logo" class="footer-logo">
           </a>
+        </div>
+
+        <!-- Col 2: Company Overview -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer.col.about">Company Overview</h4>
           <p class="footer-desc" data-i18n="footer.brand.desc">
             K-Precision supplies reliable precision manufacturing consumables and tooling solutions: Grinding Wheels, Cutting Tools, Tool Holding Systems, and EDM Wires.
           </p>
         </div>
 
-        <!-- Col 2: Manufacturing Technologies -->
+        <!-- Col 3: Manufacturing Technologies -->
         <div>
           <h4 class="footer-col-title" data-i18n="footer.col.catalog">Manufacturing Technologies</h4>
           <ul class="footer-links">
@@ -391,7 +439,7 @@
           </ul>
         </div>
 
-        <!-- Col 3: Contact Us -->
+        <!-- Col 4: Contact Us -->
         <div>
           <h4 class="footer-col-title" data-i18n="footer.col.contact">CONTACT US</h4>
           <div class="footer-contact-item">
@@ -401,19 +449,6 @@
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <a href="tel:+14158016639" class="topbar-link">+1 415-801-6639</a>
-          </div>
-        </div>
-
-        <!-- Col 4: Corporate Headquarters -->
-        <div>
-          <h4 class="footer-col-title" data-i18n="footer.col.hq">Corporate Headquarters</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span data-i18n="footer.hq.rep">Representative: <strong>Kyunghee Baik</strong></span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span data-i18n="footer.hq.address">Room 303, Dong-a Apt. Sangga, 147 Songwol-gil, Jongno-gu, Seoul, South Korea (Zip: 03165)</span>
           </div>
         </div>
       </div>

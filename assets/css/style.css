@@ -678,18 +678,26 @@ button, input, select, textarea {
 }
 
 .mfg-tech-media-frame {
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  background: #0F172A;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  min-height: 420px;
 }
 
 .mfg-tech-img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 480px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  margin: 0 auto;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -1213,13 +1221,15 @@ button, input, select, textarea {
    CONTACT PAGE & FORMS (Machining.com Style Clean Form)
    ========================================================================== */
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: 48px;
-  align-items: start;
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .contact-form-card {
+  width: 100%;
+  margin: 0 auto;
   background: #FFFFFF;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -1330,10 +1340,11 @@ button, input, select, textarea {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr 1.1fr 1.2fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   padding-bottom: 56px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: start;
 }
 
 .footer-brand {
@@ -1343,8 +1354,9 @@ button, input, select, textarea {
 }
 
 .footer-logo {
-  height: 38px;
+  height: 52px;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
   margin-bottom: 4px;
 }
@@ -1353,7 +1365,7 @@ button, input, select, textarea {
   font-size: 0.875rem;
   color: var(--text-light-muted);
   line-height: 1.65;
-  max-width: 320px;
+  max-width: 100%;
 }
 
 .footer-col-title {
@@ -1561,13 +1573,13 @@ button, input, select, textarea {
     position: static;
   }
   .footer-top {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
   }
   .protocol-grid {
     grid-template-columns: 1fr;
   }
-  .about-story-grid,
-  .contact-grid {
+  .about-story-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1687,6 +1699,13 @@ button, input, select, textarea {
   }
   .mfg-tech-media {
     position: static;
+  }
+  .mfg-tech-media-frame {
+    padding: 16px;
+    min-height: 280px;
+  }
+  .mfg-tech-img {
+    max-height: 320px;
   }
 
   .page-hero {
@@ -1828,6 +1847,13 @@ button, input, select, textarea {
   }
   .mfg-tech-grid {
     gap: 20px;
+  }
+  .mfg-tech-media-frame {
+    padding: 12px;
+    min-height: 220px;
+  }
+  .mfg-tech-img {
+    max-height: 250px;
   }
   .mfg-acc-header {
     padding: 14px 0;
