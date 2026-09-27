@@ -24,11 +24,51 @@
   <meta http-equiv="Expires" content="0">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=10.0">
-  <link rel="stylesheet" href="assets/css/components.css?v=10.0">
-  <link rel="stylesheet" href="assets/css/inline-admin.css?v=10.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=10.4">
+  <link rel="stylesheet" href="assets/css/components.css?v=10.4">
+  <link rel="stylesheet" href="assets/css/inline-admin.css?v=10.4">
 
   <style>
+    .section-statement {
+      padding: 56px 0 48px 0 !important;
+      background-color: #FFFFFF !important;
+    }
+    .statement-grid {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 48px !important;
+      align-items: center !important;
+    }
+    .statement-col-left {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+    }
+    .statement-col-right {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+    }
+    .statement-title {
+      font-size: 2.1rem !important;
+      font-weight: 850 !important;
+      line-height: 1.25 !important;
+      color: var(--color-primary-dark) !important;
+      letter-spacing: -0.025em !important;
+      margin: 0 !important;
+    }
+    .statement-desc {
+      font-size: 1.0625rem !important;
+      line-height: 1.7 !important;
+      color: var(--text-dark-secondary) !important;
+      margin: 0 !important;
+    }
+    @media (max-width: 1024px) {
+      .statement-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+    }
     .mfg-tech-media-frame {
       background: #FFFFFF !important;
       border: 1px solid var(--border-color, #E2E8F0) !important;
@@ -52,6 +92,15 @@
       margin: 0 auto !important;
     }
     @media (max-width: 768px) {
+      .section-statement {
+        padding: 36px 0 32px 0 !important;
+      }
+      .statement-title {
+        font-size: 1.75rem !important;
+      }
+      .statement-desc {
+        font-size: 1rem !important;
+      }
       .mfg-tech-media-frame {
         padding: 16px !important;
         min-height: 280px !important;
@@ -61,6 +110,15 @@
       }
     }
     @media (max-width: 480px) {
+      .section-statement {
+        padding: 28px 0 24px 0 !important;
+      }
+      .statement-title {
+        font-size: 1.45rem !important;
+      }
+      .statement-desc {
+        font-size: 0.9375rem !important;
+      }
       .mfg-tech-media-frame {
         padding: 12px !important;
         min-height: 220px !important;
@@ -135,7 +193,7 @@
 
           <!-- Right Tile (Precision Machine Spindle & Exhibition Showroom) -->
           <a href="contact.html" class="hero-visual-tile">
-            <img src="assets/images/hero-machine.jpg" alt="High-Speed Precision Spindle and Tooling" class="hero-tile-img">
+            <img src="assets/images/hero-machine.jpg?v=10.1" alt="High-Speed Precision Spindle and Tooling" class="hero-tile-img">
             <div class="hero-tile-overlay"></div>
             <div class="hero-tile-content">
               <span class="hero-tile-tag" data-i18n="home.hero.tag2">ENGINEERING CONSULTATION &amp; SEOUL HUB</span>
@@ -179,7 +237,7 @@
           <!-- Left Column: High-Resolution Precision Machined Workpiece Media Frame -->
           <div class="mfg-tech-media">
             <div class="mfg-tech-media-frame">
-              <img src="assets/images/tech-grinding.jpg?v=10.0" alt="Abrasive and Precision Grinding Wheels" class="mfg-tech-img">
+              <img src="assets/images/tech-grinding.jpg?v=10.1" alt="Abrasive and Precision Grinding Wheels" class="mfg-tech-img">
             </div>
           </div>
 
@@ -188,7 +246,7 @@
             <div class="mfg-accordion" id="techAccordion">
 
               <!-- Accordion Item 1: Grinding Wheels -->
-              <div class="mfg-acc-item active" data-acc="1" data-tech-img="assets/images/tech-grinding.jpg?v=10.0" data-tech-alt="Abrasive and Precision Grinding Wheels" data-tech-caption-key="tech.gw.caption">
+              <div class="mfg-acc-item active" data-acc="1" data-tech-img="assets/images/tech-grinding.jpg?v=10.1" data-tech-alt="Abrasive and Precision Grinding Wheels" data-tech-caption-key="tech.gw.caption">
                 <button class="mfg-acc-header" type="button" aria-expanded="true" onclick="toggleAccordion(this)">
                   <span class="mfg-acc-title" data-i18n="tech.gw.name">Grinding Wheels</span>
                   <svg class="mfg-acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>

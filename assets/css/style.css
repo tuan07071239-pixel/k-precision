@@ -581,23 +581,37 @@ button, input, select, textarea {
 
 .statement-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.statement-col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statement-col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .statement-title {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 850;
-  line-height: 1.18;
+  line-height: 1.25;
   color: var(--color-primary-dark);
   letter-spacing: -0.025em;
+  margin: 0;
 }
 
 .statement-desc {
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-size: 1.0625rem;
+  line-height: 1.7;
   color: var(--text-dark-secondary);
+  margin: 0;
 }
 
 .statement-metrics {
@@ -1553,7 +1567,7 @@ button, input, select, textarea {
   }
   .statement-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
   .statement-metrics {
     grid-template-columns: 1fr 1fr;
